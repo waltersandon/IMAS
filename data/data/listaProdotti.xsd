@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns="http://www.imas.it"
+    targetNamespace="http://www.imas.it"
+    elementFormDefault="qualified">
+
+    <xs:element name="listaProdotti" type="TlistaP"/>
+
+    <xs:complexType name="TlistaP">
+    	<xs:sequence>
+    		<xs:element name="categoria" type="Tcategoria" maxOccurs="unbounded"/>
+    	</xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="Tcategoria">
+    	<xs:sequence>
+    		<xs:element name="prodotto" type="Tprodotto"/>
+    	</xs:sequence>
+    	<xs:attribute name="id" type="xs:positiveInteger" use="required"/>
+      <xs:attribute name="segmento" type="Tsegmento" use="required"/>
+    </xs:complexType>
+
+      <xs:simpleType name="Tsegmento">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="FORNELLI E FORNI"/>
+      <xs:enumeration value="FRIGORIFERI EFREEZER"/>
+      <xs:enumeration value="ARREDAMENTO"/>
+    </xs:restriction>
+  </xs:simpleType>
+    
+    <xs:complexType name="Tprodotto">
+      <xs:sequence>
+        <xs:element name="nome" type="xs:string"/>
+        <xs:element name="lavorazione" type="Tlavorazione"/>
+        <xs:element name="immagini" type="Timmagini"
+      </xs:sequence>
+    </xs:complexType>
+  
+<xs:simpleType name="Tlavorazione">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Nichel"/>
+      <xs:enumeration value="Cromo"/>
+      <xs:enumeration value="Brillantatura"/>
+    </xs:restriction>
+  </xs:simpleType>
+  
+  <xs:complexType name="Tdescrizione">
+    <xs:sequence>
+      <xs:element name="p" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  
+    <xs:complexType name="Timmagini">
+      <xs:sequence>
+        <xs:element name="descrImg" type="xs:string"/>
+        <xs:element name="posizione" type="xs:anyURI"/>
+      </xs:sequence>
+    </xs:complexType>
+</xs:schema>
