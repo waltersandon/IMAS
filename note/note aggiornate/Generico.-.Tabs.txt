@@ -1,0 +1,3 @@
+Le tabs sono a diverse altezze per 1-2 pixel di differenza, si potrebbe personalizzarle per ogni 
+browser specificatamente, ma senza controllare attentamente non vi è differenza quindi ha più
+senso lasciarle così e basta.

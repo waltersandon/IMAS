@@ -1,0 +1,32 @@
+Volevo farlo un po' più elegante ma un bel po' di cose avevano problemi tecnici.
+
+Ovviamente la questione del menù coi tabs o quel che faremo è sospesa dunque ho tenuto
+questo layout tanto cambia poco.
+
+Ovviamente manca anche la parte di script dove riempiamo la mail dei valori selezionati.
+
+Ho usato html5 per i seguenti motivi:
+-required (principale)
+-placeholder
+-type:email
+-type:number
+
+Problemi/cose che non piacciono:
+-input testo non della stessa lunghezza (penso si risolva facile ma non si sa mai)
+-input testo che ridimensionando non hanno comportamento uniforme (essendo cognome più lungo
+ di nome, la casella di testo di cognome scende nella riga sotto prima di quella nome)
+-per fare l'asterisco rosso nel placeholder del textarea servono delle estensioni per ogni browser, che non sono 
+ supportate dal w3c (danno semplicemente un avviso non sono errate)
+-non sembra ci sia un'icona validator di html5, sul validator non compare in automatico e sulla lista
+ c'è al massimo html4 quindi presumo la togliamo dal footer tenendo solo il css?
+ 
+Generalità:
+-Per i colori del sito mi sono attenuto a questa regola:
+ colore principale (verde)-> logo aziendale, home
+ colori secondari (viola,arancio,rosso) -> ciascuno per la pagina corrispondente del sito
+ colore neutro (azzurro) -> navigatore dei contenuti per ogni pagina quindi non deve
+                            stonare troppo coi colori sopracitati, footer
+Pensavo se tenere il footer col colore neutro oppure col colore della pagina; con lo stesso colore è buono
+perchè il footer non cambia (a parte con html5) però con i colori della pagine dà molta più atmosfera.
+-quando avremo finito la grafica del sito vedremo l'accessibilità dei colori e dovremo sistemarli
+ ma per ora è na perdita di tempo quindi li ho sceltie via
