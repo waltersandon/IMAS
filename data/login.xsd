@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns="http://www.imas.it"
+    targetNamespace="http://www.imas.it"
+    elementFormDefault="qualified">
+
+    <xs:element name="login" type="Tlogin"/>
+
+    <xs:complexType name="Tlogin">
+      <xs:sequence>
+        <xs:element name="admin" type="Tadmin" minOccurs="1" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="Tadmin">
+        <xs:sequence>
+            <xs:element name="username" type="xs:string"/>
+        <xs:element name="password" type="xs:string"/>
+        </xs:sequence>
+        <xs:attribute name="id" type="xs:ID" use="required"/>
+    </xs:complexType>
+</xs:schema>
