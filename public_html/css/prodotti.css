@@ -14,18 +14,18 @@ html,body {
 
 #header {
 	width:96%;
-	height:220px;
+	height:90px;
 	border-radius:10px;
 	border-style:solid;
 	border-color:black;
-	margin:2em auto 1em auto;
-	background-color:#73d7e1;
+	margin:1.5em auto 1em auto;
+	background-color:#c09cbf;
 }
 
 #imglogo {
 	display:block;
 	float:left;
-	margin:1.2em 1.6em 1em 3em;
+	margin:1em 1.5em 0em 3em;
 }
 
 #adminzone {
@@ -37,7 +37,7 @@ html,body {
 	background-color:silver;
 	float:right;
 	position:relative;
-	top:169px;
+	top:39px;
 	right:40px;
 }
 
@@ -45,7 +45,6 @@ html,body {
 	display:block;
 	font-variant:small-caps;
 	font-weight:bold;
-	color:black;
 	min-width:22px;
 	min-height:22px;
 	padding:0.3em;
@@ -53,10 +52,12 @@ html,body {
 	top:2px;
 }
 
+/* panoramic */
+
 #panoramic {
 	clear:right;
 	width:96%;
-	height:12em;
+	height:90px;
 	display:block;
 	border-radius:10px;
 	border-style:solid;
@@ -74,12 +75,14 @@ html,body {
 	border-style:solid;
 	border-color:black;
 	border-radius:10px;
-	background-color:#73d7e1;
+	background-color:#c09cbf;
 }
 
 #path p {
 	margin:0.5em 1em 0.5em 0.8em;
 }
+
+/* tabs */
 
 #ultabs {
 	width:96%;
@@ -88,8 +91,6 @@ html,body {
 	font-size:18px;
 	font-variant:small-caps;
 }
-
-/* tabs */
 
 .navtab {
 	display:inline-block;
@@ -123,13 +124,9 @@ html,body {
 	border-top-left-radius:10px;
 }
 
-.navtab a:visited {
-	color:blue;
-}
-
 #lihome {
 	border-color:black;
-	background:#73d7e1;
+	background-color:silver;
 }
 
 #lihome:hover {
@@ -141,7 +138,7 @@ html,body {
 
 #lilav {
 	border-color:black;
-	background:#73d7e1;
+	background-color:silver;
 }
 
 #lilav:hover {
@@ -153,7 +150,7 @@ html,body {
 
 #licont {
 	border-color:black;
-	background:#73d7e1;
+	background-color:silver;
 }
 
 #licont:hover {
@@ -206,7 +203,7 @@ html,body {
 	border-style:solid;
 	border-color:black;
 	border-radius:10px;
-	background-color:#73d7e1;
+	background-color:white;
 	margin:1.6em auto 1.2em auto;
 }
 
@@ -230,14 +227,14 @@ html,body {
 /* phone */
 @media screen and (min-width:1px) and (max-width:768px) {
  body {
-  background:yellow;
+  background-color:yellow;
  }
 } /* end phone */
 
 /* printer */
 @media print {
  body {
-  background:cyan;
+  background-color:cyan;
  }
 } /* end printer */
 
