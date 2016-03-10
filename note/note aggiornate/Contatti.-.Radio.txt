@@ -1,1 +1,0 @@
-L'attributo name dà warning-obsolete ma è l'unico modo per avere 1 sola risposta all'input radio.

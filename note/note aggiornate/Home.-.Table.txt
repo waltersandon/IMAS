@@ -1,3 +1,0 @@
-scheletro per la table della sezione prodotti (e lavorazioni) che però viene riempita da script.
-bordi non arrotondati per evitare codice più complesso (incompatibilità border-spacing con border-radius)
-si potrebbe usare javascript per fare i colori alternati.
