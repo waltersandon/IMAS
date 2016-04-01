@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+targetNamespace="http://imas.it/xml/xsd/prodotti"
+xmlns="http://imas.it/xml/xsd/prodotti"
+elementFormDefault="qualified">
+
+<xs:element name="catalogo" type="tcatalogo" />
+
+<xs:complexType name="tcatalogo">
+<xs:sequence>
+<xs:element name="categoria" type="tcategoria" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="tcategoria">
+<xs:sequence>
+<xs:element name="nomecat" type="tnomecat" />
+<xs:element name="prodotto" type="tprodotto" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:simpleType name="tnomecat">
+<xs:restriction base="xs:string">
+<xs:enumeration value="Griglie e fornelli" />
+<xs:enumeration value="Laminati e lastre" />
+<xs:enumeration value="Fili e rivestimenti" />
+</xs:restriction>
+</xs:simpleType>
+
+<xs:complexType name="tprodotto">
+<xs:sequence>
+<xs:element name="id" type="xs:ID" />
+<xs:element name="nomeprod" type="xs:string" />
+<xs:element name="foto" type="xs:anyURI" minOccurs="0" />
+<xs:element name="alt" type="xs:string" minOccurs="0" />
+<xs:element name="descrizione" type="xs:string" minOccurs="0" />
+<xs:element name="lavorazione" type="tlavorazione" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:simpleType name="tlavorazione">
+<xs:restriction base="xs:string">
+<xs:enumeration value="Verniciatura" />
+<xs:enumeration value="Cromatura" />
+<xs:enumeration value="Taglio" />
+</xs:restriction>
+</xs:simpleType>
+
+</xs:schema>

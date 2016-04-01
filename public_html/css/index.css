@@ -7,7 +7,7 @@ html,body {
 
 ul {
   list-style-type:none;
-  }  
+}  
 
 #header {
 	height:130px;
@@ -40,6 +40,17 @@ ul {
   border-top-right-radius: 10px;
   width: 5em;
   height: 1.5em;
+}
+  
+#header ul{
+    padding-right: 5em;
+  }
+  
+#adminzone {
+	float:right;
+	position:relative;
+	top:39px;
+	right:40px;
 }
 
 #adminZone:hover {
@@ -253,6 +264,7 @@ border-radius: 400px; /*really large border radius to create round borders*/
 @media screen and (min-width:769px) and (max-width:1024px){
 /* header */
 
+
 #adminzone a {
 	display:block;
 	font-variant:small-caps;
@@ -324,6 +336,12 @@ content:"| ";
   border-width: .4em;
 }
  /* end desktop + tablet */
+  border-color: #3CB371;
+  border-width: .4em;
+}
+
+}
+/* end desktop + tablet */
 
 /* phone */
 @media screen and (min-width:461px)and (max-width:768px) {
@@ -343,13 +361,16 @@ content:"| ";
 }
 } /* end phone */
 
-/* printer */
+/* print */
 @media print {
- body {
-  background-color:cyan;
- }
-} /* end printer */
 
+html, body {
+	font-family:Arial,Helvetica,sans-serif;
+	font-size:1em;
+	color:black;
+}
+
+/* header */
 
 /* breadcrumbs */
 
@@ -363,3 +384,95 @@ content:"| ";
     padding-left: 2em;
     font-size: 2em;
   }
+#logoDitta {
+	display:block;
+	height:105px;
+	width:397px;
+	margin:1.5em 0em 0em 0em;
+}
+  
+#adminzone {
+	display:none;
+}
+
+/* panoramic */
+
+#panoramic {
+	display:none;
+}
+
+/* breadcrumbs */
+
+
+
+#breadcrumb p {
+    font-size:1em;
+}
+  
+/* circlemenu */
+
+#circlemenu li {
+	display:inline-block;
+	padding:0.5em;
+	margin:0em 1em 0.5em 0em;
+	font-size:0.8em;
+	border-style:solid;
+	border-color:black;
+	border-width:1px;
+	border-radius:999px;
+}
+
+.selected {
+	font-size:1.2em !important;
+}
+
+#circlemenu a:visited {
+	color:blue;
+}
+
+/* content */
+
+.foto {
+	display:none;
+}
+  
+.tothetop {
+	display:none;
+}
+
+#storia {
+	page-break-before:always;
+}
+
+/* footer */
+
+#footer {
+	font-size:0.8em;
+	font-style:italic;
+	border-style:solid;
+	border-color:black;
+	border-width:1px;
+	margin:4em 0em 0em 0em;
+	height:22mm;
+}
+
+#footer ul li {
+	list-style-type:none;
+	display:inline;
+}
+
+#footer ul li:before {
+	content:"| ";
+}
+
+#footer img {
+	display:none;
+}
+
+#footer p {
+	margin:1em 0em 0em 1em;
+}
+
+
+} /* end printer */
+
