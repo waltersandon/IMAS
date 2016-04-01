@@ -1,62 +1,73 @@
-/* tablet + desktop */
-@media screen and (min-width:769px) {
- 
-  
 html,body {
 	width:100%;
 	margin:0;
 	font-family:Arial,Helvetica,sans-serif;
 	font-size:1em;
-	color:black;
-	background-color:#FFFFFF;
 }
 
 ul {
   list-style-type:none;
   }  
 
-/* header */
-
 #header {
 	height:130px;
-	margin:2em auto 0em auto;
+	margin:2em auto 0 auto;
 	background-color:#808080;
 }
 
 #logoDitta {
-	display:block;
-	float:left;
-    margin-bottom: 4.1em;  
+  float:left;
+  margin-bottom: 2.1em;  
   margin-left: 6%;
   height: 130px;
   width:450px;
   background-color: #808080;
 }
-  
-  #header ul{
-    padding-right: 5em;
-  }
-#adminzone {
-	float:right;
-	position:relative;
-	top:39px;
-	right:40px;
+
+#adminZone {
+ float:right;
+ position:relative;
+ top:63%;
+ right:2em;
+  padding-left: 1.5em;
+  padding-top: .3em;
+ text-decoration: none;
+  font-size: 30px;
+  color: white;
+  border: solid;
+  border-color: white;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  width: 5em;
+  height: 1.5em;
 }
 
-#adminzone a {
-	display:block;
-	font-variant:small-caps;
-	font-weight:bold;
-	min-width:22px;
-	min-height:22px;
-    font-size: 25px;
+#adminZone:hover {
+  text-decoration: underline;
+  font-size: 30px;
+  color: white;
+}
 
+#header a:link {
+  color: white;
+}
+
+#header a:active {
+  color: aquamarine;
+}
+
+#header a:visited {
+  color: #FF0000;
+}
+
+#header a:hover {
+  color: white;
+  text-decoration: underline;
 }
 
 /* panoramic */
 
 #panoramic {
-	clear:right;
 	width:100%;
 	height:250px;
 	display:block;
@@ -64,19 +75,65 @@ ul {
 	object-fit:cover; /* nota */
 }
 
-/* breadcrumbs */
+/* content */
 
-#breadcrumb {
-	width:100%;
-    height: 3em;
-}
-  #breadcrumb p{
+#container {
+	border-style:solid;
+	border-color:transparent;
     margin-top: 2em;
-    margin-bottom: 2em;
-    padding-left: 2.5em;
-    font-size: 2em;
+}
+.foto{
+  float: left;
+  margin: 5em 3em auto 3em;/* top right bottom left */
   }
   
+  .testo{
+    width: auto;
+    margin-left: 3em;
+  }
+ 
+#container .dispari{	
+	border-style:solid;
+	border-color:transparent;
+    border-bottom-width: 0;
+	border-spacing:0;
+    background-color:#FFFFFF;
+    padding-bottom: 3em;
+}
+
+#container .pari {
+	border-style:solid;
+	border-color:transparent;
+    border-bottom-width: 0;
+	border-spacing:0;
+	background-color:#EFEFEF;
+    padding-bottom: 3em;
+}
+  
+  
+  #container h1 {
+    text-align: left;
+    margin: 1.5em 0 1em 0;
+    padding-left: 5em;
+  }
+  
+  #container p {
+    text-align: left;
+    padding-left: 15em;
+    padding-right: 10em;
+  }
+  
+  .tothetop {
+	margin-left:0.8em;
+	font-style:italic;
+	font-size:0.3em;
+}
+  #xhtml{
+  clear: left;
+  margin-left: 20%;
+  margin-right: 2em;
+}
+
 /* circlemenu */
 
 #circlemenu{
@@ -181,65 +238,38 @@ border-radius: 400px; /*really large border radius to create round borders*/
 -o-border-radius: 400px;
 }
 
-/* content */
 
-#container {
-	border-style:solid;
-	border-color:transparent;
-    margin-top: 2em;
-}
-.foto{
-  float: left;
-  margin: 5em 3em auto 3em;/* top right bottom left */
-  }
-  
-  .testo{
-    width: auto;
-    margin-left: 3em;
-  }
- 
-#container .dispari{	
-	border-style:solid;
-	border-color:transparent;
-    border-bottom-width: 0em;
-	border-spacing:0;
-    background-color:#FFFFFF;
-    padding-bottom: 3em;
+#xhtml{
+  clear: left;
+  margin-left: 30%;
+  margin-right: 2em;
 }
 
-#container .pari {
-	border-style:solid;
-	border-color:transparent;
-    border-bottom-width: 0em;
-	border-spacing:0;
-	background-color:#EFEFEF;
-    padding-bottom: 3em;
+#css{
+  float: none;
+  margin-left: 2.4em;
 }
-  
-  #container h1 {
-    text-align: left;
-    margin: 1.5em 0em 1em 0em;
-    padding-left: 5em;
-  }
-  
-  #container p {
-    text-align: left;
-    padding-left: 15em;
-    padding-right: 10em;
-  }
-  
-  .tothetop {
-	margin-left:0.8em;
-	font-style:italic;
-	font-size:0.3em;
+/* tablet + desktop */
+@media screen and (min-width:769px) and (max-width:1024px){
+/* header */
+
+#adminzone a {
+	display:block;
+	font-variant:small-caps;
+	font-weight:bold;
+	min-width:22px;
+	min-height:22px;
+    font-size: 25px;
+  }  
 }
 
-}
+
+
 
 /* footer */
 
 #footer {
-	height:90px;
+	height:110px;
     color: white;
 	font-size:0.8em;
 	font-style:italic;
@@ -250,17 +280,12 @@ border-radius: 400px; /*really large border radius to create round borders*/
 #footer img{
   float: left;
   margin-top: 1em;
+  border:0;
+  width:88px;
+  height:31px;
 }
 
-#xhtml{
-  margin-left: 30%;
-  margin-right: 2em;
-}
 
-#css{
-  float: none;
-  margin-left: 2.4em;
-}
 #footer p{
   position: relative;
   text-align: left;
@@ -285,13 +310,37 @@ border-radius: 400px; /*really large border radius to create round borders*/
 content:"| ";
 }
 
+
+/* immagini */
+.circolare {
+  width: 150px; 
+  height: 150px;
+  border-color: #C0C0C0;
+  border-radius:999em;    
+-moz-border-radius:999em;  
+-webkit-border-radius:999em; 
+  -o-border-radius: 999em;  
+  border-style: solid;
+  border-width: .4em;
+}
  /* end desktop + tablet */
 
 /* phone */
-@media screen and (min-width:1px) and (max-width:768px) {
+@media screen and (min-width:461px)and (max-width:768px) {
  body {
-  background-color:yellow;
+  background-color:yellow;  
  }
+  
+  #logoDitta {
+    width:350px;
+    margin-bottom: 0.5em;
+}
+  
+  /* panoramic */
+
+#panoramic {
+	height:200px;
+}
 } /* end phone */
 
 /* printer */
@@ -302,18 +351,15 @@ content:"| ";
 } /* end printer */
 
 
+/* breadcrumbs */
 
-
-/* immagini */
-.circolare {
-  width: 150px; 
-  height: 150px;
-  border-radius:999em;    
--moz-border-radius:999em;  
--webkit-border-radius:999em; 
-  -o-border-radius: 999em;  
-  border-style: solid;
-  border-color: #3CB371;
-  border-width: .4em;
+#breadcrumb {
+	width:100%;
+    height: 3em;
 }
-
+  #breadcrumb p{
+    margin-top: 1.5em;
+    margin-bottom: 1em;
+    padding-left: 2em;
+    font-size: 2em;
+  }
