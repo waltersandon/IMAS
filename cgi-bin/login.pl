@@ -29,19 +29,19 @@ my $inppass = $input{'pass'};
 
 my $retlink = '.../public_html/home.html';
 
-my $matched = false;
+my $matched = 0;
 
 print "<html><head><title>Login</title></head><body>";
 
 foreach $user (@user) {
 	if($inpuser eq ($user->string_value)) {
-		$matched = true;
+		$matched = 1;
 		print "Benvenuto $inpuser!\n\n";
 		print "Torna alla <a href=\"../public_html/home.html\">home</a>";
 		}
 }
 
-if($matched == false) { 
+if($matched == 0) { 
 		print "Dati inseriti errati!\n\n";
 		print "<a href=\"../public_html/login.html\">Riprova</a> oppure torna alla <a href=\"../public_html/home.html\">home</a>";
 }
