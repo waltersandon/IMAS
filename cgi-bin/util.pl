@@ -1,7 +1,6 @@
 use XML::LibXSLT;
 use XML::LibXML;
-use CGI;
-use CGI::Session;
+
 
 my $fileXMLAdmin = '../data/xml/admin.xml';
 my $fileXMLProdotti = '../data/xml/.xml';
@@ -23,14 +22,13 @@ sub connectXMLProdotti() {
 }
 
 sub stampa {
-    }
-
-
+}
 sub printHTML {
     open (FILE, $_[0]) || die "Cannot open '$_[0]': $!";
     print join '', <FILE>;
 }
 sub printDOCTYPE {
+    print "Content-type: text/html\n\n";
     print '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">';
 }
 sub printHTML_BEGIN {
@@ -51,3 +49,4 @@ sub printHEADER {
 sub printFOOTER {
     printHTML("../public_html/parts/footer.xhtml");
 }
+1;
