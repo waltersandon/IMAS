@@ -29,7 +29,7 @@ ul {
 
 #adminZone:link { color: whitesmoke; } /* link da visitare */
 #adminZone:active { color: white; } /* link attivo */
-#adminZone:visited { color: #0000FF; } /* link visitato */
+#adminZone:visited { color: v; } /* link visitato */
 #adminZone:hover {
   text-decoration: underline;
   color: #FF0000; 
@@ -148,7 +148,7 @@ background: #E3001D;
   color: white;
 }
 
-#circlemenu .selectedP,{
+#circlemenu .selectedH, #circlemenu .selectedP, #circlemenu .selectedL, #circlemenu .selectedC{
 display:inline-block;
 text-align:center;
 text-decoration: none;
@@ -337,7 +337,7 @@ height:110px;
   height:120px;
 }
 
-#circlemenu .selectedH, #circlemenu .selectedP,#circlemenu .selectedL, #circlemenu .selected{
+#circlemenu .selectedH, #circlemenu .selectedP,#circlemenu .selectedL, #circlemenu .selectedC{
   width:160px;
   height:160px;
 
@@ -468,8 +468,8 @@ html, body {
 	border-radius:999px;
 }
 
-.selected {
-	font-size:1.2em !important;
+.selectedH,.selectedP,.selectedL,.selectedC {
+	font-size:1.2em ;
 }
 
 #circlemenu a:visited {

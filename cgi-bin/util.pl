@@ -49,4 +49,3 @@ sub printHEADER {
 sub printFOOTER {
     printHTML("../public_html/parts/footer.xhtml");
 }
-1;
