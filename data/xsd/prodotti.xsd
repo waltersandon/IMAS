@@ -16,6 +16,7 @@ elementFormDefault="qualified">
 <xs:complexType name="tcategoria">
 <xs:sequence>
 <xs:element name="nomecat" type="tnomecat" />
+<xs:element name="descrizione" type="xs:string">
 <xs:element name="prodotto" type="tprodotto" maxOccurs="unbounded" />
 </xs:sequence>
 </xs:complexType>

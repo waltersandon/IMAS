@@ -29,7 +29,7 @@ ul {
 
 #adminZone:link { color: whitesmoke; } /* link da visitare */
 #adminZone:active { color: white; } /* link attivo */
-#adminZone:visited { color: v; } /* link visitato */
+#adminZone:visited { color: #0000FF; } /* link visitato */
 #adminZone:hover {
   text-decoration: underline;
   color: #FF0000; 
@@ -148,7 +148,7 @@ background: #E3001D;
   color: white;
 }
 
-#circlemenu .selectedH, #circlemenu .selectedP, #circlemenu .selectedL, #circlemenu .selectedC{
+#circlemenu .selectedP,{
 display:inline-block;
 text-align:center;
 text-decoration: none;
@@ -221,6 +221,29 @@ margin-right:5px; /*right spacing between each link */
 	margin-left:0.8em;
 	font-style:italic;
 	font-size:0.3em;
+}
+
+
+.descrizioneCat{
+  float: left;
+  margin-top: 1em;
+}
+#nomeCategoria{
+  float: none;
+}
+
+.descrizioneCat img{
+  float: left;
+  margin-left: 1em;
+}
+
+.descrizioneCat ul{
+  margin-left: 12em;
+}
+
+.listaProdotti{
+  margin-top: 1em;
+  margin-bottom: 1em;
 }
 
 /* phone */
@@ -337,7 +360,7 @@ height:110px;
   height:120px;
 }
 
-#circlemenu .selectedH, #circlemenu .selectedP,#circlemenu .selectedL, #circlemenu .selectedC{
+#circlemenu .selectedH, #circlemenu .selectedP,#circlemenu .selectedL, #circlemenu .selected{
   width:160px;
   height:160px;
 
@@ -468,8 +491,8 @@ html, body {
 	border-radius:999px;
 }
 
-.selectedH,.selectedP,.selectedL,.selectedC {
-	font-size:1.2em ;
+.selected {
+	font-size:1.2em !important;
 }
 
 #circlemenu a:visited {

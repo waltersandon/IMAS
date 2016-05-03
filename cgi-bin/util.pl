@@ -49,3 +49,16 @@ sub printHEADER {
 sub printFOOTER {
     printHTML("../public_html/parts/footer.xhtml");
 }
+
+sub printTRANSFORM {
+    my $parser = XML::LibXML->new();
+    my $doc = $parser->parse_file("../data/xml/prodotti.xml");
+    my $style_doc = $parser->parse_file($_[0]);
+    
+    my $xslt = XML::LibXSLT->new();
+    my $stylesheet = $xslt->parse_stylesheet($style_doc);
+    my $results = $stylesheet->transform($doc);
+    my $output = $stylesheet->output_string($results);
+    
+    print $output;
+}

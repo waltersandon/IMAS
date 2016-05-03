@@ -1,11 +1,11 @@
 <?xml version="1.0"?>
 
-<catalogo xmlns="http://imas.it/xml/xsd/prodotti"
-                  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-                  xsi:schemaLocation="database/xsd prodotti.xsd">
+<catalogo>
 
 <categoria>
-<nomecat>Griglie e fornelli</nomecat>
+<nomecat> PER Griglie e fornelli</nomecat>
+<descrizione> I prodotti in filo per lavastoviglie rappresentano i nostri prodotti più competitivi che richiedono una tecnologia produttiva avanzata e questi sono i nostri prodotti di maggior successo. Per questa linea di prodotti la qualità della finitura è particolarmente importante in quanto sono esposti a costante stress meccanico e termico all’interno di un ambiente umido.
+</descrizione>
 
 <prodotto>
 <id>ID001</id>
@@ -28,7 +28,9 @@
 </categoria>
 
 <categoria>
-<nomecat>Laminati e lastre</nomecat>
+<nomecat>PER Laminati e lastre</nomecat>
+<descrizione> I prodotti in filo per lavastoviglie rappresentano i nostri prodotti più competitivi che richiedono una tecnologia produttiva avanzata e questi sono i nostri prodotti di maggior successo. Per questa linea di prodotti la qualità della finitura è particolarmente importante in quanto sono esposti a costante stress meccanico e termico all’interno di un ambiente umido.
+</descrizione>
 
 <prodotto>
 <id>ID003</id>
