@@ -15,19 +15,11 @@ elementFormDefault="qualified">
 
 <xs:complexType name="tcategoria">
 <xs:sequence>
-<xs:element name="nomecat" type="tnomecat" />
-<xs:element name="descrizione" type="xs:string">
+<xs:element name="nomecat" type="xs:string" />
+<xs:element name="descrcat" type="xs:string" />
 <xs:element name="prodotto" type="tprodotto" maxOccurs="unbounded" />
 </xs:sequence>
 </xs:complexType>
-
-<xs:simpleType name="tnomecat">
-<xs:restriction base="xs:string">
-<xs:enumeration value="Griglie e fornelli" />
-<xs:enumeration value="Laminati e lastre" />
-<xs:enumeration value="Fili e rivestimenti" />
-</xs:restriction>
-</xs:simpleType>
 
 <xs:complexType name="tprodotto">
 <xs:sequence>
@@ -36,7 +28,7 @@ elementFormDefault="qualified">
 <xs:element name="foto" type="xs:anyURI" minOccurs="0" />
 <xs:element name="alt" type="xs:string" minOccurs="0" />
 <xs:element name="descrizione" type="xs:string" minOccurs="0" />
-<xs:element name="lavorazione" type="tlavorazione" />
+<xs:element name="lavorazione" type="tlavorazione" maxOccurs="unbounded" />
 </xs:sequence>
 </xs:complexType>
 
