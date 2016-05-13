@@ -2,6 +2,10 @@
 
 <utenti>
 <utente>
+<username>admin</username>
+<password>admin</password>
+</utente>
+<utente>
 <username>aa</username>
 <password>11</password>
 </utente>
