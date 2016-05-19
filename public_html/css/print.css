@@ -1,0 +1,113 @@
+/* print */
+@media print {
+
+html, body {
+	font-family:Arial,Helvetica,sans-serif;
+	font-size:1em;
+	color:black;
+}
+
+/* header */
+
+/* breadcrumbs */
+
+#breadcrumb {
+	width:100%;
+    height: 3em;
+}
+  #breadcrumb p{
+    margin-top: 1.5em;
+    margin-bottom: 1em;
+    padding-left: 2em;
+    font-size: 2em;
+  }
+#logoDitta {
+	display:block;
+	height:105px;
+	width:397px;
+	margin:1.5em 0em 0em 0em;
+}
+  
+#adminzone {
+	display:none;
+}
+
+/* panoramic */
+
+#panoramic {
+	display:none;
+}
+
+/* breadcrumbs */
+
+
+
+#breadcrumb p {
+    font-size:1em;
+}
+  
+/* circlemenu */
+
+#circlemenu li {
+	display:inline-block;
+	padding:0.5em;
+	margin:0em 1em 0.5em 0em;
+	font-size:0.8em;
+	border-style:solid;
+	border-color:black;
+	border-width:1px;
+	border-radius:999px;
+}
+
+.selected {
+	font-size:1.2em !important;
+}
+
+#circlemenu a:visited {
+	color:blue;
+}
+
+/* content */
+
+.foto {
+	display:none;
+}
+  
+.tothetop {
+	display:none;
+}
+
+#storia {
+	page-break-before:always;
+}
+
+/* footer */
+
+#footer {
+	font-size:0.8em;
+	font-style:italic;
+	border-style:solid;
+	border-color:black;
+	border-width:1px;
+	margin:4em 0em 0em 0em;
+	height:22mm;
+}
+
+#footer ul li {
+	list-style-type:none;
+	display:inline;
+}
+
+#footer ul li:before {
+	content:"| ";
+}
+
+#footer img {
+	display:none;
+}
+
+#footer p {
+	margin:1em 0em 0em 1em;
+}
+
+} /* end print */
