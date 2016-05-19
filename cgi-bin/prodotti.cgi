@@ -1,6 +1,7 @@
 #!perl
+#!/usr/bin/perl
 
-require "util.pl";
+require "utility.pl";
 
 printDOCTYPE();
 printHTML_BEGIN();
