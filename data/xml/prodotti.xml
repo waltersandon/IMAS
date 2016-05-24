@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<catalogo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.imas.com data/xsd/prodotti.xsd">
+
+<categoria>
+<fotocat>../public_html/images/fornelli.jpg</fotocat>
+<altcat>Foto Griglie e fornelli</altcat>
+<nomecat>Griglie e fornelli</nomecat>
+<descrcat>I prodotti in filo per lavastoviglie rappresentano i nostri prodotti più competitivi che richiedono una tecnologia produttiva avanzata e questi sono i nostri prodotti di maggior successo. Per questa linea di prodotti la qualità della finitura è particolarmente importante in quanto sono esposti a costante stress meccanico e termico all’interno di un ambiente umido.
+</descrcat>
+
+<prodotto>
+<id>ID001</id>
+<nomeprod>Griglia base n1</nomeprod>
+<foto>../public_html/images/griglia1.jpg</foto>
+<alt>Foto Griglia base n1</alt>
+<descrizione>Una semplice griglia adatta a tutti i tipi di lavori casalinghi.</descrizione>
+<lavorazione>Verniciatura</lavorazione>
+<lavorazione>Cromatura</lavorazione>
+</prodotto>
+
+<prodotto>
+<id>ID002</id>
+<nomeprod>Griglia base n2</nomeprod>
+<foto>../public_html/images/griglia2.jpg</foto>
+<alt>Foto griglia base n2</alt>
+<descrizione>Una normale griglia adatta a tutti i tipi di lavori casalinghi.</descrizione>
+<lavorazione>Cromatura</lavorazione>
+</prodotto>
+
+</categoria>
+
+<categoria>
+<nomecat>Laminati e lastre</nomecat>
+<fotocat>../public_html/images/laminati.jpg</fotocat>
+<altcat>Foto Laminati e lastre</altcat>
+<descrcat>I prodotti in filo per lavastoviglie rappresentano i nostri prodotti più competitivi che richiedono una tecnologia produttiva avanzata e questi sono i nostri prodotti di maggior successo. Per questa linea di prodotti la qualità della finitura è particolarmente importante in quanto sono esposti a costante stress meccanico e termico all’interno di un ambiente umido.
+</descrcat>
+
+<prodotto>
+<id>ID003</id>
+<nomeprod>Lastra rettangolare</nomeprod>
+<foto>../public_html/images/lastra.jpg</foto>
+<alt>Foto lastra rettangolare</alt>
+<descrizione>Una lastra di forma rettangolare.</descrizione>
+<lavorazione>Taglio</lavorazione>
+</prodotto>
+
+</categoria>
+
+</catalogo>
