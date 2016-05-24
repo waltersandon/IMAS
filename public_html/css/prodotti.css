@@ -1,0 +1,567 @@
+html,body {
+	width:100%;
+	margin:0;
+	font-family:Arial,Helvetica,sans-serif;
+	font-size:1em;
+	background-color:white;
+}
+
+ul {
+  list-style-type:none;
+} 
+
+#header {
+	background-color:#808080;
+}
+
+#logoDitta{
+  float:left;
+  margin-bottom: 2.1em;  
+  margin-left: 6%;
+}
+
+#adminZone {
+  float:right;
+  position:relative;
+  top:73%;
+  right:1.5em;
+  text-decoration: none;
+}
+
+#adminZone:link { color: whitesmoke; } /* link da visitare */
+#adminZone:active { color: white; } /* link attivo */
+#adminZone:visited { color: #0000FF; } /* link visitato */
+#adminZone:hover {
+  text-decoration: underline;
+  color: #FF0000; 
+}
+
+#panoramic {
+  width:100%;
+  height:250px;
+  display:block;
+  object-fit:cover; /* nota */
+}
+
+#breadcrumb {
+  height: 2.5em;
+  color: white;
+}
+
+#breadcrumb p{
+  padding-top: .5em;
+  padding-left: 2em;
+  font-size: 1.3em;
+}
+
+/* circlemenu */
+
+#circlemenu{
+width: 100%;
+overflow:hidden;
+}
+
+#circlemenu ul{
+margin: 0;
+padding: 0;
+list-style-type: none;
+text-align: center; /* "left", "center", or "right" align menu */
+}
+
+#circlemenu li{
+  display: inline;
+  margin-top: 2em;
+  margin-left: 2em;
+}
+
+#circlemenu li{
+  display:inline-block;
+  text-align:center;
+  text-decoration: none;
+  color: white;
+  margin-right:5px; /*right spacing between each link */
+  border-radius: 400px; /*really large border radius to create round borders*/
+-moz-border-radius: 400px;
+-webkit-border-radius: 400px;
+-o-border-radius: 400px;
+}
+  
+#circlemenu .notSelected{
+  position: relative;
+  top:1.5em;
+}
+#circlemenu span, #circlemenu a span{
+position:relative;
+top: 40%;
+}
+
+#circlemenu #home, .home{
+  background-color: #0dd91d;
+  } 
+
+#circlemenu #home:hover{
+  background-color: #3CB371;
+  } 
+
+#circlemenu #prodotti, .prodotti{
+  background-color: #FFDA00;
+  }
+  
+  #circlemenu #prodotti:hover{
+  background-color: #FECB00;
+  }
+  
+  #circlemenu #lavorazioni, .lavorazioni{
+  background-color: #ff5128;
+  }
+  
+  #circlemenu #lavorazioni:hover{
+  background-color: #E98300;
+  }
+  
+  #circlemenu #contatti, contatti{
+  background-color: #E3001D;
+  }
+  
+  #circlemenu #contatti:hover{
+  background-color: #b72d23;
+  }
+  
+#circlemenu li:visited{
+color: white;
+}
+
+#circlemenu .selectedH{
+background: #0dd91d;
+}
+#circlemenu .selectedP{
+background: #FECB00;
+}
+#circlemenu .selectedL{
+background: #ff5128;
+}
+#circlemenu .selectedC{
+background: #E3001D;
+}
+
+#circlemenu li a{
+  text-decoration: none;
+  color: white;
+}
+
+#circlemenu .selectedP{
+display:inline-block;
+text-align:center;
+text-decoration: none;
+color: white;
+margin-right:5px; /*right spacing between each link */
+}
+
+/* container */
+
+#container {
+	border-style:solid;
+	border-color:transparent;
+    margin-top: 2em;
+}
+
+.circolare {
+  border-color: #C0C0C0;
+  border-radius:999em;    
+  -moz-border-radius:999em;  
+  -webkit-border-radius:999em; 
+  -o-border-radius: 999em;  
+  border-style: solid;
+  border-width: 0.2em;
+}
+
+.fotocat {
+	float:left;
+	height:180px;
+	width:180px;
+	margin:3em 1.5em 0em 3em;
+}
+
+.fotoprod {
+	float:left;
+	height:120px;
+	width:120px;
+	margin:2em 1.5em 0em 3em;
+}
+
+.fotolav {
+	float:left;
+	height:70px;
+	width:70px;
+	margin:0em 1em 1em 2em;
+}
+  
+.testocat {
+    margin-left:3em;
+}
+
+.testoprod {
+    margin-left:1em;
+}
+
+.ullav {
+	margin:0em 0em 0em 8em;
+}
+
+.ullav li {
+	display:inline-block;
+	margin: 0em 1em 0em 0em;
+}
+
+.ullav p {
+	float:right;
+	padding-left:0em !important;
+}
+  
+#container .categoria {	
+	border-style:solid;
+	border-color:transparent;
+    border-bottom-width:0;
+	border-spacing:0;
+    background-color:#EFEFEF;
+    padding-bottom:1em;
+}
+
+#container .prodotto {
+	border-style:solid;
+	border-color:lightgray;
+	border-width:1px;
+	border-left-style:none;
+	border-right-style:none;
+	background-color:#FFFFFF;
+    padding-bottom:1em;
+}
+
+#container h1 {
+    text-align:left;
+    margin:1.5em 0em 1em 0em;
+    padding-left:5em;
+}
+
+#container h2 {
+    text-align:left;
+    margin:1.5em 0em 1em 0em;
+    padding-left:5em;
+}
+  
+.categoria p {
+    text-align:left;
+    padding-left:15em;
+    padding-right:10em;
+	line-height:2em;
+}
+
+.prodotto p {
+    text-align:left;
+    padding-left:11.5em;
+	line-height:2em;
+}
+  
+.tothetop {
+	margin-left:0.8em;
+	font-style:italic;
+	font-size:0.3em;
+}
+
+/* phone */
+@media screen and (min-width: 480px) and (max-width: 768px) {
+   
+  #header{
+    height: 90px;
+  }
+  #logoDitta {
+  float:left;
+  margin-bottom: 2.1em;  
+  margin-left: 6%;
+  height: 90px;
+  width:300px;
+  background-color: #808080;
+}
+  
+  #adminZone {
+  font-size: 18px;
+}
+  #panoramic {
+	width:100%;
+	height:250px;
+}
+  
+  #breadcrumb{
+    height: 2em;
+    font-size: 
+  }
+  
+  #breadcrumb p{
+  padding-top: .3em;
+  padding-left: 2em;
+  font-size: 1.1em;
+}
+  /* circlemenu */
+
+#circlemenu ul{
+  font: bold 12px Verdana;
+}
+
+#circlemenu li{
+}
+
+#circlemenu li{
+  width:80px;
+  height:80px;
+}
+  
+  
+#circlemenu .notSelected{
+  position: relative;
+  top:1.5em;
+}
+
+#circlemenu .selectedH, #circlemenu .selectedP, #circlemenu .selectedL,#circlemenu .selectedC{
+width:110px;
+height:110px;
+}
+  
+/* container */
+  
+  .foto{
+    float: left;
+    padding-bottom: 3em;
+  }
+  
+  #container h1 {
+   text-align: left;
+   margin: 1.5em 0 1em 0;
+   padding-left: 5em;
+   padding-top: 2em;
+  }
+  
+  #container p {
+    clear: both;
+    text-align: left;
+    padding-left: 0;
+    padding-right: 0em;
+  }
+}
+/* end phone */ 
+
+/* tablet + desktop */
+@media screen and (min-width:769px) and (max-width:1200px){
+/* header */
+  #header {
+	height:130px;
+}
+
+#logoDitta {
+  height: 130px;
+  width:450px;
+}
+
+#adminZone {
+  font-size: 25px;
+}
+
+/* panoramic */
+
+#panoramic {
+	max-width:1200px;
+}
+
+/* circlemenu */
+
+#circlemenu ul{
+  font: bold 16px Verdana;
+}
+
+#circlemenu li{
+  width:120px;
+  height:120px;
+}
+
+#circlemenu .selectedH, #circlemenu .selectedP,#circlemenu .selectedL, #circlemenu .selected{
+  width:160px;
+  height:160px;
+
+}
+
+#xhtml{
+  clear: left;
+  margin-left: 30%;
+  margin-right: 2em;
+}
+
+#css{
+  float: none;
+  margin-left: 2.4em;
+  }
+  
+  
+  
+}
+
+
+
+
+/* footer */
+
+#footer {
+	height:110px;
+    color: white;
+	font-size:0.8em;
+	font-style:italic;
+	background-color:#808080;
+	margin:6em auto 1.2em auto;
+}
+
+#footer img{
+  float: left;
+  margin-top: 1em;
+  border:0;
+  width:88px;
+  height:31px;
+}
+
+
+#footer p{
+  position: relative;
+  text-align: left;
+  float: left;
+  font-size: 16px;
+  margin-top: 1.2em;
+}
+
+#footer ul{
+  clear: left;
+  margin-left: 5%;
+  padding-top: 1em;
+}
+
+#footer ul li{
+  float: left;
+  list-style: none;
+  padding: 2px;
+}
+
+#footer ul li:before {
+content:"| ";
+}
+
+ /* end desktop + tablet */
+
+/* print */
+@media print {
+
+html, body {
+	font-family:Arial,Helvetica,sans-serif;
+	font-size:1em;
+	color:black;
+}
+
+/* header */
+
+/* breadcrumbs */
+
+#breadcrumb {
+	width:100%;
+    height: 3em;
+}
+  #breadcrumb p{
+    margin-top: 1.5em;
+    margin-bottom: 1em;
+    padding-left: 2em;
+    font-size: 2em;
+  }
+#logoDitta {
+	display:block;
+	height:105px;
+	width:397px;
+	margin:1.5em 0em 0em 0em;
+}
+  
+#adminzone {
+	display:none;
+}
+
+/* panoramic */
+
+#panoramic {
+	display:none;
+}
+
+/* breadcrumbs */
+
+
+
+#breadcrumb p {
+    font-size:1em;
+}
+  
+/* circlemenu */
+
+#circlemenu li {
+	display:inline-block;
+	padding:0.5em;
+	margin:0em 1em 0.5em 0em;
+	font-size:0.8em;
+	border-style:solid;
+	border-color:black;
+	border-width:1px;
+	border-radius:999px;
+}
+
+.selected {
+	font-size:1.2em !important;
+}
+
+#circlemenu a:visited {
+	color:blue;
+}
+
+/* content */
+
+.foto {
+	display:none;
+}
+  
+.tothetop {
+	display:none;
+}
+
+#storia {
+	page-break-before:always;
+}
+
+/* footer */
+
+#footer {
+	font-size:0.8em;
+	font-style:italic;
+	border-style:solid;
+	border-color:black;
+	border-width:1px;
+	margin:4em 0em 0em 0em;
+	height:22mm;
+}
+
+#footer ul li {
+	list-style-type:none;
+	display:inline;
+}
+
+#footer ul li:before {
+	content:"| ";
+}
+
+#footer img {
+	display:none;
+}
+
+#footer p {
+	margin:1em 0em 0em 1em;
+}
+
+} /* end printer */
