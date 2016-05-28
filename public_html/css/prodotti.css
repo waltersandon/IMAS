@@ -13,7 +13,49 @@ ul {
 #header {
 	background-color:#808080;
 }
+/* footer */
 
+#footer {
+    height:110px;
+    color: white;
+    font-size:0.8em;
+    font-style:italic;
+    background-color:#808080;
+    margin:6em auto 1.2em auto;
+}
+
+#footer img{
+    float: left;
+    margin-top: 1em;
+    border:0;
+    width:88px;
+    height:31px;
+}
+
+
+#footer p{
+    position: relative;
+    text-align: left;
+    float: left;
+    font-size: 16px;
+    margin-top: 1.2em;
+}
+
+#footer ul{
+    clear: left;
+    margin-left: 5%;
+    padding-top: 1em;
+}
+
+#footer ul li{
+    float: left;
+    list-style: none;
+    padding: 2px;
+}
+
+#footer ul li:before {
+    content:"| ";
+}
 #logoDitta{
   float:left;
   margin-bottom: 2.1em;  
@@ -100,15 +142,15 @@ top: 40%;
   } 
 
 #circlemenu #home:hover{
-  background-color: #3CB371;
+  background-color: #0fb358;
   } 
 
 #circlemenu #prodotti, .prodotti{
-  background-color: #FFDA00;
+  background-color: #ffd100;
   }
   
   #circlemenu #prodotti:hover{
-  background-color: #FECB00;
+  background-color: #feaf0d;
   }
   
   #circlemenu #lavorazioni, .lavorazioni{
@@ -116,11 +158,11 @@ top: 40%;
   }
   
   #circlemenu #lavorazioni:hover{
-  background-color: #E98300;
+  background-color: #e46802;
   }
   
-  #circlemenu #contatti, contatti{
-  background-color: #E3001D;
+  #circlemenu #contatti{
+  background-color: #e3001d;
   }
   
   #circlemenu #contatti:hover{
@@ -135,7 +177,7 @@ color: white;
 background: #0dd91d;
 }
 #circlemenu .selectedP{
-background: #FECB00;
+background: #ffd100;
 }
 #circlemenu .selectedL{
 background: #ff5128;
@@ -158,112 +200,48 @@ margin-right:5px; /*right spacing between each link */
 }
 
 /* container */
-
-#container {
-	border-style:solid;
-	border-color:transparent;
-    margin-top: 2em;
+.pari{
+    background-color: #a6a6a6;
+}
+.dispari{
+    background-color: white;
 }
 
-.circolare {
-  border-color: #C0C0C0;
-  border-radius:999em;    
-  -moz-border-radius:999em;  
-  -webkit-border-radius:999em; 
-  -o-border-radius: 999em;  
-  border-style: solid;
-  border-width: 0.2em;
+.catContent{
+    height: 190px;
 }
 
+.listaProd{
+    background-color: #0000FF;
+}
+
+.testocat{
+    padding-top:1em ;
+}
 .fotocat {
-	float:left;
-	height:180px;
-	width:180px;
-	margin:3em 1.5em 0em 3em;
+    float: left;
+    height:180px;
+    width:180px;
+    margin-right: 2em;
+    margin-left: 2em;
+}
+.circolare {
+    border-color: #C0C0C0;
+    border-radius:999em;
+    -moz-border-radius:999em;
+    -webkit-border-radius:999em;
+    -o-border-radius: 999em;
+    border-style: solid;
+    border-width: 0.2em;
 }
 
 .fotoprod {
-	float:left;
-	height:120px;
-	width:120px;
-	margin:2em 1.5em 0em 3em;
+    float: none;
+    display: block;
+    height:120px;
+    width:120px;
 }
 
-.fotolav {
-	float:left;
-	height:70px;
-	width:70px;
-	margin:0em 1em 1em 2em;
-}
-  
-.testocat {
-    width:auto;
-    margin-left:3em;
-}
-
-.testoprod {
-	width:auto;
-    margin-left:1em;
-}
-
-.ullav {
-	margin:0em 0em 0em 8em;
-}
-
-.ullav li {
-	display:inline-block;
-	margin: 0em 1em 0em 0em;
-}
-
-.ullav p {
-	float:right;
-	padding-left:0em !important;
-}
-  
-#container .categoria {	
-	border-style:solid;
-	border-color:transparent;
-    border-bottom-width: 0;
-	border-spacing:0;
-    background-color:#FFFFFF;
-    padding-bottom:1em;
-}
-
-#container .prodotto {
-	border-style:solid;
-	border-color:lightgray;
-	border-width:1px;
-	border-left-style:none;
-	border-right-style:none;
-	background-color:#EFEFEF;
-    padding-bottom:1em;
-}
-
-#container h1 {
-    text-align:left;
-    margin:1.5em 0em 1em 0em;
-    padding-left:5em;
-}
-
-#container h2 {
-    text-align:left;
-    margin:1.5em 0em 1em 0em;
-    padding-left:5em;
-}
-  
-.categoria p {
-    text-align:left;
-    padding-left:15em;
-    padding-right:10em;
-	line-height:2em;
-}
-
-.prodotto p {
-    text-align:left;
-    padding-left:11.5em;
-	line-height:2em;
-}
-  
 .tothetop {
 	margin-left:0.8em;
 	font-style:italic;
@@ -272,19 +250,19 @@ margin-right:5px; /*right spacing between each link */
 
 /* phone */
 @media screen and (min-width: 480px) and (max-width: 768px) {
-   
+
   #header{
     height: 90px;
   }
   #logoDitta {
   float:left;
-  margin-bottom: 2.1em;  
+  margin-bottom: 2.1em;
   margin-left: 6%;
   height: 90px;
   width:300px;
   background-color: #808080;
 }
-  
+
   #adminZone {
   font-size: 18px;
 }
@@ -292,12 +270,11 @@ margin-right:5px; /*right spacing between each link */
 	width:100%;
 	height:250px;
 }
-  
+
   #breadcrumb{
     height: 2em;
-    font-size: 
   }
-  
+
   #breadcrumb p{
   padding-top: .3em;
   padding-left: 2em;
@@ -316,8 +293,8 @@ margin-right:5px; /*right spacing between each link */
   width:80px;
   height:80px;
 }
-  
-  
+
+
 #circlemenu .notSelected{
   position: relative;
   top:1.5em;
@@ -327,29 +304,29 @@ margin-right:5px; /*right spacing between each link */
 width:110px;
 height:110px;
 }
-  
+
 /* container */
-  
+
   .foto{
     float: left;
     padding-bottom: 3em;
   }
-  
+
   #container h1 {
    text-align: left;
    margin: 1.5em 0 1em 0;
    padding-left: 5em;
    padding-top: 2em;
   }
-  
+
   #container p {
     clear: both;
     text-align: left;
     padding-left: 0;
-    padding-right: 0em;
+    padding-right: 0;
   }
 }
-/* end phone */ 
+/* end phone */
 
 /* tablet + desktop */
 @media screen and (min-width:769px) and (max-width:1200px){
@@ -400,57 +377,10 @@ height:110px;
   float: none;
   margin-left: 2.4em;
   }
-  
-  
-  
+
 }
 
 
-
-
-/* footer */
-
-#footer {
-	height:110px;
-    color: white;
-	font-size:0.8em;
-	font-style:italic;
-	background-color:#808080;
-	margin:6em auto 1.2em auto;
-}
-
-#footer img{
-  float: left;
-  margin-top: 1em;
-  border:0;
-  width:88px;
-  height:31px;
-}
-
-
-#footer p{
-  position: relative;
-  text-align: left;
-  float: left;
-  font-size: 16px;
-  margin-top: 1.2em;
-}
-
-#footer ul{
-  clear: left;
-  margin-left: 5%;
-  padding-top: 1em;
-}
-
-#footer ul li{
-  float: left;
-  list-style: none;
-  padding: 2px;
-}
-
-#footer ul li:before {
-content:"| ";
-}
 
  /* end desktop + tablet */
 
@@ -483,7 +413,7 @@ html, body {
 	width:397px;
 	margin:1.5em 0em 0em 0em;
 }
-  
+
 #adminzone {
 	display:none;
 }
@@ -501,7 +431,7 @@ html, body {
 #breadcrumb p {
     font-size:1em;
 }
-  
+
 /* circlemenu */
 
 #circlemenu li {
@@ -528,7 +458,7 @@ html, body {
 .foto {
 	display:none;
 }
-  
+
 .tothetop {
 	display:none;
 }
