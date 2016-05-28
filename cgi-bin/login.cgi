@@ -1,9 +1,11 @@
 #!perl
+#!/usr/bin/perl
 
 require "utility.pl";
 
 printDOCTYPE();
 printHTML_BEGIN();
+
 printHTML("../public_html/parts/login_header.xhtml");
 printBODY_BEGIN();
 printHEADER();

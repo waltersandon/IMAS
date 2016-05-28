@@ -1,26 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
-xmlns:pr="http://imas.it/xml/xsd/prodotti">
+<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
-<xsl:template match="/pr:catalogo">
+<xsl:template match="/catalogo">
 <div id="container">
-<xsl:for-each select="pr:categoria">
+<xsl:for-each select="categoria">
 <div class="categoria">
-	<img class="circolare fotocat" src="{pr:fotocat}" alt="{pr:altcat}" />
+	<img class="circolare fotocat" src="{fotocat}" alt="{altcat}" />
 	<div class="testocat">
-	<h1><xsl:value-of select="pr:nomecat" /><a href="#top" class="tothetop">[torna su]</a></h1>
-	<p><xsl:value-of select="pr:descrcat" /></p>
+	<h1><xsl:value-of select="nomecat" /><a href="#top" class="tothetop">[torna su]</a></h1>
+	<p><xsl:value-of select="descrcat" /></p>
 	</div>
 </div>
-<xsl:for-each select="pr:prodotto">
+<xsl:for-each select="prodotto">
 <div class="prodotto">
-	<img class="circolare fotoprod" src="{pr:foto}" alt="{pr:alt}" />
+	<img class="circolare fotoprod" src="{foto}" alt="{alt}" />
 	<div class="testoprod">
-	<h2><xsl:value-of select="pr:nomeprod" /></h2>
-	<p><xsl:value-of select="pr:descrizione" /></p>
+	<h2><xsl:value-of select="nomeprod" /></h2>
+	<p><xsl:value-of select="descrizione" /></p>
 	<p>Lavorazioni disponibili:</p>
 		<ul class="ullav">
-		<xsl:for-each select="pr:lavorazione">
+		<xsl:for-each select="lavorazione">
 		<xsl:if test="text()='Verniciatura'">
 		<li><img class="circolare fotolav" src="../public_html/images/verniciatura.jpg" alt="Verniciatura" />
 		<p>Verniciatura</p></li>

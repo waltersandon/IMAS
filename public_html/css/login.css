@@ -21,7 +21,19 @@ ul {
 }
 
 #adminZone {
-	display:none;
+  float:right;
+  position:relative;
+  top:73%;
+  right:1.5em;
+  text-decoration: none;
+}
+
+#adminZone:link { color: whitesmoke; } /* link da visitare */
+#adminZone:active { color: white; } /* link attivo */
+#adminZone:visited { color: #0000FF; } /* link visitato */
+#adminZone:hover {
+  text-decoration: underline;
+  color: #FF0000; 
 }
 
 #panoramic {
@@ -53,7 +65,7 @@ overflow:hidden;
 margin: 0;
 padding: 0;
 list-style-type: none;
-text-align: center; /* "left", "center", or "right" align menu */
+text-align: center;
 }
 
 #circlemenu li{
@@ -149,24 +161,6 @@ color: white;
 margin-right:5px; /*right spacing between each link */
 }
 
-/* immagini */
-.circolare {
-  width: 150px; 
-  height: 150px;
-  border-color: #C0C0C0;
-  border-radius:999em;    
--moz-border-radius:999em;  
--webkit-border-radius:999em; 
-  -o-border-radius: 999em;  
-  border-style: solid;
-  border-width: .4em;
-}
-
-.foto{
-  float: left;
-  margin: 5em 3em auto 3em;/* top right bottom left */
-  }
-
 /* container */
 
 #container {
@@ -176,10 +170,6 @@ margin-right:5px; /*right spacing between each link */
 	border-bottom-width: 0;
 	border-spacing:0;
     background-color:#FFFFFF;
-}
-
-#container legend {
-	font-weight:bold;
 }
 
 /* login */
@@ -216,7 +206,7 @@ margin-right:5px; /*right spacing between each link */
 .error {
 	font-weight:bold;
 	background-color:pink;
-	padding:0.3em 0em 0.3em 5em;
+	padding:0.4em 0em 0.4em 20em;
 	margin:0em 0em 3em 0em;
 }
 
@@ -311,6 +301,10 @@ height:110px;
 #logoDitta {
   height: 130px;
   width:450px;
+}
+
+#adminZone {
+  font-size: 25px;
 }
 
 /* panoramic */

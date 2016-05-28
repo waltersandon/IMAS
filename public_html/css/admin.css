@@ -8,7 +8,7 @@ html,body {
 
 ul {
   list-style-type:none;
-} 
+}
 
 #header {
 	background-color:#808080;
@@ -95,6 +95,10 @@ position:relative;
 top: 40%;
 }
 
+.admin {
+	background-color: cyan;
+}
+
 #circlemenu #home, .home{
   background-color: #0dd91d;
   } 
@@ -157,19 +161,6 @@ color: white;
 margin-right:5px; /*right spacing between each link */
 }
 
-/* immagini */
-.circolare {
-  width: 150px; 
-  height: 150px;
-  border-color: #C0C0C0;
-  border-radius:999em;    
--moz-border-radius:999em;  
--webkit-border-radius:999em; 
-  -o-border-radius: 999em;  
-  border-style: solid;
-  border-width: .4em;
-}
-
 .foto{
   float: left;
   margin: 5em 3em auto 3em;/* top right bottom left */
@@ -181,70 +172,48 @@ margin-right:5px; /*right spacing between each link */
 	border-style:solid;
 	border-color:transparent;
     margin-top: 2em;
-}
-  
-  .testo{
-    width: auto;
-    margin-left: 3em;
-  }
-#container .dispari{	
-	border-style:solid;
-	border-color:transparent;
-    border-bottom-width: 0;
+	border-bottom-width: 0;
 	border-spacing:0;
-    background-color:#EFEFEF;
-	padding-bottom:3em;
 }
 
-#container .pari {
+#container h1 {
+	padding:0.5em 0em 0.5em 2em;
+	background-color:#EFEFEF;
+	margin:0;
+}
+
+#container ul {
 	border-style:solid;
-	border-color:transparent;
-    border-bottom-width: 0;
-	border-spacing:0;
+	border-color:lightgray;
+	border-width:1px;
+	border-left-style:none;
+	border-right-style:none;
 	background-color:#FFFFFF;
-	padding-bottom:3em;
-}
-  
-  
-  #container h1 {
-    text-align: left;
-    margin: 1.5em 0 1em 0;
-    padding-left: 5em;
-  }
-  
-  #container p {
-    text-align: left;
-    padding-left: 15em;
-    padding-right: 10em;
-  }
-  
-  .tothetop {
-	margin-left:0.8em;
-	font-style:italic;
-	font-size:0.3em;
+	margin:0;
 }
 
-
-.descrizioneCat{
-  float: left;
-  margin-top: 1em;
-}
-#nomeCategoria{
-  float: none;
+#container li {
+	display:inline-block;
+	padding:0.5em 0em 0.5em 0em;
+	margin:1em;
 }
 
-.descrizioneCat img{
-  float: left;
-  margin-left: 1em;
+#container img {
+	margin-left:3em;
+	float:left;
+	height:120px;
+	width:120px;
+	border-radius:99px;
+	border-style:solid;
+	border-width:0.2em;
+	 border-color:#C0C0C0;
 }
 
-.descrizioneCat ul{
-  margin-left: 12em;
-}
-
-.listaProdotti{
-  margin-top: 1em;
-  margin-bottom: 1em;
+#container p {
+	float:right;
+	font-size:1.2em;
+	text-decoration:underline;
+    margin:2.5em 0em 0em 1em;
 }
 
 /* phone */
