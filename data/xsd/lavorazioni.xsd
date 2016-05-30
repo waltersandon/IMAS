@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="http://imas.it/xml/xsd/prodotti"
+           xmlns="http://imas.it/xml/xsd/lavorazioni"
+           elementFormDefault="qualified">
+
+<xsd:element name="lavorazioni" type="tlavorazioni" />
+
+    <xsd:complexType name="tlavorazioni">
+        <xsd:sequence>
+            <xsd:element name="lavorazione" type="tlavorazione" maxOccurs="unbounded" />
+        </xsd:sequence>
+    </xsd:complexType>
+
+    <xsd:complexType name="tlavorazione">
+        <xsd:sequence>
+            <xsd:element name="nomeLav" type="xsd:string"/>
+            <xsd:element name="fotoLav" type="xsd:string"/>
+            <xsd:element name="descrLav" type="xsd:string" />
+            <xsd:element name="commento" type="xsd:string" maxOccurs="unbounded" />
+        </xsd:sequence>
+        <xsd:attribute name="produzione" type="xsd:string" use="required"/>
+    </xsd:complexType>
+</xsd:schema>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<lavorazioni xmlns="http://imas.it/xml/xsd/lavorazioni" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="data/xsd/lavorazioni.xsd">
+
+    <lavorazione produzione="interna">
+        <nomeLav>Cromatura</nomeLav>
+        <fotoLav>../public_html/images/cromatura.png</fotoLav>
+        <descrLav>
+            Cromare significa rivestire il metallo con un sottilissimo strato di cromo al fine di proteggerlo dall'imbrunimento e dalla ruggine e renderlo lucente e brillante con un effetto così detto "a specchio". Se volete ridare vita o proteggere un manufatto di metallo, qualunque esso sia, la cromatura è quello che vi serve.
+        </descrLav>
+        <commento>
+            Cromatura Imas è una delle poche ditte italiane che eseguono ancora lavori di cromatura in maniera artigianale. Questo significa che ogni pezzo, piccolo o grande che sia, viene cromato individualmente, con tutta l'attenzione e la dedizione che si può trovare solo quando un lavoro è fatto a mano.
+            Non capita di rado che una volta conclusa la lavorazione, ci soffermiamo ad ammirare il frutto del nostro lavoro con aria un po' sognante, immaginando quanto bello dovrà risultare l'oggetto che ci troviamo di fronte, una volta inserito nel suo contesto.
+            Ogni lavoro di cromatura che eseguiamo, piccolo o grande che sia, è sempre una grande soddisfazione. Provare per credere!
+            </commento>
+    </lavorazione>
+</lavorazioni>

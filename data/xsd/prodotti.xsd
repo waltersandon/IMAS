@@ -1,42 +1,44 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
-targetNamespace="http://www.imas.com"
-xmlns="http://www.imas.com"
-elementFormDefault="qualified">
+<?xml version="1.0"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="http://imas.it/xml/xsd/prodotti"
+           xmlns="http://imas.it/xml/xsd/prodotti"
+           elementFormDefault="qualified">
 
-<xs:element name="catalogo" type="tcatalogo" />
+<xsd:element name="catalogo" type="tcatalogo" />
 
-<xs:complexType name="tcatalogo">
-<xs:sequence>
-<xs:element name="categoria" type="tcategoria" maxOccurs="unbounded" />
-</xs:sequence>
-</xs:complexType>
+    <xsd:complexType name="tcatalogo">
+        <xsd:sequence>
+            <xsd:element name="categoria" type="tcategoria" maxOccurs="unbounded" />
+        </xsd:sequence>
+    </xsd:complexType>
 
-<xs:complexType name="tcategoria">
-<xs:sequence>
-<xs:element name="nomecat" type="xs:string" />
-<xs:element name="descrcat" type="xs:string" />
-<xs:element name="prodotto" type="tprodotto" maxOccurs="unbounded" />
-</xs:sequence>
-</xs:complexType>
+    <xsd:complexType name="tcategoria">
+        <xsd:sequence>
+            <xsd:element name="fotocat" type="xsd:string" minOccurs="1" maxOccurs="1"/>
+            <xsd:element name="altcat" type="xsd:string"/>
+            <xsd:element name="nomecat" type="xsd:string" />
+            <xsd:element name="descrcat" type="xsd:string" />
+            <xsd:element name="prodotto" type="tprodotto" maxOccurs="unbounded" />
+        </xsd:sequence>
+    </xsd:complexType>
 
-<xs:complexType name="tprodotto">
-<xs:sequence>
-<xs:element name="id" type="xs:ID" />
-<xs:element name="nomeprod" type="xs:string" />
-<xs:element name="foto" type="xs:anyURI" />
-<xs:element name="alt" type="xs:string" />
-<xs:element name="descrizione" type="xs:string" />
-<xs:element name="lavorazione" type="tlavorazione" maxOccurs="unbounded" />
-</xs:sequence>
-</xs:complexType>
+    <xsd:complexType name="tprodotto">
+    <xsd:sequence>
+        <xsd:element name="id" type="xsd:ID" />
+        <xsd:element name="nomeprod" type="xsd:string" />
+        <xsd:element name="foto" type="xsd:string" minOccurs="0" />
+        <xsd:element name="alt" type="xsd:string" minOccurs="0" />
+        <xsd:element name="descrizione" type="xsd:string" minOccurs="0" />
+        <xsd:element name="lavorazione" type="tlavorazione" maxOccurs="unbounded" />
+    </xsd:sequence>
+    </xsd:complexType>
 
-<xs:simpleType name="tlavorazione">
-<xs:restriction base="xs:string">
-<xs:enumeration value="Verniciatura" />
-<xs:enumeration value="Cromatura" />
-<xs:enumeration value="Taglio" />
-</xs:restriction>
-</xs:simpleType>
+    <xsd:simpleType name="tlavorazione">
+        <xsd:restriction base="xsd:string">
+            <xsd:enumeration value="Verniciatura" />
+            <xsd:enumeration value="Cromatura" />
+            <xsd:enumeration value="Taglio" />
+        </xsd:restriction>
+    </xsd:simpleType>
 
-</xs:schema>
+</xsd:schema>
