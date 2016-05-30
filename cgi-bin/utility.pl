@@ -54,7 +54,7 @@ sub printTRANSFORM_lav {
     my $xslt = XML::LibXSLT->new();
     
     my $source = XML::LibXML->load_xml(location => '../data/xml/lavorazioni.xml');
-    my $style_doc = XML::LibXML->load_xml(location=>'../data/xsl/lav.xslt', no_cdata=>1);
+    my $style_doc = XML::LibXML->load_xml(location=>'../data/xsl/lavorazioni.xslt', no_cdata=>1);
     
     my $stylesheet = $xslt->parse_stylesheet($style_doc);
     
