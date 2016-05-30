@@ -6,14 +6,15 @@ require "utility.pl";
 printDOCTYPE();
 printHTML_BEGIN();
 
-checkSession();
+if(getSession() eq false) {
+	print "<meta http-equiv='refresh' content='0;URL=../public_html/login.html'>";
+}
 
-printHTML("../public_html/parts/insprod_header.xhtml");
+printHTML("../public_html/parts/prodotti_header.xhtml");
 printBODY_BEGIN();
 printHEADER();
 
-printHTML("../public_html/parts/insprod_nav.xhtml");
-printHTML("../public_html/parts/insprod_content.xhtml");
+printHTML("../public_html/parts/prodotti_nav.xhtml");
 
 printFOOTER();
 printBODY_END();
