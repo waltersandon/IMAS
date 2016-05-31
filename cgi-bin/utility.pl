@@ -103,3 +103,4 @@ sub checkSession() {
 	if(getSession() eq false) {
 		print "<meta http-equiv='refresh' content='0;URL=../public_html/login.html'>";
 	}
+}
