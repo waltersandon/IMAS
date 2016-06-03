@@ -297,7 +297,7 @@ margin-right:5px; /*right spacing between each link */
   top:1.5em;
 }
 
-#circlemenu .selectedH, #circlemenu .selectedP, #circlemenu .selectedL,#circlemenu .selectedC{
+#circlemenu .selectedH, #circlemenu .selectedP, #circlemenu .selectedL, #circlemenu .selectedC{
 width:110px;
 height:110px;
 }
@@ -358,7 +358,7 @@ height:110px;
   height:120px;
 }
 
-#circlemenu .selectedH, #circlemenu .selectedP,#circlemenu .selectedL, #circlemenu .selected{
+#circlemenu .selectedH, #circlemenu .selectedP,#circlemenu .selectedL, #circlemenu .selectedC{
   width:160px;
   height:160px;
 
