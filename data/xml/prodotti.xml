@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<catalogo xmlns="http://imas.it/xml/xsd/prodotti" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="data/xsd/prodotti.xsd">
+<catalogo xmlns="http://imas.it/xml/xsd/prodotti" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="data/xsd/lavorazioni.xsd">
 
     <categoria>
         <fotocat>../public_html/images/fornelli.jpg</fotocat>
@@ -46,6 +46,4 @@
         </prodotto>
 
     </categoria>
-
 </catalogo>
-

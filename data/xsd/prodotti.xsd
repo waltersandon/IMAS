@@ -4,7 +4,7 @@
            xmlns="http://imas.it/xml/xsd/prodotti"
            elementFormDefault="qualified">
 
-<xsd:element name="catalogo" type="tcatalogo" />
+<xsd:element name="catalogo" type="tcatalogo"/>
 
     <xsd:complexType name="tcatalogo">
         <xsd:sequence>

@@ -69,9 +69,7 @@ text-align: center; /* "left", "center", or "right" align menu */
 }
 
 #circlemenu li{
-  display: inline;
-  margin-top: 2em;
-  margin-left: 2em;
+  display: inline;  margin: 2em;
 }
 
 #circlemenu li{
@@ -119,7 +117,7 @@ top: 40%;
   background-color: #E98300;
   }
   
-  #circlemenu #contatti, contatti{
+  #circlemenu #contatti{
   background-color: #E3001D;
   }
   
@@ -192,7 +190,7 @@ margin-right:5px; /*right spacing between each link */
 	border-color:transparent;
     border-bottom-width: 0;
 	border-spacing:0;
-    background-color:#EFEFEF;
+    background-color:gainsboro;
 	padding-bottom:3em;
 }
 
@@ -201,7 +199,7 @@ margin-right:5px; /*right spacing between each link */
 	border-color:transparent;
     border-bottom-width: 0;
 	border-spacing:0;
-	background-color:#FFFFFF;
+	background-color:white;
 	padding-bottom:3em;
 }
   
@@ -272,7 +270,6 @@ margin-right:5px; /*right spacing between each link */
   
   #breadcrumb{
     height: 2em;
-    font-size: 
   }
   
   #breadcrumb p{

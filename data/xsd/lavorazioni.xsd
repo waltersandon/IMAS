@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-           targetNamespace="http://imas.it/xml/xsd/prodotti"
+           targetNamespace="http://imas.it/xml/xsd/lavorazioni"
            xmlns="http://imas.it/xml/xsd/lavorazioni"
            elementFormDefault="qualified">
 
