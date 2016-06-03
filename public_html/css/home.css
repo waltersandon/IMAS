@@ -117,7 +117,7 @@ top: 40%;
   background-color: #E98300;
   }
   
-  #circlemenu #contatti{
+  #circlemenu #contatti, .contatti{
   background-color: #E3001D;
   }
   
@@ -374,14 +374,7 @@ height:110px;
   float: none;
   margin-left: 2.4em;
   }
-  
-  
-  
 }
-
-
-
-
 /* footer */
 
 #footer {
