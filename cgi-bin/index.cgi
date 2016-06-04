@@ -7,7 +7,7 @@ printDOCTYPE();
 printHTML_BEGIN();
 printHTML("../public_html/parts/index_header.xhtml");
 printBODY_BEGIN();
-printHEADER();
+printADMIN();
 
 printHTML("../public_html/parts/index_nav.xhtml");
 printHTML("../public_html/parts/index_content.xhtml");

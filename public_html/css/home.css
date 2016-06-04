@@ -209,7 +209,13 @@ margin-right:5px; /*right spacing between each link */
     margin: 1.5em 0 1em 0;
     padding-left: 5em;
   }
-  
+
+.testo ul{
+    padding-left: 16em;
+    padding-right: 10em;
+    list-style-type: circle;
+}
+
   #container p {
     text-align: left;
     padding-left: 15em;

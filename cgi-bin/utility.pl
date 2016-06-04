@@ -6,7 +6,7 @@ use CGI::Session;
 my $fileXMLAdmin = '../data/xml/admin.xml';
 my $fileXMLProdotti = '../data/xml/prodotti.xml';
 
-sub connectXMLAdmin() {
+sub connectXMLAdmin {
     #creazione oggetto parser
     my $parser = XML::LibXML->new();
     
@@ -14,7 +14,7 @@ sub connectXMLAdmin() {
     return $parser->parse_file($fileXMLAdmin) || die("Operazione di parsificazione fallita");
 }
 
-sub connectXMLProdotti() {
+sub connectXMLProdotti {
     #creazione oggetto parser
     my $parser = XML::LibXML->new();
     
@@ -102,5 +102,30 @@ sub destroySession() {
 sub checkSession() {
 	if(getSession() eq false) {
 		print "<meta http-equiv='refresh' content='0;URL=../public_html/login.html'>";
+	}
+}
+
+sub printADMIN {
+    if(getSession() eq true){
+        print <<EOF;
+        <div id="header">
+        <img id="logoDitta" src="../public_html/images/logoimas.png" alt="Logo Imas">
+        <div id='logged'>
+        Accesso eseguito |
+        <a href='insprod.cgi' title='Inserisci prodotto' tabindex='1'>Aggiungi Prodotto</a> |
+        <a href='logout.cgi' title='Logout' tabindex='2'>LogOut</a> |
+        </div>
+        </div>
+EOF
+    }
+    else
+    {
+        print <<EOF;
+        <div id="header">
+        <img id="logoDitta" src="../public_html/images/logoimas.png" alt="Logo Imas">
+        <a id="adminZone" href="login.cgi" tabindex="1">Area Riservata</a>
+        </div>
+
+EOF
     }
 }
