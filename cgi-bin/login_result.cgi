@@ -1,11 +1,12 @@
+
 #!/usr/bin/perl
 
 require "utility.pl";
 
 my $cgi = new CGI;
 
-my $inpuser = $cgi->param("user");
-my $inppass = $cgi->param("pass");
+$inpuser = $cgi->param("user");
+$inppass = $cgi->param("pass");
 
 my $file = '../data/xml/login.xml';
 #creazione oggetto parser
