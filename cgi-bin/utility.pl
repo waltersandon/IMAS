@@ -4,6 +4,7 @@ use CGI;
 use CGI::Session;
 
 my $fileXMLProdotti = '../data/xml/prodotti.xml';
+my $fileXMLLavorazioni = '../data/xml/lavorazioni.xml';
 
 sub printHTML {
     open (FILE, $_[0]) || die "Cannot open '$_[0]': $!";
@@ -57,7 +58,7 @@ sub printFOOTER {
 sub printTRANSFORM_lav {
     my $xslt = XML::LibXSLT->new();
     
-    my $source = XML::LibXML->load_xml(location =>"$fileXMLAdmin");
+    my $source = XML::LibXML->load_xml(location =>"$fileXMLLavorazioni");
     my $style_doc = XML::LibXML->load_xml(location=>'../data/xsl/lavorazioni.xslt', no_cdata=>1);
     
     my $stylesheet = $xslt->parse_stylesheet($style_doc);
