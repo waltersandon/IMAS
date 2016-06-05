@@ -1,22 +1,28 @@
+/* contatti */
+
 #info {
-	border-style:solid;
-	border-color:black;
-	border-radius:18px;
-	margin:2em 2em 2em 2em;
-	background-color:white;
+	background-color:lightgrey;
+}
+
+#info p {
+	padding:1em 0em 1em 2em !important;
+    margin:0em 1em 1em 1em;
 }
 
 #info a {
 	font-weight:bold;
 }
 
-#forminfo {
-	padding:1.5em;
-	border-style:solid;
-	border-color:black;
-	border-radius:18px;
-	margin:2em 2em 2em 2em;
-	background-color:white;
+fieldset {
+	border-left:0;
+	border-right:0;
+	margin-top:1em;
+	margin-bottom:1em;
+}
+
+legend {
+	font-size:1.2em;
+	font-weight:bold;
 }
 
 .errori {
@@ -26,13 +32,8 @@
 	margin:0.7em 0em 0em 0em !important;
 }
 
-legend {
-	font-size:1.2em;
-	font-weight:bold;
-}
-
 .colorbox {
-	background:#ffe6eb;
+	background:lightgrey;
 }
 
 .required {
@@ -122,22 +123,11 @@ legend {
 	padding:0.5em 1.2em 0.5em 1.2em;
 	font-size:1.4em;
 	font-weight:bold;
-	text-decoration:underline;
-	background:#ffe6eb;
-	border-color:black;
 	margin:0em 0.7em 0.5em 0.7em;
 	float:right;
-}
-
-#inviaemail:active,
-#inviaemail:hover {
-	color:#a51e1e;
-	border-color:#a51e1e;
 }
 
 #errorimessaggio {
 	padding-top:1.5em;
 	text-align:right;
 }
-
-
