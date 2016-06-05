@@ -1,0 +1,26 @@
+
+.pari{
+    background-color: #a6a6a6;
+}
+.dispari{
+    background-color: white;
+}
+
+.catContent{
+    height: 190px;
+}
+
+.listaProd{
+    background-color: #0000FF;
+}
+
+.testocat{
+    padding-top:1em ;
+}
+.fotocat {
+    float: left;
+    height:180px;
+    width:180px;
+    margin-right: 2em;
+    margin-left: 2em;
+}
