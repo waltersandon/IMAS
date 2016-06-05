@@ -1,0 +1,71 @@
+/* insprod */
+
+.insprod {
+	background-color:blue;
+}
+
+#forminsprod {
+    min-height:30em;
+}
+
+#insprodres {
+    min-height:6em;
+    padding:1em 0em 1em 4em;
+}
+
+#insprodres p {
+	padding:0;
+}
+
+.pink {
+    background-color:pink;
+}
+
+.lightgrey {
+    background-color:#EFEFEF;
+}
+
+#ulinsprod {
+    list-style:none;
+    padding:0;
+}
+
+#ulinsprod li {
+    font-weight:bold;
+    margin:1em 0em 1em 5em;
+}
+
+.formmargin {
+    margin-left:0.5em;
+	padding:0 !important;
+}
+
+.checklav {
+    display:inline;
+    font-weight:normal;
+}
+
+#pdescr {
+	padding:0 !important;
+}
+
+#descr {
+    float:left;
+    width:360px;
+    height:100px;
+    margin-bottom:1em;
+}
+
+.submit {
+    min-width:8em;
+    min-height:5em;
+    font-weight:bold;
+    font-size:0.8em;
+    margin:2em 0em 3em 7em;
+}
+
+#warning {
+    padding-top:1.5em;
+	padding-left:2em !important;
+    margin:0em 1em 2em 1em;
+}

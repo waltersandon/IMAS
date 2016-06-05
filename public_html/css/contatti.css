@@ -1,0 +1,143 @@
+#info {
+	border-style:solid;
+	border-color:black;
+	border-radius:18px;
+	margin:2em 2em 2em 2em;
+	background-color:white;
+}
+
+#info a {
+	font-weight:bold;
+}
+
+#forminfo {
+	padding:1.5em;
+	border-style:solid;
+	border-color:black;
+	border-radius:18px;
+	margin:2em 2em 2em 2em;
+	background-color:white;
+}
+
+.errori {
+	display:block;
+	font-size:0.8em;
+	color:#a51e1e;
+	margin:0.7em 0em 0em 0em !important;
+}
+
+legend {
+	font-size:1.2em;
+	font-weight:bold;
+}
+
+.colorbox {
+	background:#ffe6eb;
+}
+
+.required {
+	color:#eb2d2d;
+}
+
+#ulcateg {
+	padding:0;
+	margin:1em 0em 0em 0em;
+}
+
+#ulcateg li {
+	display:inline-block;
+	margin:0em 0em 0em 0em;
+}
+
+#hiddenazienda {
+	visibility:hidden;
+}
+
+#azienda {
+	margin:0em 0em 0em 0.7em;
+}
+
+#uldatipers {
+	padding:0;
+	margin:0;
+}
+
+#uldatipers li {
+	display:inline-block;
+	width:30%;
+	margin:0em 0.5em 0em 0.5em;
+}
+
+#tabledatipers {
+	margin:1em 0.6em 0em 0.6em;
+}
+
+.columndivider {
+	border-right:2em solid transparent;
+}
+
+#memorequired {
+	display:block;
+	font-size:0.6em;
+	font-style:italic;
+}
+
+#memoasterisco {
+	font-size:1.2em;
+	color:#eb2d2d;
+}
+
+#memorequired {
+	font-size:0.6em;
+	font-style:italic;
+	padding-top:0.5em;
+	padding-left:1.8em;
+}
+
+#tipoprob {
+	padding:0;
+	margin:0;
+}
+
+#tipoprob li {
+	display:inline-block;
+	margin:1em 0.6em 0em 0.6em;
+}
+
+#messaggio {
+	margin:1em auto 1em auto;
+	min-height:260px;
+	width:80%;
+	display:block;
+	font-size:1.3em;
+	resize:vertical;
+}
+
+#indicetipo {
+	font-size:1.1em;
+	margin:0em 0em 0em 1em !important;
+}
+
+#inviaemail {
+	padding:0.5em 1.2em 0.5em 1.2em;
+	font-size:1.4em;
+	font-weight:bold;
+	text-decoration:underline;
+	background:#ffe6eb;
+	border-color:black;
+	margin:0em 0.7em 0.5em 0.7em;
+	float:right;
+}
+
+#inviaemail:active,
+#inviaemail:hover {
+	color:#a51e1e;
+	border-color:#a51e1e;
+}
+
+#errorimessaggio {
+	padding-top:1.5em;
+	text-align:right;
+}
+
+

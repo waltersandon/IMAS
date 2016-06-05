@@ -1,0 +1,40 @@
+/* container */
+
+.admin {
+	background-color:blue;
+}
+
+.containeradmin h1 {
+	padding:0.5em 0em 0.5em 2em;
+	background-color:#EFEFEF;
+	margin:0em 0em 0em 0em !important;
+}
+
+.containeradmin  ul {
+	background-color:#FFFFFF;
+	margin:0;
+}
+
+.containeradmin  li {
+	display:inline-block;
+	padding:1em 0em 1em 0em;
+	margin:1em;
+}
+
+.containeradmin  img {
+	margin-left:2em;
+	float:left;
+	height:120px;
+	width:120px;
+	border-radius:99px;
+	border-style:solid;
+	border-width:0.2em;
+    border-color:#C0C0C0;
+}
+
+.containeradmin  p {
+	float:right;
+	font-size:1.2em;
+	padding:0 !important;
+    margin:2.5em 0em 0em 1em;
+}
