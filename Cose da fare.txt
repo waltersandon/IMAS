@@ -1,0 +1,10 @@
+Sistemare inserimento prodotto/xml
+Codice Modifica/elimina prodotto
+Codice Modifica lavorazione
+Sistemare login
+CSS vario
+Print delle pagine prodotti e lavorazioni
+Css fluido nel cambiare dimensioni (footer, schermo +1200px)
+Tabindex distanza 5
+Accessibilità
+Relazione
