@@ -4,45 +4,72 @@
     <categoria>
         <fotocat>../public_html/images/fornelli.jpg</fotocat>
         <altcat>Griglie e fornelli</altcat>
-        <nomecat> PER Griglie e fornelli</nomecat>
-        <descrcat>I prodotti in filo per lavastoviglie rappresentano i nostri prodotti più competitivi che richiedono una tecnologia produttiva avanzata e questi sono i nostri prodotti di maggior successo. Per questa linea di prodotti la qualità della finitura è particolarmente importante in quanto sono esposti a costante stress meccanico e termico all’interno di un ambiente umido.
+        <nomecat>PER Griglie e fornelli</nomecat>
+        <descrcat>Considerando la necessità di resistenza a continue sollecitazioni termiche, il materiale scelto per i prodotti in filo come la tecnologia di processo sono cruciali.
         </descrcat>
 
         <prodotto>
             <id>ID001</id>
-            <nomeprod>Griglia base n1</nomeprod>
+            <nomeprod>Griglia per forni e fornelli classica</nomeprod>
             <foto>../public_html/images/griglia1.jpg</foto>
-            <alt>Foto Griglia base n1</alt>
-            <descrizione>Una semplice griglia adatta a tutti i tipi di lavori casalinghi.</descrizione>
-            <lavorazione>Verniciatura</lavorazione>
-            <lavorazione>Cromatura</lavorazione>
+            <alt>griglia per forni e fornelli classica</alt>
+            <descrizione>Una semplice griglia adatta a tutti i tipi forni domestici.</descrizione>
+            <lavorazione>Acciao Inox</lavorazione>
+            <lavorazione>Nichel Cromo</lavorazione>
         </prodotto>
 
         <prodotto>
             <id>ID002</id>
-            <nomeprod>Griglia base n2</nomeprod>
+            <nomeprod>Griglia laterale</nomeprod>
             <foto>../public_html/images/griglia2.jpg</foto>
-            <alt>Foto griglia base n2</alt>
-            <descrizione>Una normale griglia adatta a tutti i tipi di lavori casalinghi.</descrizione>
-            <lavorazione>Cromatura</lavorazione>
+            <alt>griglia laterale</alt>
+            <descrizione>Griglia laterale standard.</descrizione>
+            <lavorazione>Nichel Cromo</lavorazione>
         </prodotto>
 
     </categoria>
 
     <categoria>
         <fotocat>../public_html/images/laminati.jpg</fotocat>
-        <altcat>Laminati e lastre</altcat>
-        <nomecat>PER Laminati e lastre</nomecat>
-        <descrcat>I prodotti in filo per lavastoviglie rappresentano i nostri prodotti più competitivi che richiedono una tecnologia produttiva avanzata e questi sono i nostri prodotti di maggior successo. Per questa linea di prodotti la qualità della finitura è particolarmente importante in quanto sono esposti a costante stress meccanico e termico all’interno di un ambiente umido.
+        <altcat>Refrigerazione</altcat>
+        <nomecat>PER Frigoriferi e Freezer</nomecat>
+        <descrcat>L’ambiente freddo e di congelamento all’interno di elettrodomestici e applicazioni commerciali richiede una gran varietà di finiture alternative. Noi siamo in grado di fornire varie soluzioni di finitura: dalla galvanica alla plastificata.
         </descrcat>
 
         <prodotto>
             <id>ID003</id>
-            <nomeprod>Lastra rettangolare</nomeprod>
+            <nomeprod>Griglia per frigorifero</nomeprod>
             <foto>../public_html/images/lastra.jpg</foto>
-            <alt>Foto lastra rettangolare</alt>
-            <descrizione>Una lastra di forma rettangolare.</descrizione>
-            <lavorazione>Taglio</lavorazione>
+            <alt>griglia per frigorifero</alt>
+            <descrizione>Griglia per i frigoriferi domestici</descrizione>
+            <lavorazione>PVC</lavorazione>
+        </prodotto>
+
+        <prodotto>
+            <id>ID004</id>
+            <nomeprod>Portabottiglie</nomeprod>
+            <foto>../public_html/images/lastra.jpg</foto>
+            <alt>porta bottiglie da frigorifero</alt>
+            <descrizione>Porta bottiglie presente nei frigoriferi domestici</descrizione>
+            <lavorazione>Zinco</lavorazione>
+        </prodotto>
+
+    </categoria>
+
+    <categoria>
+        <fotocat>../public_html/images/laminati.jpg</fotocat>
+        <altcat>Automobili</altcat>
+        <nomecat>PER L’AUTO</nomecat>
+        <descrcat>L’ambiente freddo e di congelamento all’interno di elettrodomestici e applicazioni commerciali richiede una gran varietà di finiture alternative. Noi siamo in grado di fornire varie soluzioni di finitura: dalla galvanica alla plastificata.
+        </descrcat>
+
+        <prodotto>
+            <id>ID005</id>
+            <nomeprod>Molle per sedili</nomeprod>
+            <foto>../public_html/images/lastra.jpg</foto>
+            <alt>molle per sedili</alt>
+            <descrizione>Molle interne ai sedili per aumentare il comfort.</descrizione>
+            <lavorazione>Zinco</lavorazione>
         </prodotto>
 
     </categoria>

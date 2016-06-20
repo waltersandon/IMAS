@@ -1,7 +1,7 @@
 <div id="container">
 
 <div id="info">
-<p>Per contattarci si utilizzi l'email <a href="mailto:contatti@imas.com">contatti@imas.com</a> o l'apposito modulo in basso.</p>
+<p>Per contattarci si utilizzi l'email <a href="mailto:contatti@imas.com" tabindex="11">contatti@imas.com</a> o l'apposito modulo in basso.</p>
 </div>
 
 <script type="text/javascript" src="../public_html/javascript/email.js"></script>
@@ -10,9 +10,9 @@
 <fieldset>
 <legend>Categoria<span class="required">*</span></legend>
 <ul id="ulcateg">
-<li><input type="radio" class="ccateg" id="tipoclprivato" name="radiotipocl" value="privato" onChange="Rivela()" />
+<li><input tabindex="11" type="radio" class="ccateg" id="tipoclprivato" name="radiotipocl" value="privato" onChange="Rivela()" />
 <label for="tipoclprivato">Privato</label></li>
-<li><input type="radio" class="ccateg" id="tipoclazienda" name="radiotipocl" value="azienda" onChange="Rivela()" />
+<li><input tabindex="12" type="radio" class="ccateg" id="tipoclazienda" name="radiotipocl" value="azienda" onChange="Rivela()" />
 <label for="tipoclazienda">Azienda</label></li>
 <li id="hiddenazienda"><input type="text" id="azienda" class="colorbox" placeholder=" Nome Azienda*" /></li>
 </ul>
@@ -27,21 +27,21 @@
 <tbody>
 <tr>
 <td><label for="nome">Nome<span class="required">*</span>: </label></td>
-<td class="columndivider"><input type="text" id="nome" class="colorbox" /></td>
+<td class="columndivider"><input tabindex="13" type="text" id="nome" class="colorbox" /></td>
 <td><label for="citta">Citt&agrave;: </label></td>
-<td><input type="text" id="citta" class="colorbox" /></td>
+<td><input tabindex="16" type="text" id="citta" class="colorbox" /></td>
 </tr>
 <tr>
 <td><label for="cognome">Cognome<span class="required">*</span>: </label></td>
-<td class="columndivider"><input type="text" id="cognome" class="colorbox" /></td>
+<td class="columndivider"><input tabindex="14" type="text" id="cognome" class="colorbox" /></td>
 <td><label for="indirizzo">Indirizzo: </label></td>
-<td><input type="text" id="indirizzo" class="colorbox" /></td>
+<td><input tabindex="17" type="text" id="indirizzo" class="colorbox" /></td>
 </tr>
 <tr>
 <td><label for="email">Email<span class="required">*</span>: </label></td>
-<td><input type="email" id="email" class="colorbox" /></td>
+<td><input tabindex="15" type="email" id="email" class="colorbox" /></td>
 <td><label for="telefono">Telefono: </label></td>
-<td><input type="number" id="telefono" class="colorbox" /></td>
+<td><input tabindex="18" type="number" id="telefono" class="colorbox" /></td>
 </tr>
 </tbody>
 </table>
@@ -55,20 +55,20 @@
 <legend><label for="messaggio">Messaggio<span class="required">*</span></label></legend>
 <ul id="tipoprob">
 <li id="indicetipo">Tipologia:</li>
-<li><input type="radio" class="radiotipoprob" id="asstec" name="radiocateg" value="asstec" />
+<li><input tabindex="21" type="radio" class="radiotipoprob" id="asstec" name="radiocateg" value="asstec" />
 <label for="asstec">Assistenza Tecnica</label></li>
-<li><input type="radio" class="radiotipoprob" id="difmalf" name="radiocateg" value="difmalf" />
+<li><input tabindex="22" type="radio" class="radiotipoprob" id="difmalf" name="radiocateg" value="difmalf" />
 <label for="difmalf">Difetto / Malfunzionamento</label></li>
-<li><input type="radio" class="radiotipoprob"  id="ricinfo" name="radiocateg" value="ricinfo" />
+<li><input tabindex="23" type="radio" class="radiotipoprob"  id="ricinfo" name="radiocateg" value="ricinfo" />
 <label for="ricinfo">Richiesta Info</label></li>
-<li><input type="radio" class="radiotipoprob" id="proplav" name="radiocateg" value="problav" />
+<li><input tabindex="24" type="radio" class="radiotipoprob" id="proplav" name="radiocateg" value="problav" />
 <label for="proplav">Proposta Lavorativa</label></li>
-<li><input type="radio" class="radiotipoprob" id="altro" name="radiocateg" value="altro" />
+<li><input tabindex="25" type="radio" class="radiotipoprob" id="altro" name="radiocateg" value="altro" />
 <label for="altro">Altro</label></li>
 </ul>
 <span id="erroritipo" class="errori"></span>
-<textarea id="messaggio" class="colorbox" placeholder=" Scrivere il proprio messaggio qui."></textarea>
-<input type="button" id="inviaemail" value="Invia" onClick="Email()" /><span id="errorimessaggio" class="errori"></span>
+<textarea tabindex="31" id="messaggio" class="colorbox" placeholder=" Scrivere il proprio messaggio qui."></textarea>
+<input tabindex="32" type="button" id="inviaemail" value="Invia" onClick="Email()" /><span id="errorimessaggio" class="errori"></span>
 </fieldset>
 
 </form>

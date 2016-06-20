@@ -5,13 +5,14 @@
   <xsl:template match="/lv:lavorazioni">
     <div id="container">
       <xsl:for-each select="lv:lavorazione">
+          <xsl:variable name="tab" select = "position()+10"/>
         <xsl:if test="position() mod 2 = 0">
           <div class="dispari">
             <div class="foto">
               <img class="circolare" src="{lv:fotoLav}" alt="{lv:nomeLav}"/>
             </div>
             <div class="testo">
-              <h1><xsl:value-of select="lv:nomeLav"/><a href="#top" class="tothetop">[torna su]</a></h1>
+              <h1><xsl:value-of select="lv:nomeLav"/><a href="#top" class="tothetop" tabindex="{$tab+1}">[torna su]</a></h1>
               <h2>Produzione <xsl:value-of select="@produzione"/></h2>
               <p><xsl:value-of select="lv:descrizione"/></p>
               <xsl:for-each select="lv:commento">
@@ -26,7 +27,7 @@
                     <img class="circolare" src="{lv:fotoLav}" alt="{lv:nomeLav}"/>
                 </div>
                 <div class="testo">
-                    <h1><xsl:value-of select="lv:nomeLav"/><a href="#top" class="tothetop">[torna su]</a></h1>
+                    <h1><xsl:value-of select="lv:nomeLav"/><a href="#top" class="tothetop" tabindex="{$tab}">[torna su]</a></h1>
                     <h2>Produzione <xsl:value-of select="@produzione"/></h2>
                     <p><xsl:value-of select="lv:descrizione"/></p>
                     <xsl:for-each select="lv:commento">

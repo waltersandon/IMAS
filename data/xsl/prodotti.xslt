@@ -5,12 +5,14 @@
     <xsl:template match="/pr:catalogo">
         <div id="container">
             <xsl:for-each select="pr:categoria">
+                <xsl:variable name="tab" select = "position()+10"/>
                 <xsl:if test="position() mod 2 = 0">
                     <div class="pari">
                         <div class="catContent">
                             <img class="circolare fotocat" src="{pr:fotocat}" alt="{pr:altcat}" />
                             <div class="testocat">
-                                <h1><xsl:value-of select="pr:nomecat" /><a href="#top" class="tothetop">[torna su]</a></h1>
+                                <h1><xsl:value-of select="pr:nomecat" /><a href="#top" class="tothetop" tabindex="{$tab+1}">[torna su]</a>
+                                </h1>
                                 <p><xsl:value-of select="pr:descrcat" /></p>
                             </div>
                         </div>
@@ -32,7 +34,8 @@
                         <div class="catContent">
                             <img class="circolare fotocat" src="{pr:fotocat}" alt="{pr:altcat}" />
                             <div class="testocat">
-                                <h1><xsl:value-of select="pr:nomecat" /><a href="#top" class="tothetop">[torna su]</a></h1>
+                                <h1><xsl:value-of select="pr:nomecat" /><a href="#top" class="tothetop" tabindex="{$tab}">[torna su]</a>
+                                </h1>
                                 <p><xsl:value-of select="pr:descrcat" /></p>
                             </div>
                         </div>

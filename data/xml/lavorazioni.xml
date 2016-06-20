@@ -12,24 +12,32 @@
             Non capita di rado che una volta conclusa la lavorazione, ci soffermiamo ad ammirare il frutto del nostro lavoro con aria un po' sognante, immaginando quanto bello dovrà risultare l'oggetto che ci troviamo di fronte, una volta inserito nel suo contesto.
             Ogni lavoro di cromatura che eseguiamo, piccolo o grande che sia, è sempre una grande soddisfazione. Provare per credere!
         </commento>
-        <commento>
-            Porca puttena
-        </commento>
     </lavorazione>
 
     <lavorazione produzione="interna">
-        <nomeLav>Cromatura</nomeLav>
+        <nomeLav>Zincatura</nomeLav>
         <fotoLav>../public_html/images/cromatura.jpeg</fotoLav>
         <descrLav>
-            Cromare significa rivestire il metallo con un sottilissimo strato di cromo al fine di proteggerlo dall'imbrunimento e dalla ruggine e renderlo lucente e brillante con un effetto così detto "a specchio". Se volete ridare vita o proteggere un manufatto di metallo, qualunque esso sia, la cromatura è quello che vi serve.
+            La zincatura è il processo con cui viene applicato un rivestimento di zinco su un manufatto metallico generalmente di acciaio per proteggerlo dalla corrosione galvanica: esso infatti limita la formazione di micro-celle elettrolitiche ad azione anodica nei bordi di grano.
+            Essendo meno elettronegativo dell'acciaio, quindi, in caso di rotture o porosità del film protettivo, esso stesso diventa l'anodo sacrificale nella corrosione elettrolitica e si consuma se c'è chiusura delle linee di campo.
         </descrLav>
         <commento>
-            Cromatura Imas è una delle poche ditte italiane che eseguono ancora lavori di cromatura in maniera artigianale. Questo significa che ogni pezzo, piccolo o grande che sia, viene cromato individualmente, con tutta l'attenzione e la dedizione che si può trovare solo quando un lavoro è fatto a mano.
-            Non capita di rado che una volta conclusa la lavorazione, ci soffermiamo ad ammirare il frutto del nostro lavoro con aria un po' sognante, immaginando quanto bello dovrà risultare l'oggetto che ci troviamo di fronte, una volta inserito nel suo contesto.
-            Ogni lavoro di cromatura che eseguiamo, piccolo o grande che sia, è sempre una grande soddisfazione. Provare per credere!
+            È anche specializzata in trattamenti di zincatura per metalli di ultima generazione utilizzando macchinari all'avanguardia che permettono grosse produzioni e standard qualitativi elevatissimi.
         </commento>
         <commento>
-            Porca puttena
+            Una catena produttiva dell'azienda è dedicata alla zincatura a telaio dedicata alla zincatura di pezzi di grandi dimensioni, fino a 280 cm e con cavità chiuse o profonde. Questo tipo di lavorazione avviene con telai ad immersione che permettono di rivestire di zinco gli elementi metallici in modo conforme al peso e alle dimensioni degli stessi così da garantire un prodotto finito di alta qualità.
+        </commento>
+    </lavorazione>
+    <lavorazione produzione="esterna">
+        <nomeLav>Verniciatura Poliestere</nomeLav>
+        <fotoLav>../public_html/images/cromatura.jpeg</fotoLav>
+        <descrLav>
+            La verniciatura in polvere di poliestere può essere utilizzata sia per scopi industriali che per scopi architettonici.
+            In particolare è utilizzata per il rivestimento metalli con polvere poliestere e garantisce un’ottima resistenza agli agenti chimici e atmosferici. </descrLav>
+        <commento>
+            Negli ultimi anni la gamma delle vernici a polvere si è notevolmente variegata fino a fornire numerosi colori.
+            Essendo questa lavorazione suscettibile ai colori imposti dalla moda del momento, si è deciso di affidarci ad
+            un fornitore esterno in modo tale da esser sempre al passo coi tempi sia dal punto di vista cromatico che tecnologico.
         </commento>
     </lavorazione>
 </lavorazioni>

@@ -5,6 +5,9 @@ Sistemare login
 CSS vario
 Print delle pagine prodotti e lavorazioni
 Css fluido nel cambiare dimensioni (footer, schermo +1200px)
-Tabindex distanza 5
-Accessibilit�
+Tabindex distanza 5  FATTO
+Accessibilità
+Chiedere come si fa il tab index nelle radio bottons
 Relazione
+
+Controllare nell'aggiunta di un prodotto che non esista già o fare in modo che abbia un numero progressivo
