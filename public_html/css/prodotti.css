@@ -1,6 +1,10 @@
 
-.pari{
+.pari, .dispari{
     background-color: #a6a6a6;
+    display: block;
+    overflow: hidden;
+    clear: both;
+    padding-left: 2em;
 }
 .dispari{
     background-color: white;
@@ -8,11 +12,11 @@
 
 .catContent{
     height: 190px;
+    display: inline;
+    float: left;
+    margin-bottom: 3em;
 }
 
-.listaProd{
-    background-color: #0000FF;
-}
 
 .testocat{
     padding-top:1em ;
@@ -23,4 +27,34 @@
     width:180px;
     margin-right: 2em;
     margin-left: 2em;
+}
+
+.testocat h1{
+    text-transform: uppercase;
+    font-size: x-large;
+}
+
+.circleGrid{
+    overflow: hidden;
+    display: inline;
+    float: left;
+    text-align: center;
+    width: 260px;
+    height: 280px;
+    margin-top: 2em;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1.5em;
+}
+
+.circleGrid p{padding: 0;}
+.circleGrid h2{font-size: medium}
+
+.clear{
+    clear: both;
+    display: block;
+    overflow: hidden;
+    visibility: hidden;
+    width: 0;
+    height: 0;
 }
