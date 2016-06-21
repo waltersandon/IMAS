@@ -1,23 +1,14 @@
-<!-- Start Container -->
-<div id="container">
-<form id="formins" class="lightgrey" action="../cgi-bin/insprod_result.cgi" method="post" enctype="multipart/form-data">
-<p id="warning">Per inserire un nuovo prodotto, compilare il modulo sottostante.</p>
-<ul id="ulinsprod">
-<li>Categoria: 
-<select id="selectcateg" name="selectcateg" class="formmargin">
-<option value="gef" selected>Griglie e fornelli</option>
-<option value="lel" >Laminati e lastre</option>
 </select></li>
-<li>Nome Prodotto: <input tabindex="11" type="text" id="nomeprod" name="nomeprod" class="formmargin" /></li>
-<li>ID Prodotto: <input tabindex="12" type="text" id="id" name="id" class="formmargin" /></li>
-<li>Foto: <input tabindex="13" type="file" id="foto" name="foto" class="formmargin" /></li>
+<li><label for="nomeprod">Nome Prodotto: </label><input tabindex="11" type="text" id="nomeprod" name="nomeprod" class="formmargin" /></li>
+<li><label for="id">ID Prodotto: </label><input tabindex="12" type="text" id="id" name="id" class="formmargin" /></li>
+<li><label for="foto">Foto: </label><input tabindex="13" type="file" id="foto" name="foto" class="formmargin" /></li>
 <li>
 Lavorazioni disponibili:
 <p class="checklav formmargin"><input tabindex="14" type="checkbox" id="checkvern" name="checkvern" value="Verniciatura" /><label for="checkvern">Verniciatura</label></p>
 <p class="checklav formmargin"><input tabindex="15" type="checkbox" id="checkcrom" name="checkcrom" value="Cromatura" /><label for="checkcrom">Cromatura</label></p>
 <p class="checklav formmargin"><input tabindex="16" type="checkbox" id="checktagl" name="checktagl" value="Taglio" /><label for="checktagl">Taglio</label></p>
 </li>
-<li><p id="pdescr">Descrizione:</p>
+<li><p id="pdescr"><label for="descr">Descrizione:</label></p>
 <textarea tabindex="17" id="descr" name="descr" class="formmargin"></textarea></li>
 </ul>
 <input tabindex="18" type="submit" value="Inserisci Prodotto" class="submit" />
