@@ -16,8 +16,8 @@
                                 <p><xsl:value-of select="pr:descrcat" /></p>
                             </div>
                         </div>
-                        <xsl:for-each select="pr:prodotto">
-                            <div class="circleGrid">
+                        <div class="listaP">
+                            <xsl:for-each select="pr:prodotto">
                                 <ul>
                                     <li><img class="circolare fotoprod" src="{pr:foto}" alt="{pr:alt}"/></li>
                                     <li><h2><xsl:value-of select="pr:descrizione"/></h2></li>
@@ -25,8 +25,8 @@
                                         <li><p><xsl:value-of select="."/></p></li>
                                     </xsl:for-each>
                                 </ul>
-                            </div>
-                        </xsl:for-each>
+                            </xsl:for-each>
+                        </div>
                     </div>
                 </xsl:if>
                 <xsl:if test="position() mod 2 != 0">
@@ -39,15 +39,17 @@
                                 <p><xsl:value-of select="pr:descrcat" /></p>
                             </div>
                         </div>
-                        <xsl:for-each select="pr:prodotto">
-                            <div class="circleGrid">
-                                    <img class="circolare fotoprod" src="{pr:foto}" alt="{pr:alt}"/>
-                                    <h2><xsl:value-of select="pr:descrizione"/></h2>
+                        <div class="listaP">
+                            <xsl:for-each select="pr:prodotto">
+                                <ul>
+                                    <li><img class="circolare fotoprod" src="{pr:foto}" alt="{pr:alt}"/></li>
+                                    <li><h2><xsl:value-of select="pr:descrizione"/></h2></li>
                                     <xsl:for-each select="pr:lavorazione">
-                                        <p><xsl:value-of select="."/></p>
+                                        <li><p><xsl:value-of select="."/></p></li>
                                     </xsl:for-each>
-                            </div>
-                        </xsl:for-each>
+                                </ul>
+                            </xsl:for-each>
+                        </div>
                     </div>
                 </xsl:if>
             </xsl:for-each>
