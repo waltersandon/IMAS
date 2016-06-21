@@ -1,31 +1,34 @@
 html,body {
-	width:100%;
-	margin:0;
-	font-family:Arial,Helvetica,sans-serif;
+	margin:auto;
+	font-family:'Helvetica','Arial', sans-serif;
 	font-size:1em;
 	background-color:white;
 }
 
 ul {
   list-style-type:none;
-} 
+}
+body{max-width:1200px;}
 
 #logoDitta{
-  float:left;
-  margin-bottom: 2.1em;  
-  margin-left: 6%;
+    margin-top: 1.5em;
+    margin-left: 6%;
+    height: 130px;
+    width:450px;
 }
 
+#accessoadmin {
+    margin-left:80%;
+}
 #adminzone {
-	clear:both;
-	background-color:lightgrey;
+	background-color:lightgrey;top: -3em;
+
 }
 
 #adminzone p {
 	font-size:1.3em;
 	padding-top:0.3em;
 	padding-bottom:0.3em;
-	color:black;
 }
 
 #benvenuto {
@@ -36,6 +39,19 @@ ul {
 	float:right;
 	text-decoration:none;
 	margin-right:4%;
+}
+
+#adminzone a:visited {
+	color:black;
+}
+
+#adminzone  a:hover {
+	color:blue;
+	text-decoration:underline;
+}
+
+#adminzone  a:visited:hover {
+	color:blue;
 }
 
 #panoramic {
@@ -198,8 +214,8 @@ margin-right:5px; /*right spacing between each link */
 	padding-top:1em;
 	padding-bottom:3em;
 }
-  
-#container h1 {
+
+#cosaProd h1, #storia h1, #chiSiamo h1 {
     text-align: left;
     margin: 1.5em 0 1em 0;
     padding-left: 5em;
@@ -211,7 +227,7 @@ margin-right:5px; /*right spacing between each link */
 	list-style-type:circle;
 }
 
-#container p {
+#cosaProd p, #storia p, #chiSiamo p {
     text-align: left;
     padding-left: 15em;
     padding-right: 10em;
@@ -246,6 +262,81 @@ margin-right:5px; /*right spacing between each link */
   margin-bottom: 1em;
 }
 
+#panoramic {
+    max-width:1024px;
+}
+
+/* circlemenu */
+
+#circlemenu ul{
+    font: bold 16px Verdana;
+}
+
+#circlemenu li{
+    width:120px;
+    height:120px;
+}
+
+#circlemenu .selectedH, #circlemenu .selectedP,#circlemenu .selectedL, #circlemenu .selectedC{
+    width:160px;
+    height:160px;
+
+}
+
+#xhtml{
+    clear: left;
+    margin-left: 30%;
+    margin-right: 2em;
+}
+
+#css{
+    float: none;
+    margin-left: 2.4em;
+}
+/* footer */
+
+#footer {
+    height:110px;
+    color: white;
+    font-size:0.8em;
+    font-style:italic;
+    background-color:#808080;
+    margin:6em auto 1.2em auto;
+}
+
+#footer img{
+    float: left;
+    margin-top: 1em;
+    border:0;
+    width:88px;
+    height:31px;
+}
+
+
+#footer p{
+    position: relative;
+    text-align: left;
+    float: left;
+    font-size: 16px;
+    margin-top: 1.2em;
+}
+
+#footer ul{
+    clear: left;
+    margin-left: 5%;
+    padding-top: 1em;
+}
+
+#footer ul li{
+    float: left;
+    list-style: none;
+    padding: 2px;
+}
+
+#footer ul li:before {
+    content:"| ";
+}
+
 /* phone */
 @media screen and (min-width: 480px) and (max-width: 768px) {
    
@@ -254,8 +345,6 @@ margin-right:5px; /*right spacing between each link */
   }
   
   #logoDitta {
-  float:left;
-  margin-bottom: 2.1em;  
   margin-left: 6%;
   height: 90px;
   width:300px;
@@ -326,99 +415,3 @@ height:110px;
   }
 }
 /* end phone */ 
-
-/* tablet + desktop */
-@media screen and (min-width:769px) and (max-width:1200px){
-/* header */
-  #header {
-	height:130px;
-}
-
-#logoDitta {
-  height: 130px;
-  width:450px;
-}
-
-#accessoadmin {
-	margin-left:80%;
-}
-
-/* panoramic */
-
-#panoramic {
-	max-width:1200px;
-}
-
-/* circlemenu */
-
-#circlemenu ul{
-  font: bold 16px Verdana;
-}
-
-#circlemenu li{
-  width:120px;
-  height:120px;
-}
-
-#circlemenu .selectedH, #circlemenu .selectedP,#circlemenu .selectedL, #circlemenu .selectedC{
-  width:160px;
-  height:160px;
-
-}
-
-#xhtml{
-  clear: left;
-  margin-left: 30%;
-  margin-right: 2em;
-}
-
-#css{
-  float: none;
-  margin-left: 2.4em;
-  }
-}
-/* footer */
-
-#footer {
-	height:110px;
-    color: white;
-	font-size:0.8em;
-	font-style:italic;
-	background-color:#808080;
-	margin:6em auto 1.2em auto;
-}
-
-#footer img{
-  float: left;
-  margin-top: 1em;
-  border:0;
-  width:88px;
-  height:31px;
-}
-
-
-#footer p{
-  position: relative;
-  text-align: left;
-  float: left;
-  font-size: 16px;
-  margin-top: 1.2em;
-}
-
-#footer ul{
-  clear: left;
-  margin-left: 5%;
-  padding-top: 1em;
-}
-
-#footer ul li{
-  float: left;
-  list-style: none;
-  padding: 2px;
-}
-
-#footer ul li:before {
-content:"| ";
-}
-
-/* end desktop + tablet */
