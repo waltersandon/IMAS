@@ -2,6 +2,9 @@
 
 require "utility.pl";
 
+$fileXML = $fileXMLProdotti;
+$fileXSLT = '../data/xsl/prodotti.xslt';
+
 printDOCTYPE();
 printHTML_BEGIN();
 printHTML("../public_html/parts/prodotti_header.xhtml");

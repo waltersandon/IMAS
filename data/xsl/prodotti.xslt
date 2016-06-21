@@ -34,7 +34,7 @@
                         <div class="catContent">
                             <img class="circolare fotocat" src="{pr:fotocat}" alt="{pr:altcat}" />
                             <div class="testocat">
-                                <h1><xsl:value-of select="pr:nomecat" /><a href="#top" class="tothetop" tabindex="{$tab+1}">[torna su]</a>
+                                <h1><xsl:value-of select="pr:nomecat" /><a href="#top" class="tothetop" tabindex="{$tab}">[torna su]</a>
                                 </h1>
                                 <p><xsl:value-of select="pr:descrcat" /></p>
                             </div>
