@@ -2,6 +2,9 @@
 
 require "utility.pl";
 
+$fileXML = $fileXMLLavorazioni;
+$fileXSLT = '../data/xsl/lavorazioni.xslt';
+
 printDOCTYPE();
 printHTML_BEGIN();
 printHTML("../public_html/parts/lavorazioni_header.xhtml");
