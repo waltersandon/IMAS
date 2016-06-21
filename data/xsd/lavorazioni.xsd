@@ -1,24 +1,25 @@
-<?xml version="1.0"?>
-<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-           targetNamespace="http://imas.it/xml/xsd/lavorazioni"
-           xmlns="http://imas.it/xml/xsd/lavorazioni"
-           elementFormDefault="qualified">
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+targetNamespace="http://www.imas.com"
+xmlns="http://www.imas.com"
+elementFormDefault="qualified">
 
 <xsd:element name="lavorazioni" type="tlavorazioni" />
 
-    <xsd:complexType name="tlavorazioni">
-        <xsd:sequence>
-            <xsd:element name="lavorazione" type="tlavorazione" maxOccurs="unbounded" />
-        </xsd:sequence>
-    </xsd:complexType>
+<xsd:complexType name="tlavorazioni">
+<xsd:sequence>
+<xsd:element name="lavorazione" type="tlavorazione" maxOccurs="unbounded" />
+</xsd:sequence>
+</xsd:complexType>
 
-    <xsd:complexType name="tlavorazione">
-        <xsd:sequence>
-            <xsd:element name="nomeLav" type="xsd:string"/>
-            <xsd:element name="fotoLav" type="xsd:string"/>
-            <xsd:element name="descrLav" type="xsd:string" />
-            <xsd:element name="commento" type="xsd:string" maxOccurs="unbounded" />
-        </xsd:sequence>
-        <xsd:attribute name="produzione" type="xsd:string" use="required"/>
-    </xsd:complexType>
+<xsd:complexType name="tlavorazione">
+<xsd:sequence>
+<xsd:element name="nomelav" type="xsd:string"/>
+<xsd:element name="fotolav" type="xsd:anyURI"/>
+<xsd:element name="altlav" type="xsd:string"/>
+<xsd:element name="descrlav" type="xsd:string" />
+<xsd:element name="commento" type="xsd:string" maxOccurs="unbounded" />
+</xsd:sequence>
+<xsd:attribute name="produzione" type="xsd:string" use="required"/>
+</xsd:complexType>
 </xsd:schema>
