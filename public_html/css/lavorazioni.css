@@ -1,0 +1,43 @@
+
+.pari, .dispari{
+    background-color: #a6a6a6;
+    display: block;
+    overflow: hidden;
+    clear: both;
+    padding-left: 2em;
+}
+.dispari{
+    background-color: white;
+}
+
+.testoL{
+    width: 550px;
+    display: inline;
+    float: left;
+    margin-top: 2em;
+}
+
+ .fotoL {
+     display: inline;
+    float: left;
+    height:auto;
+    width:300px;
+    margin-right: 2em;
+    margin-left: 2em;
+}
+
+.testoL h1{
+    text-transform: uppercase;
+    font-size: x-large;
+}
+
+.testoL h2{
+    text-transform: capitalize;
+    font-size: medium;
+}
+
+.fotoL img{
+    width: 270px;
+    height: 270px;
+    margin-top: 3em;
+}
