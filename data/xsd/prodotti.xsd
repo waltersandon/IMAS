@@ -35,9 +35,11 @@
 
     <xsd:simpleType name="tlavorazione">
         <xsd:restriction base="xsd:string">
+            <xsd:enumeration value="Nichel Cromo" />
+            <xsd:enumeration value="Zinco" />
             <xsd:enumeration value="Verniciatura" />
-            <xsd:enumeration value="Cromatura" />
-            <xsd:enumeration value="Taglio" />
+            <xsd:enumeration value="PVC" />
+            <xsd:enumeration value="Acciao Inox" />
         </xsd:restriction>
     </xsd:simpleType>
 
