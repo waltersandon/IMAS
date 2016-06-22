@@ -4,6 +4,7 @@ require "utility.pl";
 
 printDOCTYPE();
 printHTML_BEGIN();
+
 printHTML("../public_html/parts/index_header.xhtml");
 printBODY_BEGIN();
 printHEADER();

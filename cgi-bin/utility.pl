@@ -3,8 +3,8 @@ use XML::LibXSLT;
 use CGI;
 use CGI::Session;
 
-my $fileXMLProdotti = '../data/xml/prodotti.xml';
-my $fileXMLLavorazioni = '../data/xml/lavorazioni.xml';
+$fileXMLProdotti = '../data/xml/prodotti.xml';
+$fileXMLLavorazioni = '../data/xml/lavorazioni.xml';
 
 sub printHTML {
     open (FILE, $_[0]) || die "Cannot open '$_[0]': $!";
@@ -55,11 +55,11 @@ sub printFOOTER {
     printHTML("../public_html/parts/footer.xhtml");
 }
 
-sub printTRANSFORM_lav {
+sub printTRANSFORM_prodotti {
     my $xslt = XML::LibXSLT->new();
     
-    my $source = XML::LibXML->load_xml(location =>"$fileXMLLavorazioni");
-    my $style_doc = XML::LibXML->load_xml(location=>'../data/xsl/lavorazioni.xslt', no_cdata=>1);
+    my $source = XML::LibXML->load_xml(location =>"$fileXML");
+    my $style_doc = XML::LibXML->load_xml(location=>"$fileXSLT", no_cdata=>1);
     
     my $stylesheet = $xslt->parse_stylesheet($style_doc);
     
@@ -68,11 +68,11 @@ sub printTRANSFORM_lav {
     print $stylesheet->output_string($results);
 }
 
-sub printTRANSFORM_prodotti {
+sub printTRANSFORM_lav {
     my $xslt = XML::LibXSLT->new();
     
-    my $source = XML::LibXML->load_xml(location =>"$fileXMLProdotti");
-    my $style_doc = XML::LibXML->load_xml(location=>'../data/xsl/prodotti.xslt', no_cdata=>1);
+    my $source = XML::LibXML->load_xml(location =>"$fileXMLLavorazioni");
+    my $style_doc = XML::LibXML->load_xml(location=>"$fileXSLTLavorazioni", no_cdata=>1);
     
     my $stylesheet = $xslt->parse_stylesheet($style_doc);
     

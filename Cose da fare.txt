@@ -13,3 +13,4 @@ Relazione
 Controllare nell'aggiunta di un prodotto che non esista già o fare in modo che abbia un numero progressivo
 Fa finire di sistemare il css footer e modalità telefono
 Da trovare foto adatte per le lavorazioni (alcune vanno bene) e per i prodotti
+

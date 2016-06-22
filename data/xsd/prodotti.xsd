@@ -14,7 +14,7 @@
 
     <xsd:complexType name="tcategoria">
         <xsd:sequence>
-            <xsd:element name="fotocat" type="xsd:string" minOccurs="1" maxOccurs="1"/>
+            <xsd:element name="fotocat" type="xsd:string" />
             <xsd:element name="altcat" type="xsd:string"/>
             <xsd:element name="nomecat" type="xsd:string" />
             <xsd:element name="descrcat" type="xsd:string" />
@@ -26,9 +26,9 @@
     <xsd:sequence>
         <xsd:element name="id" type="xsd:ID" />
         <xsd:element name="nomeprod" type="xsd:string" />
-        <xsd:element name="foto" type="xsd:string" minOccurs="0" />
-        <xsd:element name="alt" type="xsd:string" minOccurs="0" />
-        <xsd:element name="descrizione" type="xsd:string" minOccurs="0" />
+        <xsd:element name="foto" type="xsd:string" />
+        <xsd:element name="alt" type="xsd:string" />
+        <xsd:element name="descrizione" type="xsd:string" />
         <xsd:element name="lavorazione" type="tlavorazione" maxOccurs="unbounded" />
     </xsd:sequence>
     </xsd:complexType>
