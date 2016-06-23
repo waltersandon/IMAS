@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <utenti xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.imas.com data/xsd/login.xsd">
 
-<utenti>
 <utente>
 <username>admin</username>
 <password>admin</password>
@@ -14,4 +13,5 @@
 <username>cc</username>
 <password>22</password>
 </utente>
+
 </utenti>
