@@ -4,22 +4,33 @@ targetNamespace="http://www.imas.com"
 xmlns="http://www.imas.com"
 elementFormDefault="qualified">
 
-<xsd:element name="lavorazioni" type="tlavorazioni" />
+<xs:element name="lavorazioni" type="tlavorazioni" />
 
-<xsd:complexType name="tlavorazioni">
-<xsd:sequence>
-<xsd:element name="lavorazione" type="tlavorazione" maxOccurs="unbounded" />
-</xsd:sequence>
-</xsd:complexType>
+<xs:complexType name="tlavorazioni">
+<xs:sequence>
+<xs:element name="lavorazione" type="tlavorazione" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
 
-<xsd:complexType name="tlavorazione">
-<xsd:sequence>
-<xsd:element name="nomelav" type="xsd:string"/>
-<xsd:element name="fotolav" type="xsd:anyURI"/>
-<xsd:element name="altlav" type="xsd:string"/>
-<xsd:element name="descrlav" type="xsd:string" />
-<xsd:element name="commento" type="xsd:string" maxOccurs="unbounded" />
-</xsd:sequence>
-<xsd:attribute name="produzione" type="xsd:string" use="required"/>
-</xsd:complexType>
-</xsd:schema>
+<xs:complexType name="tlavorazione">
+<xs:sequence>
+<xs:element name="nomelav" type="xs:tnomelav" />
+<xs:element name="fotolav" type="xs:anyURI" />
+<xs:element name="altlav" type="xs:string" />
+<xs:element name="descrlav" type="xs:string" />
+<xs:element name="commento" type="xs:string" maxOccurs="unbounded" />
+</xs:sequence>
+<xs:attribute name="produzione" type="xs:string" use="required"/>
+</xs:complexType>
+
+<xs:simpleType name="tnomelav">
+<xs:restriction base="xs:string">
+<xs:enumeration value="Nichel Cromo" />
+<xs:enumeration value="Zincatura" />
+<xs:enumeration value="Verniciatura Poliestere" />
+<xs:enumeration value="PVC" />
+<xs:enumeration value="Acciao Inox" />
+</xs:restriction>
+</xs:simpleType>
+
+</xs:schema>
