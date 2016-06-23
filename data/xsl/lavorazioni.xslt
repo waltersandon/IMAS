@@ -27,7 +27,7 @@
                     <img class="circolare" src="{lv:fotoLav}" alt="{lv:nomeLav}"/>
                 </div>
                 <div class="testoL">
-                    <h1><xsl:value-of select="lv:nomeLav"/><a href="#top" class="tothetop" tabindex="{$tab+1}">[torna su]</a></h1>
+                    <h1><xsl:value-of select="lv:nomeLav"/><a href="#top" class="tothetop" tabindex="{$tab}">[torna su]</a></h1>
                     <h2>Produzione <xsl:value-of select="@produzione"/></h2>
                     <p><xsl:value-of select="lv:descrLav"/></p>
                     <xsl:for-each select="lv:commento">
