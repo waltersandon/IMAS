@@ -1,3 +1,4 @@
+#!perl
 #!/usr/bin/perl
 
 require "utility.pl";
@@ -5,7 +6,6 @@ require "utility.pl";
 my $cgi = new CGI;
 
 $fileXML = $fileXMLProdotti;
-$fileXSLT = '../data/xsl/modprod.xslt';
 
 #creazione oggetto parser
 my $parser = XML::LibXML->new();
