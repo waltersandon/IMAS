@@ -1,76 +1,76 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<catalogo xmlns="http://imas.it/xml/xsd/prodotti" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="data/xsd/lavorazioni.xsd">
+<catalogo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.imas.com data/xsd/prodotti.xsd">
 
-    <categoria>
-        <fotocat>../public_html/images/fornelli.jpg</fotocat>
-        <altcat>Griglie e fornelli</altcat>
-        <nomecat>prodotti in filo per griglie e fornelli</nomecat>
-        <descrcat>Considerando la necessità di resistenza a continue sollecitazioni termiche, il materiale scelto per i prodotti in filo come la tecnologia di processo sono cruciali.
-        </descrcat>
+<categoria>
+<fotocat>../public_html/images/fornelli.jpg</fotocat>
+<altcat>Griglie e fornelli</altcat>
+<nomecat>prodotti in filo per griglie e fornelli</nomecat>
+<descrcat>Considerando la necessità di resistenza a continue sollecitazioni termiche, il materiale scelto per i prodotti in filo come la tecnologia di processo sono cruciali.
+</descrcat>
 
-        <prodotto>
-            <id>ID001</id>
-            <nomeprod>Griglia per forni classica</nomeprod>
-            <foto>../public_html/images/griglia1.jpg</foto>
-            <alt>griglia per forni e fornelli classica</alt>
-            <descrizione>Una semplice griglia adatta a tutti i tipi forni domestici.</descrizione>
-            <lavorazione>Acciao Inox</lavorazione>
-            <lavorazione>Nichel Cromo</lavorazione>
-        </prodotto>
+<prodotto>
+<id>ID001</id>
+<nomeprod>Griglia per forni classica</nomeprod>
+<foto>../public_html/images/griglia1.jpg</foto>
+<alt>griglia per forni e fornelli classica</alt>
+<descrizione>Una semplice griglia adatta a tutti i tipi forni domestici.</descrizione>
+<lavorazione>Acciao Inox</lavorazione>
+<lavorazione>Nichel Cromo</lavorazione>
+</prodotto>
 
-        <prodotto>
-            <id>ID002</id>
-            <nomeprod>Griglia laterale</nomeprod>
-            <foto>../public_html/images/griglia2.jpg</foto>
-            <alt>griglia laterale</alt>
-            <descrizione>Griglia laterale standard.</descrizione>
-            <lavorazione>Nichel Cromo</lavorazione>
-        </prodotto>
+<prodotto>
+<id>ID002</id>
+<nomeprod>Griglia laterale</nomeprod>
+<foto>../public_html/images/griglia2.jpg</foto>
+<alt>griglia laterale</alt>
+<descrizione>Griglia laterale standard.</descrizione>
+<lavorazione>Nichel Cromo</lavorazione>
+</prodotto>
 
-    </categoria>
+</categoria>
 
-    <categoria>
-        <fotocat>../public_html/images/laminati.jpg</fotocat>
-        <altcat>Refrigerazione</altcat>
-        <nomecat>griglia per frigoriferi e freezer</nomecat>
-        <descrcat>L’ambiente freddo e di congelamento all’interno di elettrodomestici e applicazioni commerciali richiede una gran varietà di finiture alternative. Noi siamo in grado di fornire varie soluzioni di finitura: dalla galvanica alla plastificata.
-        </descrcat>
+<categoria>
+<fotocat>../public_html/images/laminati.jpg</fotocat>
+<altcat>Refrigerazione</altcat>
+<nomecat>griglia per frigoriferi e freezer</nomecat>
+<descrcat>L’ambiente freddo e di congelamento all’interno di elettrodomestici e applicazioni commerciali richiede una gran varietà di finiture alternative. Noi siamo in grado di fornire varie soluzioni di finitura: dalla galvanica alla plastificata.
+</descrcat>
 
-        <prodotto>
-            <id>ID003</id>
-            <nomeprod>Griglia per frigorifero</nomeprod>
-            <foto>../public_html/images/lastra.jpg</foto>
-            <alt>griglia per frigorifero</alt>
-            <descrizione>Griglia per i frigoriferi domestici</descrizione>
-            <lavorazione>PVC</lavorazione>
-        </prodotto>
+<prodotto>
+<id>ID003</id>
+<nomeprod>Griglia per frigorifero</nomeprod>
+<foto>../public_html/images/lastra.jpg</foto>
+<alt>griglia per frigorifero</alt>
+<descrizione>Griglia per i frigoriferi domestici</descrizione>
+</prodotto>
 
-        <prodotto>
-            <id>ID004</id>
-            <nomeprod>Portabottiglie</nomeprod>
-            <foto>../public_html/images/lastra.jpg</foto>
-            <alt>porta bottiglie da frigorifero</alt>
-            <descrizione>Porta bottiglie</descrizione>
-            <lavorazione>Zinco</lavorazione>
-        </prodotto>
+<prodotto>
+<id>ID004</id>
+<nomeprod>Portabottiglie</nomeprod>
+<foto>../public_html/images/lastra.jpg</foto>
+<alt>porta bottiglie da frigorifero</alt>
+<descrizione>Porta bottiglie</descrizione>
+<lavorazione>Zincatura</lavorazione>
+</prodotto>
 
-    </categoria>
+</categoria>
 
-    <categoria>
-        <fotocat>../public_html/images/laminati.jpg</fotocat>
-        <altcat> Soluzioni per Automobili</altcat>
-        <nomecat>soluzioni per l'auto</nomecat>
-        <descrcat>La sicurezza richiede alta qualità e abilità nel saper rispettare tolleranze produttive ristrette. Possiamo affrontare le differenti richieste di singoli componenti o sistemi funzionali completi realizzati in filo, tubo e lamiera.
-        </descrcat>
+<categoria>
+<fotocat>../public_html/images/laminati.jpg</fotocat>
+<altcat> Soluzioni per Automobili</altcat>
+<nomecat>soluzioni per l'auto</nomecat>
+<descrcat>La sicurezza richiede alta qualità e abilità nel saper rispettare tolleranze produttive ristrette. Possiamo affrontare le differenti richieste di singoli componenti o sistemi funzionali completi realizzati in filo, tubo e lamiera.
+</descrcat>
 
-        <prodotto>
-            <id>ID005</id>
-            <nomeprod>Molle per sedili</nomeprod>
-            <foto>../public_html/images/lastra.jpg</foto>
-            <alt>molle per sedili</alt>
-            <descrizione>Molle interne ai sedili per aumentare il comfort.</descrizione>
-            <lavorazione>Zinco</lavorazione>
-        </prodotto>
+<prodotto>
+<id>ID005</id>
+<nomeprod>Molle per sedili</nomeprod>
+<foto>../public_html/images/lastra.jpg</foto>
+<alt>molle per sedili</alt>
+<descrizione>Molle interne ai sedili per aumentare il comfort.</descrizione>
+<lavorazione>Zincatura</lavorazione>
+</prodotto>
 
-    </categoria>
+</categoria>
+
 </catalogo>
