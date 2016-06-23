@@ -13,7 +13,7 @@ printHEADER();
 
 printHTML("../public_html/parts/prodotti_nav.xhtml");
 
-printTRANSFORM_prodotti();
+printTRANSFORM();
 
 printFOOTER();
 printBODY_END();

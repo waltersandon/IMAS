@@ -55,24 +55,11 @@ sub printFOOTER {
     printHTML("../public_html/parts/footer.xhtml");
 }
 
-sub printTRANSFORM_prodotti {
+sub printTRANSFORM{
     my $xslt = XML::LibXSLT->new();
     
     my $source = XML::LibXML->load_xml(location =>"$fileXML");
     my $style_doc = XML::LibXML->load_xml(location=>"$fileXSLT", no_cdata=>1);
-    
-    my $stylesheet = $xslt->parse_stylesheet($style_doc);
-    
-    my $results = $stylesheet->transform($source);
-    
-    print $stylesheet->output_string($results);
-}
-
-sub printTRANSFORM_lav {
-    my $xslt = XML::LibXSLT->new();
-    
-    my $source = XML::LibXML->load_xml(location =>"$fileXMLLavorazioni");
-    my $style_doc = XML::LibXML->load_xml(location=>"$fileXSLTLavorazioni", no_cdata=>1);
     
     my $stylesheet = $xslt->parse_stylesheet($style_doc);
     
