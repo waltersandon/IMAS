@@ -1,0 +1,327 @@
+html,body {
+    margin:auto;
+    font-family:'Helvetica','Arial', sans-serif;
+    font-size:1em;
+    background-color:white;
+}
+
+ul {list-style-type:none}
+body{max-width:1300px}
+
+#logoDitta{
+    margin-top: 1.5em;
+    margin-left: 6%;
+    height: 130px;
+    width:450px;
+}
+
+#accessoadmin {
+    margin-left:80%;
+}
+#adminzone {
+    background-color:lightgrey;top: -3em;
+
+}
+
+#adminzone p {
+    font-size:1.3em;
+    padding-top:0.3em;
+    padding-bottom:0.3em;
+}
+
+#benvenuto {
+    margin-left:3%;
+}
+
+#scelteadmin {
+    float:right;
+    text-decoration:none;
+    margin-right:4%;
+}
+
+#adminzone a:visited {
+    color:black;
+}
+
+#adminzone  a:hover {
+    color:blue;
+    text-decoration:underline;
+}
+
+#adminzone  a:visited:hover {
+    color:blue;
+}
+
+#panoramic {
+    width:100%;
+    height:250px;
+    display:block;
+    object-fit:cover; /* nota */
+}
+
+#breadcrumb {
+    height: 2.5em;
+    color: white;
+}
+
+#breadcrumb p{
+    padding-top: .5em;
+    padding-left: 2em;
+    font-size: 1.3em;
+}
+
+/* circlemenu */
+
+#circlemenu{
+    width: 100%;
+    overflow:hidden;
+}
+
+#circlemenu ul{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    text-align: center; /* "left", "center", or "right" align menu */
+}
+
+#circlemenu li{
+    display: inline;
+    margin: 2em;
+}
+
+#circlemenu li{
+    display:inline-block;
+    text-align:center;
+    text-decoration: none;
+    color: white;
+    margin-right:5px; /*right spacing between each link */
+    border-radius: 400px; /*really large border radius to create round borders*/
+    -moz-border-radius: 400px;
+    -webkit-border-radius: 400px;
+    -o-border-radius: 400px;
+}
+
+#circlemenu .notSelected{
+    position: relative;
+    top:1.5em;
+}
+#circlemenu span, #circlemenu a span{
+    position:relative;
+    top: 40%;
+}
+
+#circlemenu #home, .home{
+    background-color: #0dd91d;
+}
+
+#circlemenu #home:hover{
+    background-color: #3CB371;
+}
+
+#circlemenu #prodotti, .prodotti{
+    background-color: #FFDA00;
+}
+
+#circlemenu #prodotti:hover{
+    background-color: #FECB00;
+}
+
+#circlemenu #lavorazioni, .lavorazioni{
+    background-color: #ff5128;
+}
+
+#circlemenu #lavorazioni:hover{
+    background-color: #E98300;
+}
+
+#circlemenu #contatti, .contatti{
+    background-color: #E3001D;
+}
+
+#circlemenu #contatti:hover{
+    background-color: #b72d23;
+}
+
+#circlemenu li:visited{
+    color: white;
+}
+
+#circlemenu .selectedH{
+    background: #0dd91d;
+}
+#circlemenu .selectedP{
+    background: #FECB00;
+}
+#circlemenu .selectedL{
+    background: #ff5128;
+}
+#circlemenu .selectedC{
+    background: #E3001D;
+}
+
+#circlemenu li a{
+    text-decoration: none;
+    color: white;
+}
+
+#circlemenu .selectedP{
+    display:inline-block;
+    text-align:center;
+    text-decoration: none;
+    color: white;
+    margin-right:5px; /*right spacing between each link */
+}
+
+/* immagini */
+.circolare {
+    width: 150px;
+    height: 150px;
+    border-color: #C0C0C0;
+    border-radius:999em;
+    -moz-border-radius:999em;
+    -webkit-border-radius:999em;
+    -o-border-radius: 999em;
+    border-style: solid;
+    border-width: .4em;
+}
+
+.foto{
+    float: left;
+    margin: 5em 3em auto 3em;/* top right bottom left */
+}
+
+/* container */
+
+#container {
+    margin-top: 2em;
+}
+
+.testo {
+    width: auto;
+    margin-left: 3em;
+}
+
+#container .dispari {
+    background-color:gainsboro;
+    padding-top:1em;
+    padding-bottom:3em;
+}
+
+#container .pari {
+    background-color:white;
+    padding-top:1em;
+    padding-bottom:3em;
+}
+
+#cosaProd h1, #storia h1, #chiSiamo h1 {
+    text-align: left;
+    margin: 1.5em 0 1em 0;
+    padding-left: 5em;
+}
+
+.testo ul {
+    padding-left:16em;
+    padding-right:10em;
+    list-style-type:circle;
+}
+
+#cosaProd p, #storia p, #chiSiamo p {
+    text-align: left;
+    padding-left: 15em;
+    padding-right: 10em;
+}
+
+.tothetop {
+    margin-left:0.8em;
+    font-style:italic;
+    font-size:0.3em;
+}
+
+.descrizioneCat {
+    float: left;
+    margin-top: 1em;
+}
+
+#nomeCategoria {
+    float: none;
+}
+
+.descrizioneCat img {
+    float: left;
+    margin-left: 1em;
+}
+
+.descrizioneCat ul {
+    margin-left: 12em;
+}
+
+.listaProdotti {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+#panoramic {
+    max-width:1024px;
+}
+
+/* circlemenu */
+
+#circlemenu ul{
+    font: bold 16px Verdana;
+}
+
+#circlemenu li{
+    width:120px;
+    height:120px;
+}
+
+#circlemenu .selectedH, #circlemenu .selectedP,#circlemenu .selectedL, #circlemenu .selectedC{
+    width:160px;
+    height:160px;
+
+}
+
+
+/* footer */
+
+#footer {
+    height:110px;
+    color: white;
+    font-size:0.8em;
+    font-style:italic;
+    background-color:#808080;
+    margin:6em auto 1.2em auto;
+}
+
+#footer ul{
+    clear: left;
+    margin-left: 5%;
+    padding-top: 1em;
+}
+
+#footer ul li{
+    float: left;
+    list-style: none;
+    padding: 2px;
+}
+
+#footer ul li:before {
+    content:"| ";
+}
+
+.center{
+    width: 470px;
+    margin: 0 auto;
+    padding-top: 1.5em;
+}
+
+.center img{
+    border:0;
+    width:88px;
+    height:31px;
+}
+
+.media{
+    margin: 0 1em 0 1em;
+    vertical-align: middle;
+}
