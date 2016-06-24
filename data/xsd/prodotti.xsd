@@ -29,18 +29,8 @@ elementFormDefault="qualified">
         <xs:element name="foto" type="xs:anyURI" />
         <xs:element name="alt" type="xs:string" />
         <xs:element name="descrizione" type="xs:string" />
-        <xs:element name="lavorazione" type="tlavorazione" maxOccurs="unbounded" />
+        <xs:element name="lavorazione" type="xs:string" maxOccurs="unbounded" />
     </xs:sequence>
     </xs:complexType>
-
-    <xs:simpleType name="tlavorazione">
-        <xs:restriction base="xs:string">
-            <xs:enumeration value="Nichel Cromo" />
-            <xs:enumeration value="Zincatura" />
-            <xs:enumeration value="Verniciatura Poliestere" />
-            <xs:enumeration value="PVC" />
-            <xs:enumeration value="Acciao Inox" />
-        </xs:restriction>
-    </xs:simpleType>
 
 </xs:schema>
