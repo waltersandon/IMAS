@@ -1,18 +1,22 @@
+#!perl
 #!/usr/bin/perl
 
 require "utility.pl";
 
 my $cgi = new CGI;
 
-$fileXML = $fileXMLProdotti;
+$fileXMLprod = $fileXMLProdotti;
+$fileXMLlav = $fileXMLLavorazioni;
 
-#creazione oggetto parser
 my $parser = XML::LibXML->new();
-#apertura file e lettura input
-my $doc = $parser->parse_file($fileXML);
-#estrazione elemento radice
-my $radice= $doc->getDocumentElement;
+my $doc = $parser->parse_file($fileXMLprod);
+my $radice = $doc->getDocumentElement;
 my @categoria = $radice->getElementsByTagName('categoria');
+
+my $parserlav = XML::LibXML->new();
+my $doclav = $parserlav->parse_file($fileXMLlav);
+my $radicelav = $doclav->getDocumentElement;
+my @nomelav = $radicelav->getElementsByTagName('nomeLav');
 
 #cattura parametri se il prodotto è già stato scelto
 my $nomeprod = $cgi->param("selectprod");
@@ -32,7 +36,6 @@ if($nomeprod and $nomeprod ne "--------") {
 	my $mfoto = $radice->findvalue("//prodotto[nomeprod = '$nomeprod']/foto");
 	my $malt = $radice->findvalue("//prodotto[nomeprod = '$nomeprod']/alt");
 	my $mcategoria = $radice->findvalue("//prodotto[nomeprod = '$nomeprod']/../nomecat");
-	my $mid = $radice->findvalue("//prodotto[nomeprod = '$nomeprod']/id");
 	my $mdescr = $radice->findvalue("//prodotto[nomeprod = '$nomeprod']/descrizione");
 	printHTML("../public_html/parts/modprod_content_afterchoice.xhtml");
 	print "<img class='circolare fotoprod' src='$mfoto' alt='$malt' />
@@ -51,10 +54,6 @@ if($nomeprod and $nomeprod ne "--------") {
 	<td><input type='text' name='nome' id='nome' value='$nomeprod' /></td>
 	</tr>
 	<tr>
-	<td><label for='id' class='textbold'>ID: </label></td>
-	<td><input type='text' name='id' id='id' value='$mid' /></td>
-	</tr>
-	<tr>
 	<td><label for='foto' class='textbold'>Foto: </label></td>
 	<td><input type='file' name='foto' id='foto' /></td>
 	</tr>
@@ -65,33 +64,25 @@ if($nomeprod and $nomeprod ne "--------") {
 	</tbody>
 	</table>
 	</li>
+
 	
 	<div id='divlav'><span class='textbold'>Lavorazioni:</span>
 	<ul id='ullav'>";
-	if($radice->findvalue("//prodotto[nomeprod = '$nomeprod']/lavorazione[text()='Verniciatura']")) {
-		print "<li class='checklav'><input type='checkbox' id='checkvern' name='checkvern' value='Verniciatura' checked />
-		<label for='checkvern'>Verniciatura</label></li>"; 
+	
+	foreach $nomelav(@nomelav) {
+		my $listalav = $nomelav->string_value;
+		if($radice->findvalue("//prodotto[nomeprod = '$nomeprod']/lavorazione[text()='$listalav']")) {
+		print "<li class='checklav'>
+		<input type='checkbox' id='check$listalav' name='check$listalav' value='$listalav' checked />
+		<label for='check$listalav'>$listalav</label></li>";
+		}
+		else {
+		print "<li class='checklav'>
+		<input type='checkbox' id='check$listalav' name='check$listalav' value='$listalav' />
+		<label for='check$listalav'>$listalav</label></li>";
+		}
 	}
-	else {
-		print "<li class='checklav'><input type='checkbox' id='checkvern' name='checkvern' value='Verniciatura' />
-		<label for='checkvern'>Verniciatura</label></li>";
-	}
-	if($radice->findvalue("//prodotto[nomeprod = '$nomeprod']/lavorazione[text()='Cromatura']")) {
-		print "<li class='checklav'><input type='checkbox' id='checkcrom' name='checkcrom' value='Cromatura' checked />
-		<label for='checkcrom'>Cromatura</label></li>";
-	}
-	else {
-		print "<li class='checklav'><input type='checkbox' id='checkcrom' name='checkcrom' value='Cromatura' />
-		<label for='checkcrom'>Cromatura</label></li>";
-	}
-	if($radice->findvalue("//prodotto[nomeprod = '$nomeprod']/lavorazione[text()='Taglio']")) {
-		print "<li class='checklav'><input type='checkbox' id='checktagl' name='checktagl' value='Taglio' checked />
-		<label for='checktagl'>Taglio</label></li>";
-	}
-	else {
-		print "<li class='checklav'><input type='checkbox' id='checktagl' name='checktagl' value='Taglio' />
-		<label for='checktagl'>Taglio</label></li>";
-	}
+
 	print "</ul>
 	</div>
 	
