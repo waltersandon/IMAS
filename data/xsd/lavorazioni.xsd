@@ -14,7 +14,7 @@ elementFormDefault="qualified">
 
 <xs:complexType name="tlavorazione">
 <xs:sequence>
-<xs:element name="nomeLav" type="xs:tnomelav" />
+<xs:element name="nomeLav" type="xs:string" />
 <xs:element name="fotoLav" type="xs:anyURI" />
 <xs:element name="altLav" type="xs:string" />
 <xs:element name="descrLav" type="xs:string" />
@@ -22,15 +22,5 @@ elementFormDefault="qualified">
 </xs:sequence>
 <xs:attribute name="produzione" type="xs:string" use="required"/>
 </xs:complexType>
-
-<xs:simpleType name="tnomelav">
-<xs:restriction base="xs:string">
-<xs:enumeration value="Nichel Cromo" />
-<xs:enumeration value="Zincatura" />
-<xs:enumeration value="Verniciatura Poliestere" />
-<xs:enumeration value="PVC" />
-<xs:enumeration value="Acciao Inox" />
-</xs:restriction>
-</xs:simpleType>
 
 </xs:schema>
