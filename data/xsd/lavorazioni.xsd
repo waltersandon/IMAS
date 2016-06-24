@@ -14,10 +14,10 @@ elementFormDefault="qualified">
 
 <xs:complexType name="tlavorazione">
 <xs:sequence>
-<xs:element name="nomelav" type="xs:tnomelav" />
-<xs:element name="fotolav" type="xs:anyURI" />
-<xs:element name="altlav" type="xs:string" />
-<xs:element name="descrlav" type="xs:string" />
+<xs:element name="nomeLav" type="xs:tnomelav" />
+<xs:element name="fotoLav" type="xs:anyURI" />
+<xs:element name="altLav" type="xs:string" />
+<xs:element name="descrLav" type="xs:string" />
 <xs:element name="commento" type="xs:string" maxOccurs="unbounded" />
 </xs:sequence>
 <xs:attribute name="produzione" type="xs:string" use="required"/>
