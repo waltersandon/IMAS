@@ -1,6 +1,6 @@
-<?xml version="1.0"?>
-
+<?xml version="1.0" encoding="UTF-8"?>
 <utenti>
+
 <utente>
 <username>admin</username>
 <password>admin</password>
@@ -13,4 +13,5 @@
 <username>cc</username>
 <password>22</password>
 </utente>
+
 </utenti>

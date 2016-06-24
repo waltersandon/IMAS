@@ -13,7 +13,7 @@ printHEADER();
 
 printHTML("../public_html/parts/lavorazioni_nav.xhtml");
 
-printTRANSFORM_lav();
+printTRANSFORM();
 
 printFOOTER();
 printBODY_END();

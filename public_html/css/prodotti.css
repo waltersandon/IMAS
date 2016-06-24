@@ -22,21 +22,20 @@
     padding-top:1em ;
 }
 .fotocat {
-    float: left;
-    height:180px;
-    width:180px;
-    margin-right: 2em;
-    margin-left: 2em;
-}
+     float: left;
+     height:200px;
+     width:200px;
+     margin:1.5em  2em 0 2em;
+ }
 
 .testocat h1{
     text-transform: uppercase;
     font-size: x-large;
+    margin-top: 1.5em;
 }
 
 .circleGrid{
     overflow: hidden;
-    display: inline;
     float: left;
     text-align: center;
     width: 260px;
@@ -47,14 +46,52 @@
     margin-bottom: 1.5em;
 }
 
-.circleGrid p{padding: 0;}
-.circleGrid h2{font-size: medium}
+.circleGrid p{padding: 0;margin-bottom: -.5em;}
+.circleGrid h1{font-size: medium}
 
-.clear{
-    clear: both;
-    display: block;
-    overflow: hidden;
-    visibility: hidden;
-    width: 0;
-    height: 0;
+
+@media screen and (min-width: 480px) and (max-width: 768px){
+    .testocat p{
+        padding-top: 2em;
+        margin-top: 5em;
+    }
+    .catContent{
+        margin-top: 1.5em;
+        margin-bottom: 6em;
+        padding-bottom: 2em;
+    }
+    .fotocat {
+        float: left;
+        height:170px;
+        width:170px;
+        margin:1em  1.5em 0 2em;
+    }
+
+    .circleGrid{
+        overflow: hidden;
+        float: left;
+        text-align: center;
+        width: 260px;
+        height: 280px;
+        margin-top: 1.5em;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 1em;
+    }
+
+    .fotoprod{
+        height:150px;
+        width:150px;
+    }
+
+    .circleGrid p{
+        margin-bottom: -.5em;
+        padding: 0;
+    }
+
+    .testocat h1{
+        font-size: x-large;
+        margin-top: 2.5em;
+    }
+
 }

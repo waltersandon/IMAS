@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
-xmlns="http://www.imas.it"
-targetNamespace="http://www.imas.it"
+targetNamespace="http://www.imas.com"
+xmlns="http://www.imas.com"
 elementFormDefault="qualified">
 
     <xs:element name="login" type="Tlogin" />

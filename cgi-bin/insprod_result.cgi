@@ -9,7 +9,17 @@ checkSession();
 
 my $cgi = new CGI;
 
-$fileXML = $fileXMLProdotti;
+$fileXMLprod = $fileXMLProdotti;
+$fileXMLlav = $fileXMLLavorazioni;
+
+my $parser = XML::LibXML->new();
+my $doc = $parser->parse_file($fileXMLprod);
+my $radice = $doc->getDocumentElement;
+
+my $parserlav = XML::LibXML->new();
+my $doclav = $parserlav->parse_file($fileXMLlav);
+my $radicelav = $doclav->getDocumentElement;
+my @nomelav = $radicelav->getElementsByTagName('nomeLav');
 
 #cattura parametri del form
 
@@ -17,39 +27,40 @@ my $categ = $cgi->param("selectcateg");
 my $nomeprod = $cgi->param("nomeprod");
 my $id = $cgi->param("id");
 my $foto = $cgi->param("foto");
-my $checkvern = $cgi->param("checkvern");
-my $checkcrom = $cgi->param("checkcrom");
-my $checktagl = $cgi->param("checktagl");
 my $descr = $cgi->param("descr");
 
 #controllo errori
 
 my $error = 0;
 
-if(!$nomeprod) {
-	$error = 1;
+if(!$nomeprod) { $error = 1; }
+elsif(!$id) { $error = 1; }
+elsif(!$foto) { $error = 1; }
+elsif(!$descr) { $error = 1; }
+
+#errore lavorazioni
+
+my $lavelemento;
+
+my $numlav = 0;
+
+foreach $nomelav(@nomelav) {
+
+my $listalav = $nomelav->string_value;
+if($cgi->param("check$listalav")) {
+$numlav += 1;
+$lavelemento .= 
+"<lavorazione>$listalav</lavorazione>
+";
 }
-elsif(!$id) {
-	$error = 1;
+
 }
-elsif(!$foto) {
-	$error = 1;
-}
-elsif(!$checkvern and !$checkcrom and !$checktagl) {
-	$error = 1;
-}
-elsif(!$descr) {
-	$error = 1;
-}
+
+if(!$numlav) { $error = 1; }
 
 #nessun errore
 
 if(!$error) {
-
-#elaborazione categoria
-
-if($categ eq gef) {	$categ = 'Griglie e fornelli'; }
-elsif($categ eq lel) { $categ = 'Laminati e lastre'; }
 
 #elaborazione foto
 
@@ -63,10 +74,6 @@ close UPLOADFILE;
 
 #inserimento nuovo prodotto
 
-my $parser = XML::LibXML->new();
-my $doc = $parser->parse_file($fileXML) || die("Operazione di parsificazione fallita");
-my $radice = $doc->getDocumentElement || die("Non accedo alla radice");
-
 my $nuovoelemento = "<prodotto>
 <id>$id</id>
 <nomeprod>$nomeprod</nomeprod>
@@ -75,12 +82,7 @@ my $nuovoelemento = "<prodotto>
 <descrizione>$descr</descrizione>
 ";
 
-if($checkvern) { $nuovoelemento .= "<lavorazione>Verniciatura</lavorazione>
-"; }
-if($checkcrom) { $nuovoelemento .= "<lavorazione>Cromatura</lavorazione>
-"; }
-if($checktagl) { $nuovoelemento .= "<lavorazione>Taglio</lavorazione>
-"; }
+$nuovoelemento .= $lavelemento;
 
 $nuovoelemento .= "</prodotto>
 
@@ -94,7 +96,7 @@ foreach my $node (@nodes) {
   $node->appendChild($frammento);
 }
 
-open(OUT,">$fileXML");
+open(OUT,">$fileXMLprod");
 print OUT $doc->toString;
 close(OUT);
 
