@@ -6,7 +6,11 @@ html,body {
 }
 
 ul {list-style-type:none}
+<<<<<<< HEAD
 body{max-width:1300px;  }
+=======
+body{max-width:1300px}
+>>>>>>> 0ae5d46974507b9535a387f889d11113ab21113c
 
 #logoDitta{
     margin-top: 1.5em;
@@ -202,7 +206,11 @@ body{max-width:1300px;  }
 }
 
 #container .dispari {
+<<<<<<< HEAD
     background-color:#f2f2f2;
+=======
+    background-color:gainsboro;
+>>>>>>> 0ae5d46974507b9535a387f889d11113ab21113c
     padding-top:1em;
     padding-bottom:3em;
 }
@@ -281,7 +289,16 @@ body{max-width:1300px;  }
 
 }
 
+#xhtml{
+    clear: left;
+    margin-left: 30%;
+    margin-right: 2em;
+}
 
+#css{
+    float: none;
+    margin-left: 2.4em;
+}
 /* footer */
 
 #footer {
@@ -291,6 +308,23 @@ body{max-width:1300px;  }
     font-style:italic;
     background-color:#808080;
     margin:6em auto 1.2em auto;
+}
+
+#footer img{
+    float: left;
+    margin-top: 1em;
+    border:0;
+    width:88px;
+    height:31px;
+}
+
+
+#footer p{
+    position: relative;
+    text-align: left;
+    float: left;
+    font-size: 16px;
+    margin-top: 1.2em;
 }
 
 #footer ul{

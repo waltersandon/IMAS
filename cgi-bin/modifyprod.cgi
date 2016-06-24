@@ -10,35 +10,51 @@ checkSession();
 
 my $cgi = new CGI;
 
-$fileXML = $fileXMLProdotti;
+$fileXMLprod = $fileXMLProdotti;
+$fileXMLlav = $fileXMLLavorazioni;
 
 my $parser = XML::LibXML->new();
-
-my $doc = $parser->parse_file($fileXML);
-
+my $doc = $parser->parse_file($fileXMLprod);
 my $radice = $doc->getDocumentElement;
-
 my $prodotto = $cgi->param("modificaprod");
+
+my $parserlav = XML::LibXML->new();
+my $doclav = $parserlav->parse_file($fileXMLlav);
+my $radicelav = $doclav->getDocumentElement;
+my @nomelav = $radicelav->getElementsByTagName('nomeLav');
 
 #recupero i parametri
 
 my $nnome = $cgi->param("nome");
-my $nid = $cgi->param("id");
 my $nfoto = $cgi->param("foto");
 my $nalt = $cgi->param("alt");
 my $ndescr = $cgi->param("descr");
-my $ncheckvern = $cgi->param("checkvern");
-my $ncheckcrom = $cgi->param("checkcrom");
-my $nchecktagl = $cgi->param("checktagl");
 
-if(!$nnome or !$nid or !$nalt or (!$ncheckvern and !$ncheckcrom and !$nchecktagl)) { $error = 1; }
+if(!$nnome or !$nalt) { $error = 1; }
+
+#errore lavorazioni
+
+my $lavelemento;
+
+my $numlav = 0;
+
+foreach $nomelav(@nomelav) {
+
+my $listalav = $nomelav->string_value;
+if($cgi->param("check$listalav")) {
+$numlav += 1;
+$lavelemento .= 
+"<lavorazione>$listalav</lavorazione>
+";
+}
+
+}
+
+if(!$numlav) { $error = 1; }
 
 if(!$error) {
 
 #modifiche semplici
-
-my $idnodo = $radice->findnodes("//prodotto[nomeprod = '$prodotto']/id/text()")->get_node(1);
-$idnodo->setData($nid);
 
 my $altnodo = $radice->findnodes("//prodotto[nomeprod = '$prodotto']/alt/text()")->get_node(1);
 $altnodo->setData($nalt);
@@ -77,12 +93,8 @@ foreach $daeliminare (@daeliminare) {
 }
 
 my $nuovoelemento = "";
-if($ncheckvern) { $nuovoelemento .= "<lavorazione>Verniciatura</lavorazione>
-"; }
-if($ncheckcrom) { $nuovoelemento .= "<lavorazione>Cromatura</lavorazione>
-"; }
-if($nchecktagl) { $nuovoelemento .= "<lavorazione>Taglio</lavorazione>
-"; }
+
+$nuovoelemento .= $lavelemento;
 
 my $frammento = $parser->parse_balanced_chunk($nuovoelemento);
 my @nodes = $doc->findnodes("//prodotto[nomeprod = '$prodotto']");
@@ -93,7 +105,7 @@ foreach my $node(@nodes) { $node->appendChild($frammento); }
 my $nomenodo = $radice->findnodes("//prodotto[nomeprod = '$prodotto']/nomeprod/text()")->get_node(1);
 $nomenodo->setData($nnome);
 
-open(OUT,">$fileXML");
+open(OUT,">$fileXMLprod");
 print OUT $doc->toString;
 close(OUT);
 

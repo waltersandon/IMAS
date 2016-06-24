@@ -1,3 +1,4 @@
+
 @media screen and (max-width: 768px) {
     body{min-width:550px;  }
     #header{
@@ -60,23 +61,38 @@
         padding-bottom: 3em;
     }
 
+<<<<<<< HEAD
     #cosaProd h1, #storia h1, #chiSiamo h1  {
+=======
+    #container h1 {
+>>>>>>> 0ae5d46974507b9535a387f889d11113ab21113c
         text-align: left;
         margin: 1.5em 0 1em 0;
         padding-left: 5em;
         padding-top: 2em;
     }
 
+<<<<<<< HEAD
     #cosaProd p, #storia p, #chiSiamo p  {
         clear: both;
         text-align: left;
         padding-left: 0;
         padding-right: 0;
+=======
+    #container p {
+        clear: both;
+        text-align: left;
+        padding-left: 0;
+        padding-right: 0em;
+>>>>>>> 0ae5d46974507b9535a387f889d11113ab21113c
     }
     .center{
         padding-top: 3em;
     }
+<<<<<<< HEAD
     #footer {
         height:120px;
     }
+=======
+>>>>>>> 0ae5d46974507b9535a387f889d11113ab21113c
 }
