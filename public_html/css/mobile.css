@@ -1,0 +1,82 @@
+@media screen and (max-width: 768px) {
+    body{min-width:550px;  }
+    #header{
+        height: 90px;
+    }
+
+    #logoDitta {
+        margin-left: 6%;
+        height: 90px;
+        width:300px;
+    }
+
+    #accessoadmin {
+        margin-left:69%;
+    }
+
+    #panoramic {
+        width:100%;
+        height:250px;
+    }
+
+    #breadcrumb{
+        height: 2em;
+    }
+
+    #breadcrumb p{
+        padding-top: .3em;
+        padding-left: 2em;
+        font-size: 1.1em;
+    }
+    /* circlemenu */
+
+    #circlemenu ul{
+        font: bold 12px Verdana;
+    }
+
+    #circlemenu li{
+    }
+
+    #circlemenu li{
+        width:80px;
+        height:80px;
+    }
+
+
+    #circlemenu .notSelected{
+        position: relative;
+        top:1.5em;
+    }
+
+    #circlemenu .selectedH, #circlemenu .selectedP, #circlemenu .selectedL, #circlemenu .selectedC{
+        width:110px;
+        height:110px;
+    }
+
+    /* container */
+
+    .foto{
+        float: left;
+        padding-bottom: 3em;
+    }
+
+    #cosaProd h1, #storia h1, #chiSiamo h1  {
+        text-align: left;
+        margin: 1.5em 0 1em 0;
+        padding-left: 5em;
+        padding-top: 2em;
+    }
+
+    #cosaProd p, #storia p, #chiSiamo p  {
+        clear: both;
+        text-align: left;
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .center{
+        padding-top: 3em;
+    }
+    #footer {
+        height:120px;
+    }
+}
