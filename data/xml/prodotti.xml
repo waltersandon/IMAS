@@ -9,7 +9,7 @@
 </descrcat>
 
 <prodotto>
-<id>ID001</id>
+<id>ID1</id>
 <nomeprod>Griglia per forni classica</nomeprod>
 <foto>../public_html/images/griglia1.jpg</foto>
 <alt>griglia per forni e fornelli classica</alt>
@@ -19,7 +19,7 @@
 </prodotto>
 
 <prodotto>
-<id>ID002</id>
+<id>ID2</id>
 <nomeprod>Griglia laterale</nomeprod>
 <foto>../public_html/images/griglia2.jpg</foto>
 <alt>griglia laterale</alt>
@@ -37,7 +37,7 @@
 </descrcat>
 
 <prodotto>
-<id>ID003</id>
+<id>ID3</id>
 <nomeprod>Griglia per frigorifero</nomeprod>
 <foto>../public_html/images/lastra.jpg</foto>
 <alt>griglia per frigorifero</alt>
@@ -45,7 +45,7 @@
 </prodotto>
 
 <prodotto>
-<id>ID004</id>
+<id>ID4</id>
 <nomeprod>Portabottiglie</nomeprod>
 <foto>../public_html/images/lastra.jpg</foto>
 <alt>porta bottiglie da frigorifero</alt>
@@ -63,7 +63,7 @@
 </descrcat>
 
 <prodotto>
-<id>ID005</id>
+<id>ID5</id>
 <nomeprod>Molle per sedili</nomeprod>
 <foto>../public_html/images/lastra.jpg</foto>
 <alt>molle per sedili</alt>
