@@ -1,67 +1,47 @@
 html,body {
     margin:auto;
-    font-family:-apple-system,"San Francisco",'Helvetica','Arial', sans-serif;
+    font-family:-apple-system,"Verdana",'Helvetica','Arial', sans-serif;
     font-size:1em;
     background-color:white;
 }
-
+a:hover, a:active {
+    outline:none;
+}
 ul {list-style-type:none}
 body{max-width:1300px}
 
 #logoDitta{
     margin-top: 1.5em;
     margin-left: 6%;
-    height: 130px;
-    width:450px;
+    height: 110px;
+    width:400px;
 }
 
-#accessoadmin {
-    margin-left:80%;
-}
-#adminzone {
-    background-color:lightgrey;top: -3em;
-
+#header{
+    display: inline;
 }
 
-#adminzone p {
+#header p {
+    position: relative;
+    top:3.8em;
+    right: 1em;
+    display: inline;
+    float: right;
     font-size:1.3em;
     padding-top:0.3em;
     padding-bottom:0.3em;
 }
 
-#benvenuto {
-    margin-left:3%;
-}
-
-#scelteadmin {
-    float:right;
-    text-decoration:none;
-    margin-right:4%;
-}
-
-#adminzone a:visited {
-    color:black;
-}
-
-#adminzone  a:hover {
-    color:blue;
-    text-decoration:underline;
-}
-
-#adminzone  a:visited:hover {
-    color:blue;
-}
-
 #panoramic {
     width:100%;
-    height:250px;
-    display:block;
+    height:180px;
     object-fit:cover; /* nota */
 }
 
 #breadcrumb {
     height: 2.5em;
     color: white;
+    margin-bottom: -2em;
 }
 
 #breadcrumb p{
@@ -90,6 +70,7 @@ body{max-width:1300px}
 }
 
 #circlemenu li{
+    overflow: hidden;
     display:inline-block;
     text-align:center;
     text-decoration: none;
@@ -102,12 +83,14 @@ body{max-width:1300px}
 }
 
 #circlemenu .notSelected{
+    overflow: hidden;
     position: relative;
     top:1.5em;
 }
 #circlemenu span, #circlemenu a span{
     position:relative;
     top: 40%;
+    overflow: hidden;
 }
 
 #circlemenu #home, .home{
@@ -160,6 +143,7 @@ body{max-width:1300px}
 }
 
 #circlemenu li a{
+    overflow: hidden;
     text-decoration: none;
     color: white;
 }
@@ -299,7 +283,7 @@ body{max-width:1300px}
     font-size:0.8em;
     font-style:italic;
     background-color:#808080;
-    margin:6em auto 1.2em auto;
+    margin-top:-1em;
 }
 
 #footer ul{
@@ -334,3 +318,4 @@ body{max-width:1300px}
     margin: 0 1em 0 1em;
     vertical-align: middle;
 }
+

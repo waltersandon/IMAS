@@ -1,7 +1,12 @@
 
 @media screen and (max-width: 768px) {
     body{min-width:550px;  }
+
+    a:hover, a:active {
+        outline:none;
+    }
     #header{
+        display: inline;
         height: 90px;
     }
 
@@ -11,13 +16,19 @@
         width:300px;
     }
 
-    #accessoadmin {
-        margin-left:69%;
+
+    #header p {
+        position: relative;
+        top:2.8em;
+        right: 1em;
+        display: inline;
+        float: right;
+        font-size:1.3em;
     }
 
     #panoramic {
         width:100%;
-        height:250px;
+        height:180px;
     }
 
     #breadcrumb{
@@ -59,6 +70,8 @@
     .foto{
         float: left;
         padding-bottom: 3em;
+        margin: 2em 3em auto 3em;/* top right bottom left */
+
     }
 
     #cosaProd h1, #storia h1, #chiSiamo h1  {
@@ -78,5 +91,8 @@
     }
     #footer {
         height:120px;
+    }
+    .testo ul{
+        padding-left: 2em;
     }
 }
