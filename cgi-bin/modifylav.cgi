@@ -12,38 +12,39 @@ my $cgi = new CGI;
 $fileXML = $fileXMLLavorazioni;
 
 my $parser = XML::LibXML->new();
-
 my $doc = $parser->parse_file($fileXML);
-
 my $radice = $doc->getDocumentElement;
-
 my $nomelav = $cgi->param("modificaprod");
 
 #recupero i parametri
 
+my $nproduz = $cgi->param("produz");
 my $nfoto = $cgi->param("foto");
 my $nalt = $cgi->param("alt");
 my $ndescr = $cgi->param("descrlav");
 my $ncomm = $cgi->param("comm");
 
-if(!$nfoto and !$nalt and !$ndescr and !$ncomm) { $error = 1; }
+if(!$nproduz and !$nfoto and !$nalt and !$ndescr and !$ncomm) { $error = 1; }
 
 if(!$error) {
 
 #modifiche semplici
 
-my $altnodo = $radice->findnodes("//lavorazione[nomelav = '$nomelav']/altlav/text()")->get_node(1);
+my $produznodo = $radice->findnodes("//lavorazione[nomeLav = '$nomelav']")->get_node(1);
+$produznodo->setAttribute('produzione',$nproduz);
+
+my $altnodo = $radice->findnodes("//lavorazione[nomeLav = '$nomelav']/altLav/text()")->get_node(1);
 $altnodo->setData($nalt);
 
 #modifica descrizione e commento
 
 if($ndescr) {
-	my $descrnodo = $radice->findnodes("//lavorazione[nomelav = '$nomelav']/descrlav/text()")->get_node(1);
+	my $descrnodo = $radice->findnodes("//lavorazione[nomeLav = '$nomelav']/descrLav/text()")->get_node(1);
 	$descrnodo->setData($ndescr);
 }
 
 if($ncomm) {
-	my $descrcomm = $radice->findnodes("//lavorazione[nomelav = '$nomelav']/commento/text()")->get_node(1);
+	my $descrcomm = $radice->findnodes("//lavorazione[nomeLav = '$nomelav']/commento/text()")->get_node(1);
 	$descrcomm->setData($ncomm);
 }
 
@@ -53,7 +54,7 @@ if($nfoto) {
 	my $imagesdir = "../public_html/images/";
 	my $uploadfoto = $cgi->upload("foto");
 	
-	my $vecchiafoto = $radice->findvalue("//lavorazione[nomelav = '$nomelav']/fotolav/text()");
+	my $vecchiafoto = $radice->findvalue("//lavorazione[nomeLav = '$nomelav']/fotoLav/text()");
 	unlink("$vecchiafoto") or die "Errore nella cancellazione vecchia foto!";
 	
 	open(UPLOADFILE,">$imagesdir/$nfoto");
@@ -61,7 +62,7 @@ if($nfoto) {
 	while(<$uploadfoto>) { print UPLOADFILE; }
 	close UPLOADFILE;
 	
-	my $fotonodo = $radice->findnodes("//lavorazione[nomelav = '$nomelav']/fotolav/text()")->get_node(1);
+	my $fotonodo = $radice->findnodes("//lavorazione[nomeLav = '$nomelav']/fotoLav/text()")->get_node(1);
 	$fotonodo->setData($imagesdir.$nfoto);
 }
 

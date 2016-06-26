@@ -1,10 +1,8 @@
-#!perl
 #!/usr/bin/perl
 
 require "utility.pl";
 
 my $cgi = new CGI;
-
 
 $fileXMLprod = $fileXMLProdotti;
 $fileXMLlav = $fileXMLLavorazioni;
