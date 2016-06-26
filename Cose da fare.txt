@@ -1,14 +1,9 @@
-Sistemare inserimento prodotto/xml
-Codice Modifica/elimina prodotto
-Codice Modifica lavorazione
 Sistemare login
 CSS vario
 Print delle pagine prodotti e lavorazioni
 Css fluido nel cambiare dimensioni (footer, schermo +1200px)
 Accessibilità
 Relazione
-
-Controllare nell'aggiunta di un prodotto che non esista già o fare in modo che abbia un numero progressivo
 
 Fa finire di sistemare il css footer e modalità telefono
 
@@ -17,4 +12,3 @@ Da trovare foto adatte per le lavorazioni (alcune vanno bene) e per i prodotti
 Pensare ad una soluzione di refresh su log out perchè ti manda sempre all'admin e non so se sia la cosa migliore
 
 sistemare pagina contatti e da valutare di mettere tutte le info della ditta oltre che la mail
-
