@@ -1,4 +1,5 @@
 #!/usr/bin/perl
+#!/usr/bin/perl
 
 require "utility.pl";
 
@@ -28,6 +29,8 @@ my $nnome = $cgi->param("nome");
 my $nfoto = $cgi->param("foto");
 my $nalt = $cgi->param("alt");
 my $ndescr = $cgi->param("descr");
+
+my $error = 0;
 
 if(!$nnome or !$nalt) { $error = 1; }
 
@@ -99,7 +102,7 @@ my $frammento = $parser->parse_balanced_chunk($nuovoelemento);
 my @nodes = $doc->findnodes("//prodotto[nomeprod = '$prodotto']");
 foreach my $node(@nodes) { $node->appendChild($frammento); }
 
-#cambio nome nodo
+#modifica nome
 
 my $nomenodo = $radice->findnodes("//prodotto[nomeprod = '$prodotto']/nomeprod/text()")->get_node(1);
 $nomenodo->setData($nnome);

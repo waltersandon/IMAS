@@ -1,4 +1,5 @@
 #!/usr/bin/perl
+#!/usr/bin/perl
 
 require "utility.pl";
 
@@ -36,8 +37,11 @@ if($nomeprod and $nomeprod ne "--------") {
 	my $malt = $radice->findvalue("//prodotto[nomeprod = '$nomeprod']/alt");
 	my $mcategoria = $radice->findvalue("//prodotto[nomeprod = '$nomeprod']/../nomecat");
 	my $mdescr = $radice->findvalue("//prodotto[nomeprod = '$nomeprod']/descrizione");
-	printHTML("../public_html/parts/modprod_content_afterchoice.xhtml");
-	print "<img class='circolare fotoprod' src='$mfoto' alt='$malt' />
+	print "<!-- Start Container -->
+	<div id='container' class='lightgrey containerbottom'>
+	<div id='divmodprod'>
+	<h3 id='titoloprod'>Stai modificando: </h3>
+	<img class='circolare fotoprod' src='$mfoto' alt='$malt' />
 	<h3>$nomeprod</h3>
 	</div>";
 	
@@ -70,7 +74,7 @@ if($nomeprod and $nomeprod ne "--------") {
 	
 	foreach $nomelav(@nomelav) {
 		my $listalav = $nomelav->string_value;
-		if($radice->findvalue("//prodotto[nomeprod = '$nomeprod']/lavorazione[text()='$listalav']")) {
+		if($radice->findvalue("//prodotto[nomeprod = '$nomeprod']/lavorazione[text() = '$listalav']")) {
 		print "<li class='checklav'>
 		<input type='checkbox' id='check$listalav' name='check$listalav' value='$listalav' checked />
 		<label for='check$listalav'>$listalav</label></li>";
@@ -84,7 +88,6 @@ if($nomeprod and $nomeprod ne "--------") {
 
 	print "</ul>
 	</div>
-	
 	<table class='tablemodify'>
 	<tbody>
 	<tr>
@@ -112,7 +115,7 @@ if($nomeprod and $nomeprod ne "--------") {
 	</div>";
 }
 else {
-	printHTML("../public_html/parts/modprod_content_beforechoice.xhtml");
+	printHTML("../public_html/parts/modprod_content_choice.xhtml");
 	foreach $categoria(@categoria) {
 		my $listacat = $categoria->getElementsByTagName('nomecat')->string_value;
 		print "<option disabled>Categoria: $listacat</option>";

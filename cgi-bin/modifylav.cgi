@@ -18,13 +18,14 @@ my $nomelav = $cgi->param("modificaprod");
 
 #recupero i parametri
 
+my $nnome = $cgi->param("nome");
 my $nproduz = $cgi->param("produz");
 my $nfoto = $cgi->param("foto");
 my $nalt = $cgi->param("alt");
 my $ndescr = $cgi->param("descrlav");
 my $ncomm = $cgi->param("comm");
 
-if(!$nproduz and !$nfoto and !$nalt and !$ndescr and !$ncomm) { $error = 1; }
+if(!$nnome and !$nproduz and !$nfoto and !$nalt and !$ndescr and !$ncomm) { $error = 1; }
 
 if(!$error) {
 
@@ -65,6 +66,11 @@ if($nfoto) {
 	my $fotonodo = $radice->findnodes("//lavorazione[nomeLav = '$nomelav']/fotoLav/text()")->get_node(1);
 	$fotonodo->setData($imagesdir.$nfoto);
 }
+
+#modifica nome
+
+my $nomenodo = $radice->findnodes("//lavorazione[nomeLav = '$nomelav']/nomeLav/text()")->get_node(1);
+$nomenodo->setData($nnome);
 
 open(OUT,">$fileXML");
 print OUT $doc->toString;

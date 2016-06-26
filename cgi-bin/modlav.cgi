@@ -1,4 +1,5 @@
 #!/usr/bin/perl
+#!/usr/bin/perl
 
 require "utility.pl";
 
@@ -29,8 +30,11 @@ if($nomelav and $nomelav ne "--------") {
 	my $mfoto = $radice->findvalue("//lavorazione[nomeLav = '$nomelav']/fotoLav");
 	my $malt = $radice->findvalue("//lavorazione[nomeLav = '$nomelav']/altLav");
 	my $mproduz = $radice->findvalue("//lavorazione[nomeLav = '$nomelav']/\@produzione");
-	printHTML("../public_html/parts/modprod_content_afterchoice.xhtml");
-	print "<img class='circolare fotoprod' src='$mfoto' alt='$malt' />
+	print "<!-- Start Container -->
+	<div id='container' class='lightgrey containerbottom'>
+	<div id='divmodprod'>
+	<h3 id='titoloprod'>Stai modificando: </h3>
+	<img class='circolare fotoprod' src='$mfoto' alt='$malt' />
 	<h3>$nomelav</h3>
 	</div>";
 	
@@ -41,6 +45,10 @@ if($nomelav and $nomelav ne "--------") {
 	<table class='tablemodify'>
 	<tbody>
 	<tr><td><input type='hidden' name='modificaprod' id='modificaprod' value='$nomelav' /></td></tr>
+	<tr>
+	<td><label for='nome' class='textbold'>Nome: </label></td>
+	<td><input type='text' name='nome' id='nome' value='$nomelav' /></td>
+	</tr>
 	<tr>
 	<td><label for='produz' class='textbold'>Produzione: </label></td>
 	<td><input type='text' name='produz' id='produz' value='$mproduz' /></td>
@@ -79,7 +87,7 @@ if($nomelav and $nomelav ne "--------") {
 
 }
 else {
-	printHTML("../public_html/parts/modlav_content_beforechoice.xhtml");
+	printHTML("../public_html/parts/modlav_content_choice.xhtml");
 	foreach $lavorazione(@lavorazione) {
 			my $nomelav = $lavorazione->getElementsByTagName('nomeLav')->string_value;
 			print "<option>$nomelav</option>";
