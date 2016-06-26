@@ -27,7 +27,8 @@ my $categ = $cgi->param("selectcateg");
 my $nomeprod = $cgi->param("nomeprod");
 my $id = $cgi->param("id");
 my $foto = $cgi->param("foto");
-my $descr = $cgi->param("descr");
+my $alt = $cgi->param("alt");
+my $descr = $cgi->param("texta2");
 
 #controllo errori
 
@@ -36,6 +37,7 @@ my $error = 0;
 if(!$nomeprod) { $error = 1; }
 elsif(!$id) { $error = 1; }
 elsif(!$foto) { $error = 1; }
+elsif(!$alt) { $error = 1; }
 elsif(!$descr) { $error = 1; }
 
 #errore lavorazioni
@@ -64,7 +66,7 @@ if(!$error) {
 
 #elaborazione foto
 
-my $imagesdir = "../public_html/images/";
+my $imagesdir = "../public_html/images";
 my $uploadfoto = $cgi->upload("foto");
 
 open(UPLOADFILE,">$imagesdir/$foto");
@@ -78,7 +80,7 @@ my $nuovoelemento = "<prodotto>
 <id>$id</id>
 <nomeprod>$nomeprod</nomeprod>
 <foto>$imagesdir/$foto</foto>
-<alt>Foto $nomeprod</alt>
+<alt>$alt</alt>
 <descrizione>$descr</descrizione>
 ";
 

@@ -7,12 +7,14 @@ my $cgi = new CGI;
 $fileXML = $fileXMLProdotti;
 
 my $parser = XML::LibXML->new();
-
 my $doc = $parser->parse_file($fileXML);
-
 my $radice = $doc->getDocumentElement;
-
 my $prodotto = $cgi->param("eliminaprod");
+
+#elimino il prodotto
+
+my $vecchiafoto = $radice->findvalue("//prodotto[nomeprod = '$prodotto']/foto/text()");
+unlink("$vecchiafoto") or die "Errore nella cancellazione vecchia foto!";
 
 my $daeliminare = $radice->findnodes("//prodotto[nomeprod = '$prodotto']")->get_node(1);
 

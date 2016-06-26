@@ -35,7 +35,7 @@ print "<!-- Start Container -->
 <p id='warning'>Per inserire un nuovo prodotto, compilare il modulo sottostante.</p>";
 
 my @ids = $radice->getElementsByTagName('id');
-my $maxid = '1';
+my $maxid = 1;
 foreach $ids(@ids) {
 	$idstring = $ids->string_value;
 	$idcode = substr $idstring, 2;
@@ -57,9 +57,10 @@ foreach $categoria(@categoria) {
 print "</select></li>
 <li><label for='nomeprod'>Nome Prodotto: </label><input tabindex='11' type='text' id='nomeprod' name='nomeprod' class='formmargin' /></li>
 <li><label for='foto'>Foto: </label><input tabindex='12' type='file' id='foto' name='foto' class='formmargin' /></li>
+<li><label for='alt'>Alt: </label><input tabindex='13' type='text' id='alt' name='alt' class='formmargin' /></li>
 <li>Lavorazioni disponibili:";
 
-my $tabindex = 13;
+my $tabindex = 14;
 
 foreach $nomelav(@nomelav) {
 	my $listalav = $nomelav->string_value;
@@ -68,8 +69,8 @@ foreach $nomelav(@nomelav) {
 }
 
 print "</li>
-<li><p id='pdescr'><label for='descr'>Descrizione:</label></p>
-<textarea tabindex='$tabindex' id='descr' name='descr' class='formmargin'></textarea></li>
+<li><p id='ptexta2'><label for='texta2'>Descrizione:</label></p>
+<textarea tabindex='$tabindex' id='texta2' name='texta2' class='formmargin'></textarea></li>
 </ul>";
 
 $tabindex += 1;

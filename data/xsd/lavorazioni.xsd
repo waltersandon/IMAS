@@ -18,7 +18,7 @@ elementFormDefault="qualified">
 <xs:element name="fotoLav" type="xs:anyURI" />
 <xs:element name="altLav" type="xs:string" />
 <xs:element name="descrLav" type="xs:string" />
-<xs:element name="commento" type="xs:string" maxOccurs="unbounded" />
+<xs:element name="commento" type="xs:string" />
 </xs:sequence>
 <xs:attribute name="produzione" type="xs:string" use="required"/>
 </xs:complexType>

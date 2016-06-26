@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<lavorazioni>
+<lavorazioni xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.imas.com data/xsd/lavorazioni.xsd">
 
 <lavorazione produzione="interna">
 <nomeLav>Cromatura</nomeLav>
@@ -25,11 +25,10 @@ Essendo meno elettronegativo dell'acciaio, quindi, in caso di rotture o porosit�
 </descrLav>
 <commento>
 È anche specializzata in trattamenti di zincatura per metalli di ultima generazione utilizzando macchinari all'avanguardia che permettono grosse produzioni e standard qualitativi elevatissimi.
-</commento>
-<commento>
 Una catena produttiva dell'azienda è dedicata alla zincatura a telaio dedicata alla zincatura di pezzi di grandi dimensioni, fino a 280 cm e con cavità chiuse o profonde. Questo tipo di lavorazione avviene con telai ad immersione che permettono di rivestire di zinco gli elementi metallici in modo conforme al peso e alle dimensioni degli stessi così da garantire un prodotto finito di alta qualità.
 </commento>
 </lavorazione>
+
 <lavorazione produzione="esterna">
 <nomeLav>Verniciatura Poliestere</nomeLav>
 <fotoLav>../public_html/images/verniciatura.jpg</fotoLav>

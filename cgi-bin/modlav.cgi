@@ -5,13 +5,9 @@ require "utility.pl";
 my $cgi = new CGI;
 
 $fileXML = $fileXMLLavorazioni;
-$fileXSLT = '../data/xsl/modlav.xslt';
 
-#creazione oggetto parser
 my $parser = XML::LibXML->new();
-#apertura file e lettura input
 my $doc = $parser->parse_file($fileXML);
-#estrazione elemento radice
 my $radice= $doc->getDocumentElement;
 my @lavorazione = $radice->getElementsByTagName('lavorazione');
 
@@ -30,8 +26,9 @@ printHEADER();
 printHTML("../public_html/parts/modlav_nav.xhtml");
 
 if($nomelav and $nomelav ne "--------") {
-	my $mfoto = $radice->findvalue("//lavorazione[nomelav = '$nomelav']/fotolav");
-	my $malt = $radice->findvalue("//lavorazione[nomelav = '$nomelav']/altlav");
+	my $mfoto = $radice->findvalue("//lavorazione[nomeLav = '$nomelav']/fotoLav");
+	my $malt = $radice->findvalue("//lavorazione[nomeLav = '$nomelav']/altLav");
+	my $mproduz = $radice->findvalue("//lavorazione[nomeLav = '$nomelav']/\@produzione");
 	printHTML("../public_html/parts/modprod_content_afterchoice.xhtml");
 	print "<img class='circolare fotoprod' src='$mfoto' alt='$malt' />
 	<h3>$nomelav</h3>
@@ -44,6 +41,10 @@ if($nomelav and $nomelav ne "--------") {
 	<table class='tablemodify'>
 	<tbody>
 	<tr><td><input type='hidden' name='modificaprod' id='modificaprod' value='$nomelav' /></td></tr>
+	<tr>
+	<td><label for='produz' class='textbold'>Produzione: </label></td>
+	<td><input type='text' name='produz' id='produz' value='$mproduz' /></td>
+	</tr>
 	<tr>
 	<td><label for='foto' class='textbold'>Foto: </label></td>
 	<td><input type='file' name='foto' id='foto' /></td>
@@ -67,6 +68,12 @@ if($nomelav and $nomelav ne "--------") {
 	</table>
 	</li>
 	</ul>
+	</form>";
+	
+	print "<form id='formdelprod' class='lightgrey' action='../cgi-bin/deletelav.cgi' method='post'>
+	<span id='testodelete'>Eliminazione lavorazione:</span>
+	<input type='hidden' name='eliminalav' id='eliminalav' value='$nomelav' /></td></tr>
+	<input type='submit' value='Elimina Lavorazione' id='confdeleteprod' />
 	</form>
 	</div>";
 
@@ -74,7 +81,7 @@ if($nomelav and $nomelav ne "--------") {
 else {
 	printHTML("../public_html/parts/modlav_content_beforechoice.xhtml");
 	foreach $lavorazione(@lavorazione) {
-			my $nomelav = $lavorazione->getElementsByTagName('nomelav')->string_value;
+			my $nomelav = $lavorazione->getElementsByTagName('nomeLav')->string_value;
 			print "<option>$nomelav</option>";
 	}
 	print "</select>
