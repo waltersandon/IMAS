@@ -1,6 +1,6 @@
 html,body {
     margin:auto;
-    font-family:-apple-system,"Verdana",'Helvetica','Arial', sans-serif;
+    font-family:'Helvetica','Arial', sans-serif;
     font-size:1em;
     background-color:white;
 }
@@ -24,7 +24,7 @@ body{max-width:1300px}
 #header p {
     position: relative;
     top:3.8em;
-    right: 1em;
+    right: 2em;
     display: inline;
     float: right;
     font-size:1.3em;
@@ -102,11 +102,11 @@ body{max-width:1300px}
 }
 
 #circlemenu #prodotti, .prodotti{
-    background-color: #FFDA00;
+    background-color: #ffc700;
 }
 
 #circlemenu #prodotti:hover{
-    background-color: #FECB00;
+    background-color: #fea300;
 }
 
 #circlemenu #lavorazioni, .lavorazioni{
@@ -114,7 +114,7 @@ body{max-width:1300px}
 }
 
 #circlemenu #lavorazioni:hover{
-    background-color: #E98300;
+    background-color: #e96326;
 }
 
 #circlemenu #contatti, .contatti{
@@ -201,18 +201,22 @@ body{max-width:1300px}
     text-align: left;
     margin: 1.5em 0 1em 0;
     padding-left: 5em;
+    text-transform: uppercase;
+
 }
 
 .testo ul {
-    padding-left:16em;
+    padding-left:17em;
     padding-right:10em;
     list-style-type:circle;
+    color: #5f6060;
 }
 
 #cosaProd p, #storia p, #chiSiamo p {
     text-align: left;
     padding-left: 15em;
     padding-right: 10em;
+    color: #5f6060;
 }
 
 .tothetop {

@@ -38,12 +38,8 @@ sub printHEADER {
 	else {
 	$utente = $session->param('username');
 	print '<div id="header">
-	<img id="logoDitta" src="../public_html/images/logoimas.png" alt="Logo Imas">
-	</div>
-	<div id="adminzone"> 
-	<p><span id="benvenuto">';
-	print "Buongiorno, $utente.";
-	print '</span><span id="scelteadmin"><a id="logout" href="../cgi-bin/admin.cgi" tabindex="1">Amministrazione</a> | <a id="logout" href="../cgi-bin/logout.cgi" tabindex="2">Logout</a><span></p>
+	<a href="../cgi-bin/index.cgi" tabindex="1"><img id="logoDitta" src="../public_html/images/logoimas.png" alt="Logo Imas"/></a>
+	<p></span><span id="scelteadmin"><a id="logout" href="../cgi-bin/admin.cgi" tabindex="2">Amministrazione</a> | <a id="logout" href="../cgi-bin/logout.cgi" tabindex="3">Logout</a><span></p>
     </div>';
 	}
 }

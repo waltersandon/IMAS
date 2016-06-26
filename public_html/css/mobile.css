@@ -19,11 +19,11 @@
 
     #header p {
         position: relative;
-        top:2.8em;
-        right: 1em;
+        top:3.3em;
+        right: 2em;
         display: inline;
         float: right;
-        font-size:1.3em;
+        font-size:large;
     }
 
     #panoramic {

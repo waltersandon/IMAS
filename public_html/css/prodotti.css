@@ -20,6 +20,10 @@
 
 .testocat{
     padding-top:1em ;
+
+}
+.testocat p, .circleGrid p{
+    color: #5f6060;
 }
 .fotocat {
      float: left;
