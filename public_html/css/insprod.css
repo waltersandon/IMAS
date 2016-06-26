@@ -1,9 +1,12 @@
 /* insprod */
 
-.insprod {
-	background-color:blue;
+#formcontent{background-color:#EFEFEF}
+#forminsprod {
+    height: 450px;
+    width: 600px;
+    margin: 0em auto;
+    padding-top: 1em;
 }
-
 .pink {
     background-color:pink;
 }

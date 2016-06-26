@@ -4,9 +4,7 @@ html,body {
     font-size:1em;
     background-color:white;
 }
-a:hover, a:active {
-    outline:none;
-}
+a:active {outline:none;}
 ul {list-style-type:none}
 body{max-width:1300px}
 
@@ -31,6 +29,9 @@ body{max-width:1300px}
     padding-top:0.3em;
     padding-bottom:0.3em;
 }
+#header a{color: black}
+#header a:visited{color: #800080}
+#header a:hover{color: red}
 
 #panoramic {
     width:100%;
@@ -49,6 +50,9 @@ body{max-width:1300px}
     padding-left: 2em;
     font-size: 1.3em;
 }
+#breadcrumb a{color: white}
+#breadcrumb a:visited{color:grey}
+#breadcrumb a:hover{color: white}
 
 /* circlemenu */
 
@@ -125,6 +129,8 @@ body{max-width:1300px}
     background-color: #b72d23;
 }
 
+.admin{background-color: #04c0ff
+}
 #circlemenu li:visited{
     color: white;
 }

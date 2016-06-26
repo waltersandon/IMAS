@@ -30,6 +30,7 @@ printHTML("../public_html/parts/insprod_nav.xhtml");
 
 print "<!-- Start Container -->
 <div id='container'>
+<div id='formcontent'>
 <form id='forminsprod' class='lightgrey' action='../cgi-bin/insprod_result.cgi' method='post' enctype='multipart/form-data'>
 <p id='warning'>Per inserire un nuovo prodotto, compilare il modulo sottostante.</p>";
 
@@ -75,6 +76,7 @@ $tabindex += 1;
 
 print "<input tabindex='$tabindex' type='submit' value='Inserisci Prodotto' class='submit' />
 </form>
+</div>
 </div>";
 
 printFOOTER();

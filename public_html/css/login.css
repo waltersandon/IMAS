@@ -1,11 +1,12 @@
 /* login */
 
-.login {
-    background-color:blue;
-}
+#formcontent{background-color:#EFEFEF}
 #formlogin {
-    min-height:6em;
-	background-color:#EFEFEF;
+    min-height: 6em;
+    height: 200px;
+    width: 450px;
+    margin: 0em auto;
+    padding-top: 1em;
 }
 
 #ullogin {
@@ -20,10 +21,7 @@
 }
 
 .submit {
-    width:5.2em;
-    height:4em;
     margin:2.5em 2em 2em 2em;
-    font-weight:bold;
     font-size:0.8em;
 }
 
