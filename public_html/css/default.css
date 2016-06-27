@@ -4,14 +4,17 @@ html,body {
     font-size:1em;
     background-color:white;
 }
+
 a:active {outline:none;}
 ul {list-style-type:none}
 body{max-width:1300px}
 
 #logoDitta{
-    margin-top: 1.5em;
-    margin-left: 6%;
-    height: 110px;
+	display:block;
+	float:left;
+    margin-left:6%;
+	margin-bottom:1em;
+    height:110px;
     width:400px;
 }
 
@@ -29,30 +32,54 @@ body{max-width:1300px}
     padding-top:0.3em;
     padding-bottom:0.3em;
 }
-#header a{color: black}
-#header a:visited{color: #800080}
-#header a:hover{color: red}
+
+#zonaadmin {
+	font-size:1em;
+	float:right;
+	color:white;
+	font-weight:bold;
+	margin:4.2em 1em 0em 0em;
+}
+
+.linkadmin {
+	padding:1em 0.8em 1em 0.8em;
+	border-radius:15px;
+}
+
+.linkadmin:hover {
+	background-color:#28a7d1;
+}
+
+#zonaadmin a {
+	color:white;
+	font-weight:bold;
+	text-decoration:none;
+}
 
 #panoramic {
     width:100%;
     height:180px;
+	margin:0.5em 0em 1.5em 0em;
     object-fit:cover; /* nota */
 }
 
 #breadcrumb {
     height: 2.5em;
     color: white;
+	margin-top:1em;
     margin-bottom: -2em;
 }
 
 #breadcrumb p{
-    padding-top: .5em;
+    padding-top: 0.5em;
     padding-left: 2em;
+	margin-top:0em;
     font-size: 1.3em;
 }
-#breadcrumb a{color: white}
-#breadcrumb a:visited{color:grey}
-#breadcrumb a:hover{color: white}
+#breadcrumb a{color: white; }
+#breadcrumb a:visited{color:white; }
+#breadcrumb a:hover{color: whitesmoke; }
+#breadcrumb a:visited:hover{color: black; }
 
 /* circlemenu */
 
@@ -70,7 +97,7 @@ body{max-width:1300px}
 
 #circlemenu li{
     display: inline;
-    margin: 2em;
+    margin:0em 2em 2em 2em;
 }
 
 #circlemenu li{
@@ -104,11 +131,11 @@ body{max-width:1300px}
 }
 
 #circlemenu #prodotti, .prodotti{
-    background-color: #ffc700;
+    background-color: #f2b70e;
 }
 
 #circlemenu #prodotti:hover{
-    background-color: #fea300;
+    background-color: #dea70b;
 }
 
 #circlemenu #lavorazioni, .lavorazioni{
@@ -136,15 +163,19 @@ body{max-width:1300px}
 
 #circlemenu .selectedH{
     background: #0dd91d;
+	margin-bottom:0;
 }
 #circlemenu .selectedP{
-    background: #FECB00;
+    background: #f2b70e;
+	margin-bottom:0;
 }
 #circlemenu .selectedL{
     background: #ff5128;
+	margin-bottom:0;
 }
 #circlemenu .selectedC{
     background: #E3001D;
+	margin-bottom:0;
 }
 
 #circlemenu li a{
@@ -179,6 +210,7 @@ body{max-width:1300px}
 
 #container {
     margin-top: 2em;
+	color:#383838;
 }
 
 .testo {
@@ -210,14 +242,12 @@ body{max-width:1300px}
     padding-left:17em;
     padding-right:10em;
     list-style-type:circle;
-    color: #5f6060;
 }
 
 #cosaProd p, #storia p, #chiSiamo p {
     text-align: left;
     padding-left: 15em;
     padding-right: 10em;
-    color: #5f6060;
 }
 
 .tothetop {
@@ -247,10 +277,6 @@ body{max-width:1300px}
 .listaProdotti {
     margin-top: 1em;
     margin-bottom: 1em;
-}
-
-#panoramic {
-    max-width:1024px;
 }
 
 /* circlemenu */

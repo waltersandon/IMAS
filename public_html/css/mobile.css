@@ -16,7 +16,6 @@
         width:300px;
     }
 
-
     #header p {
         position: relative;
         top:3.3em;
@@ -25,6 +24,15 @@
         float: right;
         font-size:large;
     }
+	
+	#zonaadmin {
+		font-size:0.8em;
+	}
+	
+	.linkadmin {
+		padding:0.8em 0.6em 0.8em 0.6em;
+		border-radius:15px;
+	}
 
     #panoramic {
         width:100%;
