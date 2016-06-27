@@ -54,7 +54,6 @@
         height:80px;
     }
 
-
     #circlemenu .notSelected{
         position: relative;
         top:1.5em;
@@ -88,8 +87,12 @@
     }
 	
     #footer {
-        height:120px;
+        height:140px;
     }
+	
+	.center {
+		margin-top:6em;
+	}
 	
     .testo ul{
         padding-left: 2em;

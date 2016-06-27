@@ -320,8 +320,13 @@ body{max-width:1300px}
     margin:4em auto 0em auto;
 }
 
+.center span {
+	margin:0em 1em 0em 1em;
+}
+
 .center img{
     border:0;
     width:88px;
     height:31px;
+	vertical-align:middle;
 }
