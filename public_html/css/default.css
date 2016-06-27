@@ -298,34 +298,30 @@ body{max-width:1300px}
 }
 
 #footer ul{
-    clear: left;
-    margin-left: 5%;
-    padding-top: 1em;
+    clear:left;
+    margin-left:5%;
+    padding-top:1em;
 }
 
 #footer ul li{
-    float: left;
-    list-style: none;
-    padding: 2px;
+    display:inline-block;
+	float:left;
+    list-style:none;
+    padding:2px;
 }
 
 #footer ul li:before {
     content:"| ";
 }
 
-.center{
-    width: 470px;
-    margin: 0 auto;
-    padding-top: 1.5em;
+.center {
+	clear:both;
+    width:470px;
+    margin:4em auto 0em auto;
 }
 
 .center img{
     border:0;
     width:88px;
     height:31px;
-}
-
-.media{
-    margin: 0 1em 0 1em;
-    vertical-align: middle;
 }
