@@ -39,7 +39,7 @@ sub printHEADER {
 	$utente = $session->param('username');
 	print '<div id="header">
 	<a href="../cgi-bin/index.cgi" tabindex="1"><img id="logoDitta" src="../public_html/images/logoimas.png" alt="Logo Imas"/></a>
-	<p></span><span id="scelteadmin"><a id="logout" href="../cgi-bin/admin.cgi" tabindex="2">Amministrazione</a> | <a id="logout" href="../cgi-bin/logout.cgi" tabindex="3">Logout</a><span></p>
+	<div id="zonaadmin"><a class="admincolor linkadmin" href="../cgi-bin/admin.cgi" tabindex="2">Amministrazione</a> | <a class="admincolor linkadmin" href="../cgi-bin/logout.cgi" tabindex="3">Logout</a><span></div>
     </div>';
 	}
 }
