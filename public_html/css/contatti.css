@@ -3,25 +3,25 @@
 #info {
 	background-color:lightgrey;
 	text-align: center;
+	margin: 2em 0 2em 0;
 }
 
 #info p {
-	padding:1em 0em 1em 2em !important;
+	padding:1em 0em 1em 2em;
     margin:0em 1em 1em 1em;
-}
+	font-weight: bold;
+	font-size: large;
 
-#info a {
-	font-weight:bold;
 }
 
 fieldset {
 	border: solid;
 	border-radius: 8px;
 	border-width: thin;
-	margin:1em auto 1em auto;
+	margin:2em auto 1em auto;
 	width: 60%;
-
-
+	min-width: 500px;
+	max-width: 600px;
 }
 
 legend {
@@ -136,3 +136,5 @@ legend {
 	padding-top:1.5em;
 	text-align:right;
 }
+
+.maiuscolo{font-weight: bold}
