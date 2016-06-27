@@ -1,6 +1,9 @@
 /* login */
 
-#formcontent{background-color:#EFEFEF}
+.lightgrey {
+    background-color:#EFEFEF;
+}
+
 #formlogin {
     min-height: 6em;
     height: 200px;
@@ -20,14 +23,14 @@
     margin:0.8em 0em 0.8em 5em;
 }
 
-.submit {
+.submitlogin {
     margin:2.5em 2em 2em 2em;
-    font-size:0.8em;
+	padding:1em;
 }
 
 #warning {
     padding-top:1.5em;
-	padding-left:2em !important;
+	padding-left:2em;
     margin:0em 1em 0em 1em;
 }
 

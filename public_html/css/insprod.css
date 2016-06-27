@@ -1,49 +1,38 @@
 /* insprod */
 
-#formcontent{background-color:#EFEFEF}
-#forminsprod {
-    height: 450px;
-    width: 600px;
-    margin: 0em auto;
-    padding-top: 1em;
-}
-.pink {
-    background-color:pink;
+.paddtop {
+    padding-top:1em;
 }
 
 .lightgrey {
     background-color:#EFEFEF;
 }
 
-#ulinsprod {
-    list-style:none;
+.pink {
+    background-color:pink;
+}
+
+.result {
+	padding-top:1em;
+	padding-bottom:1em;
+}
+
+.ulnopadd {
     padding:0;
 }
 
-#ulinsprod li {
+.ulnopadd li {
     font-weight:bold;
     margin:1em 0em 1em 5em;
 }
 
-.formmargin {
-    margin-left:0.5em;
-	padding:0 !important;
-}
-
-.checklav {
+.standardcheckb {
     display:inline;
     font-weight:normal;
 }
 
-#pdescr {
-	padding:0 !important;
-}
-
-#descr {
-    float:left;
-    width:360px;
-    height:100px;
-    margin-bottom:1em;
+.formmargin {
+	margin-left:0.5em;
 }
 
 .submit {
@@ -56,6 +45,6 @@
 
 #warning {
     padding-top:1.5em;
-	padding-left:2em !important;
-    margin:0em 1em 2em 1em;
+	padding-left:2em;
+    margin:0em 1em 0em 1em;
 }

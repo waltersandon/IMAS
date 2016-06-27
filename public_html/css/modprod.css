@@ -1,31 +1,7 @@
-/* insprod */
+/* modprod */
 
-.modprod {
-	background-color:blue;
-}
-
-#divmodprod {
-	padding-top:1em;
-}
-
-.textbold {
-	font-weight:bold;
-}
-
-h3 {
-	display:inline;
-}
-
-.fotoprod {
-	height:60px;
-	width:60px;
-	vertical-align:middle;
-	border-width:0.2em;
-	margin:0em 1em 0em 2.5em;
-}
-
-#selectprod {
-	padding:0.5em;
+.paddtop {
+    padding-top:1em;
 }
 
 .lightgrey {
@@ -40,45 +16,58 @@ h3 {
 	background-color:white;
 }
 
-.formmargin {
-    margin-left:1em;
+.result {
+	padding-top:1em;
+	padding-bottom:1em;
 }
 
-.sceltaprod {
-	margin:1em 0em 1em 6em;
-	padding:1em;
+.result3 {
+	padding-top:3em;
+	padding-bottom:3em;
 }
 
-#titoloprod {
+.textbold {
+	font-weight:bold;
+}
+
+.fotoprod {
+	height:60px;
+	width:60px;
+	vertical-align:middle;
+	border-width:0.2em;
+	margin:0em 1em 0em 2.5em;
+}
+
+h3 {
+	display:inline;
+}
+
+.infoattuale {
 	padding-left:3em;
 	margin:0.5em 0em 0em 0em;
 	font-size:1.5em;
 }
 
-#formmodprod {
-	padding:0em 0em 3em 0em;
+#select {
+	padding:0.5em;
 }
 
-#modifyprod {
-	padding:1em;
-}
-
-#ulmodify li {
+#ulmod li {
 	display:inline-block;
 	width:30%;
 	margin:0em 0.5em 0em 0.5em;
 }
 
-.tablemodify {
-	margin:1em 0.6em 0em 0.6em;
+.tablemod {
+	margin:1em 0.5em 0em 0.5em;
 }
 
-.tablemodify td {
+.tablemod td {
 	padding-right:1em;
 	padding-bottom:0.5em;
 }
 
-#divlav {
+.divlav {
 	margin-left:1.2em;
 }
 
@@ -112,47 +101,26 @@ h3 {
 }
 
 #attualedescr p {
-	padding:0em 0em 0em 1.5em !important;
+	padding:0em 0em 0em 1.5em;
 	font-style:italic;
 	width:200px;
 }
 
-.submit {
-    min-width:8em;
-    min-height:5em;
-    font-weight:bold;
-    font-size:0.8em;
-    margin:2em 0em 3em 7em;
-}
-
 #testodelete {
-	padding-left:2em;
-	margin-right:3em;
-	font-weight:bold;
+	margin-left:3.5em;
 }
 
-#formdelprod {
-	padding:1.5em;
-}
-
-#confmodprod {
-	padding:1em;
-	margin:1.5em 0em 0em 2em;
-}
-
-#confdeleteprod {
-	padding:1em;
-}
-
-#confdeleteprod:hover {
+.redhover:hover {
 	color:red;
 }
 
-#warning {
-	padding-left:2em;
+.submitchoice {
+	padding:1em;
+	margin:2em 0em 2em 3em;
 }
 
-.warningafter {
-	font-size:1.5em;
-	padding-left:2em !important;
+#warning {
+    padding-top:1.5em;
+	padding-left:2em;
+    margin:0em 1em 0em 1em;
 }

@@ -130,7 +130,7 @@ body{max-width:1300px}
 }
 
 .admincolor {
-    background-color: #04c0ff;
+	background-color: #04c0ff;
 }
 #circlemenu li:visited{
     color: white;
@@ -329,4 +329,3 @@ body{max-width:1300px}
     margin: 0 1em 0 1em;
     vertical-align: middle;
 }
-
