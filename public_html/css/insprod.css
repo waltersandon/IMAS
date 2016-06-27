@@ -27,12 +27,17 @@
 }
 
 .standardcheckb {
-    display:inline;
     font-weight:normal;
+	margin:0.5em;
 }
 
 .formmargin {
 	margin-left:0.5em;
+}
+
+#texta2 {
+	width:280px;
+	height:80px;
 }
 
 .submit {
@@ -43,8 +48,12 @@
     margin:2em 0em 3em 7em;
 }
 
-#warning {
-    padding-top:1.5em;
-	padding-left:2em;
-    margin:0em 1em 0em 1em;
+.warning {
+	font-size:1.2em;
+	padding:1em 0em 0.5em 0em;
+    margin-top:1em;
+}
+
+.marginleft {
+	margin-left:4em;
 }
