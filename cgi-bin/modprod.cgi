@@ -38,10 +38,13 @@ if($nomeprod and $nomeprod ne "--------") {
 	my $mdescr = $radice->findvalue("//prodotto[nomeprod = '$nomeprod']/descrizione");
 	print "<!-- Start Container -->
 	<div id='container' class='lightgrey result'>
+	<div id='divmodprod'>
+	<h1 id='titoloprod'>Lavorazione scelta: </h1>
 	<h3 class='infoattuale'>Stai modificando: </h3>
 	<img class='circolare fotoprod' src='$mfoto' alt='$malt' />
-	<h3>$nomeprod</h3>";
-	
+	<h1>$nomelav</h1>
+	</div>";
+
 	print "<form class='white' action='../cgi-bin/modifyprod.cgi' method='post' enctype='multipart/form-data' autocomplete='off'>";
 	
 	print "<ul id='ulmod'>
