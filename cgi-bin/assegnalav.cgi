@@ -23,7 +23,7 @@ my $radicelav = $doclav->getDocumentElement;
 my @lavorazione = $radicelav->getElementsByTagName('lavorazione');
 
 #cattura parametri se il prodotto è già stato scelto
-my $nomelav = $cgi->param("selectprod");
+my $nomelav = $cgi->param("select");
 
 my @listaprod = $radice->findnodes("//prodotto/nomeprod");
 
@@ -38,18 +38,20 @@ if($nomelav and $nomelav ne "--------") {
 	my $malt = $radicelav->findvalue("//lavorazione[nomeLav = '$nomelav']/altLav");
 	my $mproduz = $radicelav->findvalue("//lavorazione[nomeLav = '$nomelav']/\@produzione");
 	print "<!-- Start Container -->
-	<div id='container' class='containerbottom'>
+	<div id='container' class='lightgrey result'>
 	<div id='divmodprod'>
 	<h1 id='titoloprod'>Lavorazione scelta: </h1>
 	<img class='circolare fotoprod' src='$mfoto' alt='$malt' />
 	<h1>$nomelav</h1>
 	</div>";
 	
+	print "<form class='white' action='../cgi-bin/assegnalav_result.cgi' method='post' autocomplete='off'>";
+
 	print "
-	<p>La $nomelav è disponibile per i prodotti spuntati: </p>
+	<p>Disponibile per i prodotti spuntati: </p>
 	<div id='form'>
 	<form id='formmodprod' class='white' action='../cgi-bin/assegnalav_result.cgi' method='post' autocomplete='off'>";
-	
+
 	print "<div id='divlav'>
 	<input type='hidden' name='hiddennomelav' id='hiddennomelav' value='$nomelav' />
 	<ul id='ulmodify'>";
@@ -57,17 +59,17 @@ if($nomelav and $nomelav ne "--------") {
 	foreach my $listaprod(@listaprod) {
 		$nomelistaprod = $listaprod->string_value;
 		if($radice->findvalue("//prodotto[nomeprod = '$nomelistaprod']/lavorazione[text() = '$nomelav']")) {
-			print "<li class='checklav'>
+			print "<li>
 			<input type='checkbox' id='check$nomelistaprod' name='check$nomelistaprod' value='$nomelistaprod' checked />
 			<label for='check$nomelistaprod'>$nomelistaprod</label></li>";
 		}
 		else {
-			print "<li class='checklav'>
+			print "<li>
 			<input type='checkbox' id='check$nomelistaprod' name='check$nomelistaprod' value='$nomelistaprod' />
 			<label for='check$nomelistaprod'>$nomelistaprod</label></li>";
 		}
 	}
-	
+
 	print "</ul>
 	<input type='submit' value='Conferma Assegnazioni' id='confmodprod' />
 	</div>
@@ -81,10 +83,11 @@ else {
 			print "<option>$nomelav</option>";
 	}
 	print "</select>
-	<input type='submit' value='Seleziona Lavorazione' id='sceltamodprod' class='sceltaprod' />
+	<input type='submit' value='Seleziona Lavorazione' class='submitchoice' />
 	</form>
 	</div>";
 }
+
 printFOOTER();
 printBODY_END();
 printHTML_END();

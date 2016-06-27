@@ -1,39 +1,7 @@
-/* insprod */
+/* modprod */
 
-#divmodprod {
-	padding-top:1em;
-	padding-right: 5em;
-	text-align: center;
-	background-color: lightgray;
-	height:70px;
-}
-
-.textbold {
-	font-weight:bold;
-}
-
-h1 {
-	display:inline;
-	font-size: 2em;
-}
-
-p{
-	padding-top: 2em;
-	padding-bottom: 1em;
-	text-align: center;
-	font-size: large;
-}
-
-.fotoprod {
-	height:60px;
-	width:60px;
-	vertical-align:middle;
-	border-width:0.2em;
-	margin:0em 1em 0em 2.5em;
-}
-
-#selectprod {
-	padding:0.5em;
+.paddtop {
+    padding-top:1em;
 }
 
 .pink {
@@ -44,49 +12,55 @@ p{
 	background-color:white;
 }
 
-.formmargin {
-    margin-left:1em;
+.result {
+	padding-top:1em;
+	padding-bottom:1em;
 }
 
-.sceltaprod {
-	margin:1em 0em 1em 6em;
-	padding:1em;
+.result3 {
+	padding-top:3em;
+	padding-bottom:3em;
 }
 
-#titoloprod {
+.textbold {
+	font-weight:bold;
+}
+
+.fotoprod {
+	height:60px;
+	width:60px;
+	vertical-align:middle;
+	border-width:0.2em;
+	margin:0em 1em 0em 2.5em;
+}
+
+.infoattuale {
 	padding-left:3em;
 	margin:0.5em 0em 0em 0em;
 	font-size:1.5em;
 }
 
-#formmodprod {
-	padding:0em 0em 3em 2em;
-}
-#formmodprod h2{padding-top: 1em}
-#modifyprod {
-	padding:1em;
+#select {
+	padding:0.5em;
 }
 
-#ulmodify li {
-	width:100%;
+#ulmod li {
+	display:inline-block;
+	width:35%;
 	margin:0em 0.5em 0em 0.5em;
 }
-.tablemodify {
-	margin:1em 0.6em 0em 0.6em;
+
+.tablemod {
+	margin:1em 0.5em 0em 0.5em;
 }
 
-.tablemodify td {
+.tablemod td {
 	padding-right:1em;
 	padding-bottom:0.5em;
 }
-#form{
-	background-color: white;
-	width: 40%;
-	height: 200px;
-	margin: 0 auto;
-}
+
 #divlav {
-	margin-left:1.2em;
+	margin-left:5em;
 }
 
 #ullav {
@@ -119,47 +93,67 @@ p{
 }
 
 #attualedescr p {
-	padding:0em 0em 0em 1.5em !important;
+	padding:0em 0em 0em 1.5em;
 	font-style:italic;
 	width:200px;
 }
 
-.submit {
-    min-width:8em;
-    min-height:5em;
-    font-weight:bold;
-    font-size:0.8em;
-    margin:2em 0em 3em 7em;
-}
-
 #testodelete {
-	padding-left:2em;
-	margin-right:3em;
-	font-weight:bold;
+	margin-left:3.5em;
 }
 
-#formdelprod {
-	padding:1.5em;
-}
-
-#confmodprod {
-	padding:1em 0 0 3em;
-	margin:1.5em 0em 0em 5em;
-}
-
-#confdeleteprod {
-	padding:1em;
-}
-
-#confdeleteprod:hover {
+.redhover:hover {
 	color:red;
 }
 
-#warning {
-	padding-left:2em;
+.submitchoice {
+	padding:1em;
+	margin:2em 0em 2em 3em;
 }
 
-.warningafter {
-	font-size:1.5em;
-	padding-left:2em !important;
+#warning {
+    padding-top:1.5em;
+	padding-left:2em;
+    margin:0em 1em 0em 1em;
+}
+
+#form{
+	background-color: white;
+	width: 50%;
+	height: 270px;
+	margin: 0 auto;
+}
+h1 {
+	display:inline;
+	font-size: x-large;
+}
+
+p{
+	text-align: center;
+	padding-top: 2em;
+	padding-bottom: 1em;
+	font-weight: bold;
+	font-size: large;
+}
+
+#divmodprod {
+	padding-top:1em;
+	padding-right: 6em;
+	text-align: center;
+	background-color: lightgray;
+	height:70px;
+}
+
+#confmodprod{
+	margin-left: 4em;
+}
+@media screen and (max-width: 768px) {
+
+	#divlav {
+		margin-left:1em;
+	}
+
+	h1 {
+		font-size: large;
+	}
 }
