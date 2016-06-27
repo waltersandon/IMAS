@@ -2,6 +2,11 @@
 
 require "utility.pl";
 
+printDOCTYPE();
+printHTML_BEGIN();
+
+checkSession();
+
 my $cgi = new CGI;
 
 $fileXMLprod = $fileXMLProdotti;
@@ -18,12 +23,7 @@ my $radicelav = $doclav->getDocumentElement;
 my @nomelav = $radicelav->getElementsByTagName('nomeLav');
 
 #cattura parametri se il prodotto è già stato scelto
-my $nomeprod = $cgi->param("selectprod");
-
-printDOCTYPE();
-printHTML_BEGIN();
-
-checkSession();
+my $nomeprod = $cgi->param("select");
 
 printHTML("../public_html/parts/modprod_header.xhtml");
 printBODY_BEGIN();
@@ -37,18 +37,16 @@ if($nomeprod and $nomeprod ne "--------") {
 	my $mcategoria = $radice->findvalue("//prodotto[nomeprod = '$nomeprod']/../nomecat");
 	my $mdescr = $radice->findvalue("//prodotto[nomeprod = '$nomeprod']/descrizione");
 	print "<!-- Start Container -->
-	<div id='container' class='lightgrey containerbottom'>
-	<div id='divmodprod'>
-	<h3 id='titoloprod'>Stai modificando: </h3>
+	<div id='container' class='lightgrey result'>
+	<h3 class='infoattuale'>Stai modificando: </h3>
 	<img class='circolare fotoprod' src='$mfoto' alt='$malt' />
-	<h3>$nomeprod</h3>
-	</div>";
+	<h3>$nomeprod</h3>";
 	
-	print "<form id='formmodprod' class='white' action='../cgi-bin/modifyprod.cgi' method='post' enctype='multipart/form-data' autocomplete='off'>";
+	print "<form class='white' action='../cgi-bin/modifyprod.cgi' method='post' enctype='multipart/form-data' autocomplete='off'>";
 	
-	print "<ul id='ulmodify'>
+	print "<ul id='ulmod'>
 	<li>
-	<table class='tablemodify'>
+	<table class='tablemod'>
 	<tbody>
 	<tr><td><input type='hidden' name='modificaprod' id='modificaprod' value='$nomeprod' /></td></tr>
 	<tr>
@@ -68,18 +66,18 @@ if($nomeprod and $nomeprod ne "--------") {
 	</li>
 
 	
-	<div id='divlav'><span class='textbold'>Lavorazioni:</span>
+	<div class='divlav'><span class='textbold'>Lavorazioni:</span>
 	<ul id='ullav'>";
 	
 	foreach $nomelav(@nomelav) {
 		my $listalav = $nomelav->string_value;
 		if($radice->findvalue("//prodotto[nomeprod = '$nomeprod']/lavorazione[text() = '$listalav']")) {
-		print "<li class='checklav'>
+		print "<li>
 		<input type='checkbox' id='check$listalav' name='check$listalav' value='$listalav' checked />
 		<label for='check$listalav'>$listalav</label></li>";
 		}
 		else {
-		print "<li class='checklav'>
+		print "<li>
 		<input type='checkbox' id='check$listalav' name='check$listalav' value='$listalav' />
 		<label for='check$listalav'>$listalav</label></li>";
 		}
@@ -87,7 +85,7 @@ if($nomeprod and $nomeprod ne "--------") {
 
 	print "</ul>
 	</div>
-	<table class='tablemodify'>
+	<table class='tablemod'>
 	<tbody>
 	<tr>
 	<td><label for='descr' id='labeldescr' class='textbold'>Descrizione:</label></td>
@@ -98,7 +96,7 @@ if($nomeprod and $nomeprod ne "--------") {
 	<td id='attualedescr'><p>$mdescr</p></td>
 	</tr>
 	<tr>
-	<td><input type='submit' value='Conferma Modifiche' id='confmodprod' /></td>
+	<td><input type='submit' value='Conferma Modifiche' class='submitchoice' /></td>
 	</tr>
 	</tbody>
 	</table>
@@ -106,10 +104,10 @@ if($nomeprod and $nomeprod ne "--------") {
 	</ul>
 	</form>";
 	
-	print "<form id='formdelprod' class='lightgrey' action='../cgi-bin/deleteprod.cgi' method='post'>
-	<span id='testodelete'>Eliminazione prodotto:</span>
-	<input type='hidden' name='eliminaprod' id='eliminaprod' value='$nomeprod' /></td></tr>
-	<input type='submit' value='Elimina Prodotto' id='confdeleteprod' />
+	print "<form class='lightgrey' action='../cgi-bin/deleteprod.cgi' method='post'>
+	<span id='testodelete' class='textbold'>Eliminazione prodotto:</span>
+	<input type='hidden' name='eliminaprod' id='eliminaprod' value='$nomeprod' />
+	<input type='submit' value='Elimina Prodotto' class='submitchoice redhover' />
 	</form>
 	</div>";
 }
@@ -125,7 +123,7 @@ else {
 		}
 	}
 	print "</select>
-	<input type='submit' value='Seleziona Prodotto' id='sceltamodprod' class='sceltaprod' />
+	<input type='submit' value='Seleziona Prodotto' class='submitchoice' />
 	</div>
 	</form>
 	</div>";

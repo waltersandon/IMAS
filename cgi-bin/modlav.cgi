@@ -12,7 +12,7 @@ my $radice= $doc->getDocumentElement;
 my @lavorazione = $radice->getElementsByTagName('lavorazione');
 
 #cattura parametri se il prodotto è già stato scelto
-my $nomelav = $cgi->param("selectprod");
+my $nomelav = $cgi->param("select");
 
 printDOCTYPE();
 printHTML_BEGIN();
@@ -30,20 +30,18 @@ if($nomelav and $nomelav ne "--------") {
 	my $malt = $radice->findvalue("//lavorazione[nomeLav = '$nomelav']/altLav");
 	my $mproduz = $radice->findvalue("//lavorazione[nomeLav = '$nomelav']/\@produzione");
 	print "<!-- Start Container -->
-	<div id='container' class='lightgrey containerbottom'>
-	<div id='divmodprod'>
-	<h3 id='titoloprod'>Stai modificando: </h3>
+	<div id='container' class='lightgrey result'>
+	<h3 class='infoattuale'>Stai modificando: </h3>
 	<img class='circolare fotoprod' src='$mfoto' alt='$malt' />
-	<h3>$nomelav</h3>
-	</div>";
+	<h3>$nomelav</h3>";
 	
-	print "<form id='formmodprod' class='white' action='../cgi-bin/modifylav.cgi' method='post' enctype='multipart/form-data' autocomplete='off'>";
+	print "<form class='white' action='../cgi-bin/modifylav.cgi' method='post' enctype='multipart/form-data' autocomplete='off'>";
 	
-	print "<ul id='ulmodify'>
+	print "<ul id='ulmod'>
 	<li>
-	<table class='tablemodify'>
+	<table class='tablemod'>
 	<tbody>
-	<tr><td><input type='hidden' name='modificaprod' id='modificaprod' value='$nomelav' /></td></tr>
+	<tr><td><input type='hidden' name='modificalav' id='modificalav' value='$nomelav' /></td></tr>
 	<tr>
 	<td><label for='nome' class='textbold'>Nome: </label></td>
 	<td><input type='text' name='nome' id='nome' value='$nomelav' /></td>
@@ -64,13 +62,13 @@ if($nomelav and $nomelav ne "--------") {
 	</table>
 	</li>
 	
-	<table class='tablemodify'>
+	<table class='tablemod'>
 	<tbody>
 	<tr><td><label for='descrlav' id='labeldescrlav' class='textbold labeltextlav'>Descrizione:</label></td></tr>
 	<tr><td><textarea name='descrlav' id='descrlav' class='textlav'></textarea></td></tr>
 	<tr><td><label for='comm' id='labelcomm' class='textbold labeltextlav'>Commento:</label></td></tr>
 	<tr><td><textarea name='comm' id='comm' class='textlav'></textarea></td></tr>
-	<tr><td><input type='submit' value='Conferma Modifiche' id='confmodprod' /></td></tr>
+	<tr><td><input type='submit' value='Conferma Modifiche' class='submitchoice' /></td></tr>
 	</tbody>
 	</table>
 	</li>
@@ -78,9 +76,9 @@ if($nomelav and $nomelav ne "--------") {
 	</form>";
 	
 	print "<form id='formdelprod' class='lightgrey' action='../cgi-bin/deletelav.cgi' method='post'>
-	<span id='testodelete'>Eliminazione lavorazione:</span>
+	<span id='testodelete' class='textbold'>Eliminazione lavorazione:</span>
 	<input type='hidden' name='eliminalav' id='eliminalav' value='$nomelav' /></td></tr>
-	<input type='submit' value='Elimina Lavorazione' id='confdeleteprod' />
+	<input type='submit' value='Elimina Lavorazione' id='confdeleteprod' class='submitchoice redhover' />
 	</form>
 	</div>";
 
@@ -92,7 +90,7 @@ else {
 			print "<option>$nomelav</option>";
 	}
 	print "</select>
-	<input type='submit' value='Seleziona Lavorazione' id='sceltamodprod' class='sceltaprod' />
+	<input type='submit' value='Seleziona Lavorazione' class='submitchoice' />
 	</form>
 	</div>";
 }

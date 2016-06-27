@@ -48,7 +48,7 @@ sub printFOOTER {
     printHTML("../public_html/parts/footer.xhtml");
 }
 
-sub printTRANSFORM{
+sub printTRANSFORM {
     my $xslt = XML::LibXSLT->new();
     
     my $source = XML::LibXML->load_xml(location =>"$fileXML");

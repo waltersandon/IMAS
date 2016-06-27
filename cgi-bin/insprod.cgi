@@ -29,9 +29,8 @@ printHEADER();
 printHTML("../public_html/parts/insprod_nav.xhtml");
 
 print "<!-- Start Container -->
-<div id='container'>
-<div id='formcontent'>
-<form id='forminsprod' class='lightgrey' action='../cgi-bin/insprod_result.cgi' method='post' enctype='multipart/form-data'>
+<div id='container' class='lightgrey'>
+<form class='paddtop' action='../cgi-bin/insprod_result.cgi' method='post' enctype='multipart/form-data'>
 <p id='warning'>Per inserire un nuovo prodotto, compilare il modulo sottostante.</p>";
 
 my @ids = $radice->getElementsByTagName('id');
@@ -44,7 +43,7 @@ foreach $ids(@ids) {
 $maxid += 1;
 $maxid = "ID".$maxid;
 
-print "<ul id='ulinsprod'>
+print "<ul class='ulnopadd'>
 <li><input type='hidden' name='id' id='id' value='$maxid' /></li>
 <li><label for='selectcateg'>Categoria: </label></td>
 <select id='selectcateg' name='selectcateg' class='formmargin'>";
@@ -64,7 +63,7 @@ my $tabindex = 14;
 
 foreach $nomelav(@nomelav) {
 	my $listalav = $nomelav->string_value;
-	print "<p class='checklav formmargin'><input tabindex='$tabindex' type='checkbox' id='check$listalav' name='check$listalav' value='$listalav' /><label for='check$listalav'>$listalav</label></p>";
+	print "<p class='standardcheckb formmargin'><input tabindex='$tabindex' type='checkbox' id='check$listalav' name='check$listalav' value='$listalav' /><label for='check$listalav'>$listalav</label></p>";
 	$tabindex += 1;
 }
 
@@ -77,7 +76,6 @@ $tabindex += 1;
 
 print "<input tabindex='$tabindex' type='submit' value='Inserisci Prodotto' class='submit' />
 </form>
-</div>
 </div>";
 
 printFOOTER();

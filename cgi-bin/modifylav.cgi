@@ -14,7 +14,7 @@ $fileXML = $fileXMLLavorazioni;
 my $parser = XML::LibXML->new();
 my $doc = $parser->parse_file($fileXML);
 my $radice = $doc->getDocumentElement;
-my $nomelav = $cgi->param("modificaprod");
+my $nomelav = $cgi->param("modificalav");
 
 #recupero i parametri
 
