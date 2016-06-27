@@ -1,4 +1,4 @@
-#!/usr/bin/perl
+#!perl
 
 require "utility.pl";
 
@@ -31,7 +31,7 @@ printHTML("../public_html/parts/insprod_nav.xhtml");
 print "<!-- Start Container -->
 <div id='container' class='lightgrey'>
 <form class='paddtop' action='../cgi-bin/insprod_result.cgi' method='post' enctype='multipart/form-data'>
-<p id='warning'>Per inserire un nuovo prodotto, compilare il modulo sottostante.</p>";
+<p class='warning marginleft'>Per inserire un nuovo prodotto, compilare il modulo sottostante:</p>";
 
 my @ids = $radice->getElementsByTagName('id');
 my $maxid = 1;
