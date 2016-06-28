@@ -41,7 +41,7 @@ if($nomelav and $nomelav ne "--------") {
 	<div id='container' class='lightgrey paddtop'>
 	<div class='aligncenter'>
 	<h1 class='infoattuale'>Lavorazione scelta:</h1>
-	<img class='circolare fotoprod' src='$mfoto' alt='$malt' />
+	<img class='circolare adminfoto' src='$mfoto' alt='$malt' />
 	<span class='nomescelta'>$nomelav</span>
 	</div>";
 	
@@ -81,7 +81,7 @@ else {
 			print "<option>$nomelav</option>";
 	}
 	print "</select>
-	<input tabindex='12 type='submit' value='Seleziona Lavorazione' class='submitchoice' />
+	<input tabindex='12' type='submit' value='Seleziona Lavorazione' class='submitchoice' />
 	</form>
 	</div>";
 }

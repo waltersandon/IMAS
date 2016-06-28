@@ -33,7 +33,7 @@ if($nomelav and $nomelav ne "--------") {
 	<div id='container' class='lightgrey paddtop'>
 	<div class='aligncenter'>
 	<h1 class='infoattuale'>Stai modificando:</h1>
-	<img class='circolare fotoprod' src='$mfoto' alt='$malt' />
+	<img class='circolare adminfoto' src='$mfoto' alt='$malt' />
 	<span class='nomescelta'>$nomelav</span>
 	</div>";
 	

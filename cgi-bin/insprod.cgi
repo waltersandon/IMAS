@@ -43,7 +43,7 @@ foreach $ids(@ids) {
 $maxid += 1;
 $maxid = "ID".$maxid;
 
-print "<ul class='ulnopadd'>
+print "<ul class='ulnopadd formmargin'>
 <li><input type='hidden' name='id' id='id' value='$maxid' /></li>
 <li><label for='selectcateg'>Categoria: </label></td>
 <select tabindex='11' id='selectcateg' name='selectcateg' class='formmargin'>";
