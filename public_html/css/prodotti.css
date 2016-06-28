@@ -43,14 +43,14 @@
     float: left;
     text-align: center;
     width: 260px;
-    height: 280px;
+    min-height: 300px;
     margin-top: 2em;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 1.5em;
 }
 
-.circleGrid p{padding: 0;margin-bottom: -.5em;}
+.circleGrid p{padding: 0;margin: .1em;}
 .circleGrid h1{font-size: medium}
 
 
