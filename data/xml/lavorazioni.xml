@@ -43,4 +43,18 @@ Essendo questa lavorazione suscettibile ai colori imposti dalla moda del momento
 </commento>
 </lavorazione>
 
+<lavorazione produzione="esterna">
+<nomeLav>Acciaio Inox</nomeLav>
+<fotoLav>../public_html/images/verniciatura.jpg</fotoLav>
+<altLav>Foto Acciaio Inox</altLav>
+<descrLav>
+L'acciaio inox è una lega di ferro dalle caratteristiche eccezionali che la rendono adatta ad ogni situazione.
+QUesto materiale  è estremamente resistente alla corrosione ed alle temperature sia alte o basse; l'unico suo difetto è il costo relativamente elevato.
+</descrLav>
+<commento>
+Grazie ai progressi nella metallurgia dell'ultimo secolo, l'acciaio inox ha trovato una miriade di sviluppi ed applicazioni pratiche, anche nell'ambito comune come per le posate.
+Essendo il suo utilizzo ampio ma che nel contempo necessita di lavorazioni specifiche, si sono scelti più fornitori esterni, così da poter offrire sempre la miglior soluzione alle vostre necessità.
+</commento>
+</lavorazione>
+
 </lavorazioni>

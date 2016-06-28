@@ -15,7 +15,7 @@
 <alt>griglia per forni e fornelli classica</alt>
 <descrizione>Una semplice griglia adatta a tutti i tipi forni domestici.</descrizione>
 <lavorazione>Acciao Inox</lavorazione>
-<lavorazione>Nichel Cromo</lavorazione>
+<lavorazione>Cromatura</lavorazione>
 </prodotto>
 
 <prodotto>
@@ -24,7 +24,7 @@
 <foto>../public_html/images/griglia_laterale.jpg</foto>
 <alt>griglia laterale</alt>
 <descrizione>Griglia laterale standard.</descrizione>
-<lavorazione>Nichel Cromo</lavorazione>
+<lavorazione>Verniciatura Poliestere</lavorazione>
 </prodotto>
 
 </categoria>
@@ -32,7 +32,7 @@
 <categoria>
 <fotocat>../public_html/images/refrigerazione.jpg</fotocat>
 <altcat>Refrigerazione</altcat>
-<nomecat>griglia per frigoriferi e freezer</nomecat>
+<nomecat>griglie per frigoriferi e freezer</nomecat>
 <descrcat>L’ambiente freddo e di congelamento all’interno di elettrodomestici e applicazioni commerciali richiede una gran varietà di finiture alternative. Noi siamo in grado di fornire varie soluzioni di finitura: dalla galvanica alla plastificata.
 </descrcat>
 
@@ -50,7 +50,8 @@
 <foto>../public_html/images/portabottiglie.jpg</foto>
 <alt>porta bottiglie da frigorifero</alt>
 <descrizione>Porta bottiglie</descrizione>
-<lavorazione>Zincatura</lavorazione>
+<lavorazione>Verniciatura Poliestere</lavorazione>
+<lavorazione>Acciaio Inox</lavorazione>
 </prodotto>
 
 </categoria>
@@ -68,8 +69,9 @@
 <foto>../public_html/images/molleSedili.jpg</foto>
 <alt>molle per sedili</alt>
 <descrizione>Molle interne ai sedili per aumentare il comfort.</descrizione>
-<lavorazione>Zincatura</lavorazione>
 <lavorazione>Cromatura</lavorazione>
+<lavorazione>Zincatura</lavorazione>
+<lavorazione>Acciaio Inox</lavorazione>
 </prodotto>
 
 </categoria>
