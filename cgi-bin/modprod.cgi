@@ -37,69 +37,74 @@ if($nomeprod and $nomeprod ne "--------") {
 	my $mcategoria = $radice->findvalue("//prodotto[nomeprod = '$nomeprod']/../nomecat");
 	my $mdescr = $radice->findvalue("//prodotto[nomeprod = '$nomeprod']/descrizione");
 	print "<!-- Start Container -->
-	<div id='container' class='lightgrey result'>
-	<div id='divmodprod'>
-	<h1 id='titoloprod'>Lavorazione scelta: </h1>
-	<h3 class='infoattuale'>Stai modificando: </h3>
+	<div id='container' class='lightgrey paddtop'>
+	<div class='aligncenter'>
+	<h1 class='infoattuale'>Stai modificando:</h1>
 	<img class='circolare fotoprod' src='$mfoto' alt='$malt' />
-	<h1>$nomelav</h1>
+	<span class='nomescelta'>$nomeprod</span>
 	</div>";
 
 	print "<form class='white' action='../cgi-bin/modifyprod.cgi' method='post' enctype='multipart/form-data' autocomplete='off'>";
 	
-	print "<ul id='ulmod'>
+	print "<p class='warning marginleft'>Per modificare un prodotto, compilare i campi dati sottostanti:</p>
+	<ul id='ulmod'>
 	<li>
 	<table class='tablemod'>
 	<tbody>
 	<tr><td><input type='hidden' name='modificaprod' id='modificaprod' value='$nomeprod' /></td></tr>
 	<tr>
 	<td><label for='nome' class='textbold'>Nome: </label></td>
-	<td><input type='text' name='nome' id='nome' value='$nomeprod' /></td>
+	<td><input tabindex='12' type='text' name='nome' id='nome' value='$nomeprod' /></td>
 	</tr>
 	<tr>
 	<td><label for='foto' class='textbold'>Foto: </label></td>
-	<td><input type='file' name='foto' id='foto' /></td>
+	<td><input tabindex='13' type='file' name='foto' id='foto' /></td>
 	</tr>
 	<tr>
 	<td><label for='alt' class='textbold'>Alt: </label></td>
-	<td><input type='text' name='alt' id='alt' value='$malt' /></td>
+	<td><input tabindex='14' type='text' name='alt' id='alt' value='$malt' /></td>
 	</tr>
 	</tbody>
 	</table>
-	</li>
-
+	<table class='tablemod'>
+	<tbody>
+	<tr><td>
+	<span class='textbold'>Lavorazioni disponibili:</span>";
 	
-	<div class='divlav'><span class='textbold'>Lavorazioni:</span>
-	<ul id='ullav'>";
-	
+	my $tabindex = 15;
 	foreach $nomelav(@nomelav) {
 		my $listalav = $nomelav->string_value;
 		if($radice->findvalue("//prodotto[nomeprod = '$nomeprod']/lavorazione[text() = '$listalav']")) {
-		print "<li>
-		<input type='checkbox' id='check$listalav' name='check$listalav' value='$listalav' checked />
-		<label for='check$listalav'>$listalav</label></li>";
+		print "<p class='standardcheckb'><input tabindex='$tabindex' type='checkbox' id='check$listalav' name='check$listalav' value='$listalav' checked /><label for='check$listalav'>$listalav</label></p>";
 		}
 		else {
-		print "<li>
-		<input type='checkbox' id='check$listalav' name='check$listalav' value='$listalav' />
-		<label for='check$listalav'>$listalav</label></li>";
+		print "<p class='standardcheckb'><input tabindex='$tabindex' type='checkbox' id='check$listalav' name='check$listalav' value='$listalav' /><label for='check$listalav'>$listalav</label></p>";
 		}
+		$tabindex += 1;
 	}
 
-	print "</ul>
-	</div>
+	print "</td></tr>
+	</tbody>
+	</table>
 	<table class='tablemod'>
 	<tbody>
 	<tr>
-	<td><label for='descr' id='labeldescr' class='textbold'>Descrizione:</label></td>
-	<td><span id='attualelabel'>Attuale:<span></td
+	<td><p id='attualelabel' class='textbold'>Descrizione Attuale:</p></td>
 	</tr>
 	<tr>
-	<td><textarea name='descr' id='descr'></textarea></td>
-	<td id='attualedescr'><p>$mdescr</p></td>
+	<td><p id='attualedescr'>$mdescr</p></td>
 	</tr>
 	<tr>
-	<td><input type='submit' value='Conferma Modifiche' class='submitchoice' /></td>
+	<td><label for='texta2' class='textbold'>Descrizione:</label></td>
+	</tr>
+	<tr>
+	<td><textarea tabindex='$tabindex' name='texta2' id='texta2'></textarea></td>
+	</tr>";
+	
+	$tabindex += 1;
+	
+	print "<tr>
+	<td><input tabindex='$tabindex' type='submit' value='Conferma Modifiche' class='submitchoice' /></td>
 	</tr>
 	</tbody>
 	</table>
@@ -107,10 +112,12 @@ if($nomeprod and $nomeprod ne "--------") {
 	</ul>
 	</form>";
 	
+	$tabinxed += 1;
+	
 	print "<form class='lightgrey' action='../cgi-bin/deleteprod.cgi' method='post'>
 	<span id='testodelete' class='textbold'>Eliminazione prodotto:</span>
 	<input type='hidden' name='eliminaprod' id='eliminaprod' value='$nomeprod' />
-	<input type='submit' value='Elimina Prodotto' class='submitchoice redhover' />
+	<input tabindex='$tabindex' type='submit' value='Elimina Prodotto' class='submitchoice redhover' />
 	</form>
 	</div>";
 }
@@ -126,7 +133,7 @@ else {
 		}
 	}
 	print "</select>
-	<input type='submit' value='Seleziona Prodotto' class='submitchoice' />
+	<input tabindex='12' type='submit' value='Seleziona Prodotto' class='submitchoice' />
 	</div>
 	</form>
 	</div>";

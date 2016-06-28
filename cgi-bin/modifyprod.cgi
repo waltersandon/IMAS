@@ -27,7 +27,7 @@ my @nomelav = $radicelav->getElementsByTagName('nomeLav');
 my $nnome = $cgi->param("nome");
 my $nfoto = $cgi->param("foto");
 my $nalt = $cgi->param("alt");
-my $ndescr = $cgi->param("descr");
+my $ndescr = $cgi->param("texta2");
 
 my $error = 0;
 

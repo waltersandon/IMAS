@@ -30,33 +30,36 @@ if($nomelav and $nomelav ne "--------") {
 	my $malt = $radice->findvalue("//lavorazione[nomeLav = '$nomelav']/altLav");
 	my $mproduz = $radice->findvalue("//lavorazione[nomeLav = '$nomelav']/\@produzione");
 	print "<!-- Start Container -->
-	<div id='container' class='lightgrey result'>
-	<h3 class='infoattuale'>Stai modificando: </h3>
+	<div id='container' class='lightgrey paddtop'>
+	<div class='aligncenter'>
+	<h1 class='infoattuale'>Stai modificando:</h1>
 	<img class='circolare fotoprod' src='$mfoto' alt='$malt' />
-	<h3>$nomelav</h3>";
+	<span class='nomescelta'>$nomelav</span>
+	</div>";
 	
 	print "<form class='white' action='../cgi-bin/modifylav.cgi' method='post' enctype='multipart/form-data' autocomplete='off'>";
 	
-	print "<ul id='ulmod'>
+	print "<p class='warning marginleft'>Per modificare una lavorazione, compilare i campi dati sottostanti:</p>
+	<ul id='ulmod'>
 	<li>
 	<table class='tablemod'>
 	<tbody>
 	<tr><td><input type='hidden' name='modificalav' id='modificalav' value='$nomelav' /></td></tr>
 	<tr>
 	<td><label for='nome' class='textbold'>Nome: </label></td>
-	<td><input type='text' name='nome' id='nome' value='$nomelav' /></td>
+	<td><input tabindex='11' type='text' name='nome' id='nome' value='$nomelav' /></td>
 	</tr>
 	<tr>
 	<td><label for='produz' class='textbold'>Produzione: </label></td>
-	<td><input type='text' name='produz' id='produz' value='$mproduz' /></td>
+	<td><input tabindex='12' type='text' name='produz' id='produz' value='$mproduz' /></td>
 	</tr>
 	<tr>
 	<td><label for='foto' class='textbold'>Foto: </label></td>
-	<td><input type='file' name='foto' id='foto' /></td>
+	<td><input tabindex='13' type='file' name='foto' id='foto' /></td>
 	</tr>
 	<tr>
 	<td><label for='alt' class='textbold'>Alt: </label></td>
-	<td><input type='text' name='alt' id='alt' value='$malt' /></td>
+	<td><input tabindex='14' type='text' name='alt' id='alt' value='$malt' /></td>
 	</tr>
 	</tbody>
 	</table>
@@ -64,21 +67,21 @@ if($nomelav and $nomelav ne "--------") {
 	
 	<table class='tablemod'>
 	<tbody>
-	<tr><td><label for='descrlav' id='labeldescrlav' class='textbold labeltextlav'>Descrizione:</label></td></tr>
-	<tr><td><textarea name='descrlav' id='descrlav' class='textlav'></textarea></td></tr>
-	<tr><td><label for='comm' id='labelcomm' class='textbold labeltextlav'>Commento:</label></td></tr>
-	<tr><td><textarea name='comm' id='comm' class='textlav'></textarea></td></tr>
-	<tr><td><input type='submit' value='Conferma Modifiche' class='submitchoice' /></td></tr>
+	<tr><td><label for='texta1' id='labeldescrlav' class='textbold labeltextlav'>Descrizione:</label></td></tr>
+	<tr><td><textarea tabindex='15' name='texta1' id='texta1' class='textlav'></textarea></td></tr>
+	<tr><td><label for='texta2' id='labelcomm' class='textbold labeltextlav'>Commento:</label></td></tr>
+	<tr><td><textarea tabindex='16' name='texta2' id='texta2' class='textlav'></textarea></td></tr>
+	<tr><td><input tabindex='17' type='submit' value='Conferma Modifiche' class='submitchoice' /></td></tr>
 	</tbody>
 	</table>
 	</li>
 	</ul>
 	</form>";
 	
-	print "<form id='formdelprod' class='lightgrey' action='../cgi-bin/deletelav.cgi' method='post'>
+	print "<form class='lightgrey' action='../cgi-bin/deletelav.cgi' method='post'>
 	<span id='testodelete' class='textbold'>Eliminazione lavorazione:</span>
-	<input type='hidden' name='eliminalav' id='eliminalav' value='$nomelav' /></td></tr>
-	<input type='submit' value='Elimina Lavorazione' id='confdeleteprod' class='submitchoice redhover' />
+	<input type='hidden' name='eliminalav' id='eliminalav' value='$nomelav' />
+	<input tabindex='18' type='submit' value='Elimina Lavorazione' class='submitchoice redhover' />
 	</form>
 	</div>";
 
@@ -90,7 +93,7 @@ else {
 			print "<option>$nomelav</option>";
 	}
 	print "</select>
-	<input type='submit' value='Seleziona Lavorazione' class='submitchoice' />
+	<input tabindex='12' type='submit' value='Seleziona Lavorazione' class='submitchoice' />
 	</form>
 	</div>";
 }

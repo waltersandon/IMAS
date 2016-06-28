@@ -22,10 +22,10 @@ my $nnome = $cgi->param("nome");
 my $nproduz = $cgi->param("produz");
 my $nfoto = $cgi->param("foto");
 my $nalt = $cgi->param("alt");
-my $ndescr = $cgi->param("descrlav");
-my $ncomm = $cgi->param("comm");
+my $ndescr = $cgi->param("texta1");
+my $ncomm = $cgi->param("texta2");
 
-if(!$nnome and !$nproduz and !$nfoto and !$nalt and !$ndescr and !$ncomm) { $error = 1; }
+if(!$nnome or !$nproduz or !$nalt) { $error = 1; }
 
 if(!$error) {
 

@@ -30,8 +30,8 @@ printHTML("../public_html/parts/insprod_nav.xhtml");
 
 print "<!-- Start Container -->
 <div id='container' class='lightgrey'>
-<form class='paddtop' action='../cgi-bin/insprod_result.cgi' method='post' enctype='multipart/form-data'>
-<p class='warning marginleft'>Per inserire un nuovo prodotto, compilare il modulo sottostante:</p>";
+<form action='../cgi-bin/insprod_result.cgi' method='post' enctype='multipart/form-data'>
+<p class='warning marginleft'>Per inserire un nuovo prodotto, compilare i campi dati sottostanti:</p>";
 
 my @ids = $radice->getElementsByTagName('id');
 my $maxid = 1;
@@ -46,7 +46,7 @@ $maxid = "ID".$maxid;
 print "<ul class='ulnopadd'>
 <li><input type='hidden' name='id' id='id' value='$maxid' /></li>
 <li><label for='selectcateg'>Categoria: </label></td>
-<select id='selectcateg' name='selectcateg' class='formmargin'>";
+<select tabindex='11' id='selectcateg' name='selectcateg' class='formmargin'>";
 
 foreach $categoria(@categoria) {
 	my $listacat = $categoria->getElementsByTagName('nomecat')->string_value;
@@ -54,22 +54,22 @@ foreach $categoria(@categoria) {
 }
 
 print "</select></li>
-<li><label for='nomeprod'>Nome Prodotto: </label><input tabindex='11' type='text' id='nomeprod' name='nomeprod' class='formmargin' /></li>
-<li><label for='foto'>Foto: </label><input tabindex='12' type='file' id='foto' name='foto' class='formmargin' /></li>
-<li><label for='alt'>Alt: </label><input tabindex='13' type='text' id='alt' name='alt' class='formmargin' /></li>
+<li><label for='nomeprod'>Nome Prodotto: </label><input tabindex='12' type='text' id='nomeprod' name='nomeprod' class='formmargin' /></li>
+<li><label for='foto'>Foto: </label><input tabindex='13' type='file' id='foto' name='foto' class='formmargin' /></li>
+<li><label for='alt'>Alt: </label><input tabindex='14' type='text' id='alt' name='alt' class='formmargin' /></li>
 <li>Lavorazioni disponibili:";
 
-my $tabindex = 14;
+my $tabindex = 15;
 
 foreach $nomelav(@nomelav) {
 	my $listalav = $nomelav->string_value;
-	print "<p class='standardcheckb formmargin'><input tabindex='$tabindex' type='checkbox' id='check$listalav' name='check$listalav' value='$listalav' /><label for='check$listalav'>$listalav</label></p>";
+	print "<p class='standardcheckb'><input tabindex='$tabindex' type='checkbox' id='check$listalav' name='check$listalav' value='$listalav' /><label for='check$listalav'>$listalav</label></p>";
 	$tabindex += 1;
 }
 
 print "</li>
 <li><p id='ptexta2'><label for='texta2'>Descrizione:</label></p>
-<textarea tabindex='$tabindex' id='texta2' name='texta2' class='formmargin'></textarea></li>
+<textarea tabindex='$tabindex' id='texta2' name='texta2'></textarea></li>
 </ul>";
 
 $tabindex += 1;
