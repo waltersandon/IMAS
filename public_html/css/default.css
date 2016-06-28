@@ -1,3 +1,5 @@
+/* css default */
+
 html,body {
     margin:auto;
     font-family:'Helvetica','Arial', sans-serif;
@@ -8,6 +10,8 @@ html,body {
 a:active {outline:none;}
 ul {list-style-type:none}
 body{max-width:1300px}
+
+/* header */
 
 #logoDitta{
 	display:block;
@@ -63,6 +67,8 @@ body{max-width:1300px}
     object-fit:cover; /* nota */
 }
 
+/* nav */
+
 #breadcrumb {
     height: 2.5em;
     color: white;
@@ -92,12 +98,15 @@ body{max-width:1300px}
     margin: 0;
     padding: 0;
     list-style-type: none;
-    text-align: center; /* "left", "center", or "right" align menu */
+    text-align: center;
+	font: bold 16px Verdana;
 }
 
 #circlemenu li{
     display: inline;
     margin:0em 2em 2em 2em;
+	width:120px;
+    height:120px;
 }
 
 #circlemenu li{
@@ -105,8 +114,8 @@ body{max-width:1300px}
     text-align:center;
     text-decoration: none;
     color: white;
-    margin-right:5px; /*right spacing between each link */
-    border-radius: 400px; /*really large border radius to create round borders*/
+    margin-right:5px;
+    border-radius: 400px;
     -moz-border-radius: 400px;
     -webkit-border-radius: 400px;
     -o-border-radius: 400px;
@@ -164,18 +173,26 @@ body{max-width:1300px}
 #circlemenu .selectedH{
     background: #0dd91d;
 	margin-bottom:0;
+	width:160px;
+    height:160px;
 }
 #circlemenu .selectedP{
     background: #f2b70e;
 	margin-bottom:0;
+	width:160px;
+    height:160px;
 }
 #circlemenu .selectedL{
     background: #ff5128;
 	margin-bottom:0;
+	width:160px;
+    height:160px;
 }
 #circlemenu .selectedC{
     background: #E3001D;
 	margin-bottom:0;
+	width:160px;
+    height:160px;
 }
 
 #circlemenu li a{
@@ -189,6 +206,7 @@ body{max-width:1300px}
 }
 
 /* immagini */
+
 .circolare {
     width: 150px;
     height: 150px;
@@ -203,7 +221,7 @@ body{max-width:1300px}
 
 .foto{
     float: left;
-    margin: 5em 3em auto 3em;/* top right bottom left */
+    margin: 5em 3em auto 3em;
 }
 
 /* container */
@@ -279,33 +297,6 @@ body{max-width:1300px}
     margin-bottom: 1em;
 }
 
-/* circlemenu */
-
-#circlemenu ul{
-    font: bold 16px Verdana;
-}
-
-#circlemenu li{
-    width:120px;
-    height:120px;
-}
-
-#circlemenu .selectedH, #circlemenu .selectedP,#circlemenu .selectedL, #circlemenu .selectedC{
-    width:160px;
-    height:160px;
-
-}
-
-#xhtml{
-    clear: left;
-    margin-left: 30%;
-    margin-right: 2em;
-}
-
-#css{
-    float: none;
-    margin-left: 2.4em;
-}
 /* footer */
 
 #footer {
@@ -349,4 +340,372 @@ body{max-width:1300px}
     width:88px;
     height:31px;
 	vertical-align:middle;
+}
+
+/* css contatti */
+
+#info {
+	background-color:lightgrey;
+	text-align: center;
+	margin: 2em 0 2em 0;
+}
+
+#info p {
+	padding:1em 0em 1em 2em;
+    margin:0em 1em 1em 1em;
+	font-weight: bold;
+	font-size: large;
+
+}
+
+fieldset {
+	border: solid;
+	border-radius: 8px;
+	border-width: thin;
+	margin:2em auto 1em auto;
+	width: 60%;
+	min-width: 520px;
+	max-width: 600px;
+}
+
+legend {
+	font-size:1.2em;
+	font-weight:bold;
+}
+
+#fieldgenerali {
+	margin-top:4em;
+}
+
+.errori {
+	display:block;
+	font-size:0.8em;
+	color:#a51e1e;
+	margin-top:0.7em;
+	text-align:center;
+}
+
+.colorbox {
+	background:lightgrey;
+}
+
+.required {
+	color:#eb2d2d;
+}
+
+#ulcateg {
+	padding:0;
+	margin:1em 0em 0em 0em;
+}
+
+#ulcateg li {
+	display:inline-block;
+	margin:0;
+}
+
+#hiddenazienda {
+	visibility:hidden;
+}
+
+#azienda {
+	margin:0em 0em 0em 0.7em;
+}
+
+#uldatipers {
+	padding:0;
+	margin:0;
+}
+
+#uldatipers li {
+	display:inline-block;
+	width:30%;
+	margin:0em 0.5em 0em 0.5em;
+}
+
+#tabledatipers {
+	margin:1em 0.6em 0em 0.6em;
+}
+
+.columndivider {
+	border-right:2em solid transparent;
+}
+
+#memorequired {
+	display:block;
+	font-size:0.6em;
+	font-style:italic;
+}
+
+#memoasterisco {
+	font-size:1.2em;
+	color:#eb2d2d;
+}
+
+#memorequired {
+	font-size:0.6em;
+	font-style:italic;
+	padding-top:0.5em;
+	padding-left:1.8em;
+}
+
+#tipoprob {
+	padding:0;
+	margin:0;
+}
+
+#tipoprob li {
+	display:inline-block;
+	margin:0.5em 0.6em 0em 0.6em;
+}
+
+#messaggio {
+	margin:1em auto 1em auto;
+	min-height:260px;
+	width:80%;
+	display:block;
+	font-size:1.3em;
+	resize:vertical;
+	border-radius: 5px;
+}
+
+#indicetipo {
+	font-size:1.1em;
+	margin:0em 0em 0em 1em;
+}
+
+#inviaemail {
+	padding:0.5em 1.2em 0.5em 1.2em;
+	font-size:1.4em;
+	font-weight:bold;
+	margin:0em 0.7em 0.5em 0.7em;
+	float:right;
+}
+
+#errorimessaggio {
+	padding-top:1.5em;
+	text-align:right;
+}
+
+#fieldultimo {
+	margin-bottom:3em;
+}
+
+.textbold {
+	font-weight:bold;
+}
+
+/* css login */
+
+#formlogin {
+    min-height: 6em;
+    height: 200px;
+    width: 450px;
+    margin: 0em auto;
+    padding-top: 1em;
+}
+
+#ullogin {
+    float:left;
+    list-style:none;
+    padding:0;
+}
+
+#ullogin li {
+    font-weight:bold;
+    margin:0.8em 0em 0.8em 5em;
+}
+
+.submitlogin {
+    margin:2.5em 2em 2em 2em;
+	padding:1em;
+}
+
+.error {
+    font-weight:bold;
+    background-color:pink;
+    padding:0.4em 0em 0.4em 20em;
+    margin:0em 0em 3em 0em;
+}
+
+/* css admin */
+
+.containeradmin h1 {
+	padding:0.5em 0em 0.5em 2em;
+	background-color:#EFEFEF;
+}
+
+.containeradmin  ul {
+	background-color:#FFFFFF;
+	margin:0;
+}
+
+.containeradmin  li {
+	display:inline-block;
+	padding:1em 0em 1em 0em;
+	margin:1em;
+}
+
+.containeradmin  img {
+	margin-left:2em;
+	float:left;
+	height:120px;
+	width:120px;
+	border-radius:99px;
+	border-style:solid;
+	border-width:0.2em;
+    border-color:#C0C0C0;
+}
+
+.containeradmin  p {
+	float:right;
+	font-size:1.2em;
+	padding:0;
+    margin:2.5em 0em 0em 1em;
+}
+
+/* css zone di modifica */
+
+.aligncenter {
+	text-align:center;
+}
+
+.adminfoto {
+	height:60px;
+	width:60px;
+	vertical-align:middle;
+	border-width:0.2em;
+	margin:0em 1em 0em 2.5em;
+}
+
+.infoattuale {
+	display:inline;
+	font-size:1.5em;
+}
+
+.nomescelta {
+	font-size:1.2em;
+}
+
+#select {
+	padding:0.5em;
+}
+
+.tablemod {
+	margin-left:3em;
+}
+
+.tablemod td {
+	padding-right:1em;
+	padding-bottom:0.5em;
+}
+
+.divlav {
+	margin-left:35%;
+}
+
+.sottoinfo {
+	padding-top:2em;
+}
+
+#ulmod {
+	margin:0;
+}
+
+#divcheckblav {
+	margin-left:3.5em;
+}
+
+#attualelabel {
+	margin:0;
+	font-style:italic;
+}
+
+#attualedescr {
+	font-style:italic;
+	margin-top:0.5em;
+	width:280px;
+}
+
+#testodelete {
+	margin-left:5em;
+}
+
+.redhover:hover {
+	color:red;
+}
+
+/* css generico zona riservata */
+
+.lightgrey {
+    background-color:#EFEFEF;
+}
+
+.pink {
+    background-color:pink;
+}
+
+.white {
+	background-color:white;
+}
+
+.result {
+	padding-top:1em;
+	padding-bottom:1em;
+}
+
+.formmargin {
+	margin-left:0.5em;
+}
+
+.marginleft {
+	margin-left:4em;
+}
+
+.paddtop {
+    padding-top:1em;
+}
+
+.warning {
+	font-size:1.2em;
+	padding:1em 0em 0.5em 0em;
+    margin:1em 0em 0em 4em;
+}
+
+#texta1 {
+	width:280px;
+	height:80px;
+}
+
+#texta2 {
+	width:280px;
+	height:80px;
+}
+
+.standardcheckb {
+    font-weight:normal;
+	margin:0.5em 0em 0.5em 0em;
+}
+
+.submit {
+    min-width:8em;
+    min-height:5em;
+    font-weight:bold;
+    font-size:0.8em;
+    margin:2em 0em 3em 7em;
+}
+
+.submitchoice {
+	padding:1em;
+	margin:2em 0em 2em 1em;
+	font-weight:bold;
+    font-size:0.8em;
+}
+
+.ulnopadd {
+    padding:0;
+}
+
+.ulnopadd li {
+    font-weight:bold;
+    margin:1em 0em 1em 5em;
 }

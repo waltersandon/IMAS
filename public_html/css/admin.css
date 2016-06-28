@@ -30,6 +30,6 @@
 .containeradmin  p {
 	float:right;
 	font-size:1.2em;
-	padding:0 !important;
+	padding:0;
     margin:2.5em 0em 0em 1em;
 }

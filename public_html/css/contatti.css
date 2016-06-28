@@ -1,4 +1,4 @@
-/* contatti */
+/* css contatti */
 
 #info {
 	background-color:lightgrey;
@@ -20,7 +20,7 @@ fieldset {
 	border-width: thin;
 	margin:2em auto 1em auto;
 	width: 60%;
-	min-width: 500px;
+	min-width: 520px;
 	max-width: 600px;
 }
 
@@ -29,11 +29,16 @@ legend {
 	font-weight:bold;
 }
 
+#fieldgenerali {
+	margin-top:4em;
+}
+
 .errori {
 	display:block;
 	font-size:0.8em;
 	color:#a51e1e;
-	margin:0.7em 0em 0em 0em !important;
+	margin-top:0.7em;
+	text-align:center;
 }
 
 .colorbox {
@@ -51,7 +56,7 @@ legend {
 
 #ulcateg li {
 	display:inline-block;
-	margin:0em 0em 0em 0em;
+	margin:0;
 }
 
 #hiddenazienda {
@@ -106,7 +111,7 @@ legend {
 
 #tipoprob li {
 	display:inline-block;
-	margin:1em 0.6em 0em 0.6em;
+	margin:0.5em 0.6em 0em 0.6em;
 }
 
 #messaggio {
@@ -121,7 +126,7 @@ legend {
 
 #indicetipo {
 	font-size:1.1em;
-	margin:0em 0em 0em 1em !important;
+	margin:0em 0em 0em 1em;
 }
 
 #inviaemail {
@@ -137,4 +142,10 @@ legend {
 	text-align:right;
 }
 
-.maiuscolo{font-weight: bold}
+#fieldultimo {
+	margin-bottom:3em;
+}
+
+.textbold {
+	font-weight:bold;
+}
