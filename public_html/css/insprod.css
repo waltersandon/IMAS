@@ -28,11 +28,16 @@
 
 .standardcheckb {
     font-weight:normal;
-	margin:0.5em;
+	margin:0.5em 0em 0.5em 0em;
 }
 
 .formmargin {
 	margin-left:0.5em;
+}
+
+#texta1 {
+	width:280px;
+	height:80px;
 }
 
 #texta2 {

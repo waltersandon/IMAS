@@ -44,9 +44,9 @@
     }
 
     #breadcrumb p{
-        padding-top: .3em;
-        padding-left: 2em;
-        font-size: 1.1em;
+        padding-top:0.5em;
+        padding-left:1em;
+        font-size:1em;
     }
     /* circlemenu */
 

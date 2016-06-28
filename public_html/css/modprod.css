@@ -1,7 +1,15 @@
 /* modprod */
 
+.aligncenter {
+	text-align:center;
+}
+
 .paddtop {
     padding-top:1em;
+}
+
+.lightgrey {
+    background-color:#EFEFEF;
 }
 
 .pink {
@@ -17,9 +25,8 @@
 	padding-bottom:1em;
 }
 
-.result3 {
-	padding-top:3em;
-	padding-bottom:3em;
+.marginleft {
+	margin-left:4em;
 }
 
 .textbold {
@@ -35,23 +42,20 @@
 }
 
 .infoattuale {
-	padding-left:3em;
-	margin:0.5em 0em 0em 0em;
+	display:inline;
 	font-size:1.5em;
+}
+
+.nomescelta {
+	font-size:1.2em;
 }
 
 #select {
 	padding:0.5em;
 }
 
-#ulmod li {
-	display:inline-block;
-	width:35%;
-	margin:0em 0.5em 0em 0.5em;
-}
-
 .tablemod {
-	margin:1em 0.5em 0em 0.5em;
+	margin-left:3em;
 }
 
 .tablemod td {
@@ -59,101 +63,69 @@
 	padding-bottom:0.5em;
 }
 
-#divlav {
-	margin-left:5em;
+.divlav {
+	margin-left:35%;
 }
 
-#ullav {
-	display:inline;
-	padding:0;
+.sottoinfo {
+	padding-top:2em;
 }
 
-#ullav li {
-	width:auto;
+#ulmod {
+	margin:0;
 }
 
-#labeldescr {
-	margin-left:0.4em;
+#divcheckblav {
+	margin-left:3.5em;
 }
 
-#descr {
-	resize:none;
-	min-height:70px;
-	min-width:300px;
-	margin-left:1em;
+.standardcheckb {
+    font-weight:normal;
+	margin:0.5em 0em 0.5em 0em;
 }
 
 #attualelabel {
-	margin-left:1.5em;
+	margin:0;
 	font-style:italic;
 }
 
 #attualedescr {
-	width:250px;
-}
-
-#attualedescr p {
-	padding:0em 0em 0em 1.5em;
 	font-style:italic;
-	width:200px;
+	margin-top:0.5em;
+	width:280px;
 }
 
 #testodelete {
-	margin-left:3.5em;
+	margin-left:5em;
 }
 
 .redhover:hover {
 	color:red;
 }
 
+#texta1 {
+	width:280px;
+	height:80px;
+}
+
+#texta2 {
+	width:280px;
+	height:80px;
+}
+
 .submitchoice {
 	padding:1em;
-	margin:2em 0em 2em 3em;
+	margin:2em 0em 2em 1em;
+	font-weight:bold;
+    font-size:0.8em;
 }
 
-#warning {
-    padding-top:1.5em;
-	padding-left:2em;
-    margin:0em 1em 0em 1em;
+.warning {
+	font-size:1.2em;
+	padding:1em 0em 0.5em 0em;
+    margin-top:1em;
 }
 
-#form{
-	background-color: white;
-	width: 50%;
-	height: 270px;
-	margin: 0 auto;
-}
-h1 {
-	display:inline;
-	font-size: x-large;
-}
-
-.white p{
-	text-align: center;
-	padding-top: 2em;
-	padding-bottom: 1em;
-	font-weight: bold;
-	font-size: large;
-}
-
-#divmodprod {
-	padding-top:1em;
-	padding-right: 6em;
-	text-align: center;
-	background-color: lightgray;
-	height:70px;
-}
-
-#confmodprod{
-	margin-left: 4em;
-}
-@media screen and (max-width: 768px) {
-
-	#divlav {
-		margin-left:1em;
-	}
-
-	h1 {
-		font-size: large;
-	}
+.formmargin {
+	margin-left:0.5em;
 }
