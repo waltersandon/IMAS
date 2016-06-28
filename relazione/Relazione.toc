@@ -1,0 +1,20 @@
+\select@language {italian}
+\select@language {italian}
+\contentsline {section}{\numberline {1}Abstract}{4}{section.1}
+\contentsline {section}{\numberline {2}Accessibilit\IeC {\`a}}{6}{section.2}
+\contentsline {subsection}{\numberline {2.1}Implementazione}{6}{subsection.2.1}
+\contentsline {subsection}{\numberline {2.2}Combinazione dei colori}{6}{subsection.2.2}
+\contentsline {section}{\numberline {3}Utenti destinatari}{7}{section.3}
+\contentsline {section}{\numberline {4}Usabilit\IeC {\`a}}{8}{section.4}
+\contentsline {section}{\numberline {5}Gerarchia file}{9}{section.5}
+\contentsline {section}{\numberline {6}Architettura}{10}{section.6}
+\contentsline {subsection}{\numberline {6.1}Progettazione layout}{10}{subsection.6.1}
+\contentsline {subsection}{\numberline {6.2}Sviluppo layout}{10}{subsection.6.2}
+\contentsline {subsection}{\numberline {6.3}Layout per dispositivi mobili}{10}{subsection.6.3}
+\contentsline {subsection}{\numberline {6.4}Layout di stampa}{10}{subsection.6.4}
+\contentsline {section}{\numberline {7}Struttura}{11}{section.7}
+\contentsline {section}{\numberline {8}Presentazione}{12}{section.8}
+\contentsline {section}{\numberline {9}Comportamento}{13}{section.9}
+\contentsline {section}{\numberline {10}Gestione dati}{14}{section.10}
+\contentsline {section}{\numberline {11}Perl}{15}{section.11}
+\contentsline {section}{\numberline {12}Validazione}{16}{section.12}

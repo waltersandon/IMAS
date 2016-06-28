@@ -1,0 +1,109 @@
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage[italian]{babel}
+\usepackage{hyperref}
+\title{Progetto di Tecnologie Web}
+
+
+\begin{document}
+	\maketitle
+	\begin{figure}[h]
+		\centering
+		\includegraphics[width=0.7\linewidth]{logo-unipd.png}
+	\end{figure}
+	\
+	\begin{center}{\fontsize{20}{10}\selectfont Autori:}\end{center}
+	\begin{center}{\fontsize{20}{30}\selectfont 
+			Marco Casagrande
+			\\ Walter Sandon 1009138
+			
+			}\end{center}
+	
+	\newpage
+	\tableofcontents
+	\newpage
+	\listoffigures
+	\newpage
+	
+	\section{Abstract}
+	
+Il progetto sviluppato implementa il sito internet di una azienda che produce per conto terzi griglie metalliche ad uso domestico, quali griglie per forni e frigoriferi.
+Il sito si propone di dare ogni informazione che possa essere rilevante agli utenti visitatori come i prodotti che la IMAS riesce a realizzare e le relative lavorazioni disponibili, la posizione della ditta  e la possibilità, nel caso si abbia la necessità di ulteriori delucidazioni, di potere contattere gli opratori tramite apposito form nell'area dedicata.
+Inoltre gli amministratori hanno la possibilità di accedere ad un area riservata dalla quale modificare  o aggiungere i prodotti e lavorazioni in catalogo; in particolare lato prodotti:
+\begin{itemize}
+	\item inserire nuovo prodotto,
+	\item assegnare a più prodotti una lavorazione, 
+	\item modificare un prodotto esistente, in particolare:	
+	\begin{itemize}
+		\item nome
+		\item foto
+		\item attributo alt della foto
+		\item lavorazione
+		\item descrizione
+	\end{itemize}
+	\item eliminare un prodotto.
+\end{itemize}
+Di una lavorazione invece possiamo effettuare queste operazioni:
+\begin{itemize}
+	\item inserire nuova lavorazione,
+	\item modificare un lavorazione esistente, in particolare:	
+	\begin{itemize}
+		\item nome
+		\item se è interna, esterna alla ditta
+		\item foto
+		\item attributo alt della foto
+		\item descrizione
+	\end{itemize}
+	\item eliminare una lavorazione.
+\end{itemize}
+Il sito è stato realizzato prestando particolare attenzione all'accessibilità dello stesso, utilizzando numerose accortezze per renderlo utilizzabile al meglio anche da utenti con deficit della vista. Tra queste troviamo l'adozione di uno schema di colori ad alto contrasto e l'ampio utilizzo nel codice \texttt{html} di accortezze per aiutare gli utenti che utilizzano screen reader. Le soluzioni adottate sono ampiamente documentate nella sezione \hyperref[sec:Accessibilita]{\underline{Accessibilità}} di questo documento.
+
+\newpage
+\section{Accessibilità}
+\label{sec:Accessibilita}
+\subsection{Implementazione}
+Per facilitare l'utilizzo del sito ad utenti con determinate disabilità, si è cercato di rispettare le raccomandazioni proposte dal W3C grazie ai relativi validatori per XHTML 1.0 e CSS. Il sito è stato inoltre progettato mantenendo una netta separazione tra struttura e presentazione cercando di mantenere una logica di navigazione intuitiva e semplificata.
+\hfill\\
+Nella realizzazione del sito è stata prestata particolare cura nel rendere il sito accessibile anche agli utenti che presentino deficit visivi o che adoperino \textit{screen reader} per leggere le pagine usando le seguenti correttezze:
+\begin{description}
+	\item[Schema di colori ad alto contrasto]\hfill\\
+	 è intervallato dal colore \textbf{bianco} e da \textbf{grigio chiaro} per distinguere il cambio d'informazione in netto contrasto col testo che risulta essere \textbf{nero }per i titoli e \textbf{grigio scuro} per le restanti informazioni.
+	\item[Markup del testo] \hfill \\
+	Nella formattazione del testo si sono usati numerosi accorgimenti per facilitare la lettura ai lettori svantaggiati quali:
+	\begin{itemize}
+		\item tag \texttt{xml:lang} per indicare agli screen reader la corretta pronuncia delle parole
+		\item la sottolineatura è utilizzata sempre ed esclusivamente per i link, in modo che gli utenti che non discernono i colori non abbiano problemi a distinguere i collegamenti dal testo semplice
+		\item tutte le immagini sono corredate dall'attributo alt per indicare il loro contenuto
+		\item form che contengono l' indicazione nel campo \texttt{label}
+	\end{itemize}
+\end{description}
+
+\subsection{Combinazione dei colori}
+\newpage
+\section{Utenti destinatari}
+\newpage
+\section{Usabilità}
+\newpage
+\section{Gerarchia file}
+\newpage
+\section{Architettura}
+\subsection{Progettazione layout}
+\subsection{Sviluppo layout}
+\subsection{Layout per dispositivi mobili}
+\subsection{Layout di stampa}
+
+\newpage
+\section{Struttura}
+\newpage
+
+\section{Presentazione}
+\newpage
+\section{Comportamento}
+\newpage
+\section{Gestione dati}
+\newpage
+\section{Perl}
+\newpage
+\section{Validazione}
+\end{document}
