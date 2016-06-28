@@ -44,47 +44,49 @@ Inoltre gli amministratori hanno la possibilità di accedere ad un area riservat
 	\end{itemize}
 	\item eliminare un prodotto.
 \end{itemize}
-Di una lavorazione invece possiamo effettuare queste operazioni:
-\begin{itemize}
-	\item inserire nuova lavorazione,
-	\item modificare un lavorazione esistente, in particolare:	
-	\begin{itemize}
-		\item nome
-		\item se è interna, esterna alla ditta
-		\item foto
-		\item attributo alt della foto
-		\item descrizione
-	\end{itemize}
-	\item eliminare una lavorazione.
-\end{itemize}
-Il sito è stato realizzato prestando particolare attenzione all'accessibilità dello stesso, utilizzando numerose accortezze per renderlo utilizzabile al meglio anche da utenti con deficit della vista. Tra queste troviamo l'adozione di uno schema di colori ad alto contrasto e l'ampio utilizzo nel codice \texttt{html} di accortezze per aiutare gli utenti che utilizzano screen reader. Le soluzioni adottate sono ampiamente documentate nella sezione \hyperref[sec:Accessibilita]{\underline{Accessibilità}} di questo documento.
-
-\newpage
-\section{Accessibilità}
-\label{sec:Accessibilita}
-\subsection{Implementazione}
-Per facilitare l'utilizzo del sito ad utenti con determinate disabilità, si è cercato di rispettare le raccomandazioni proposte dal W3C grazie ai relativi validatori per XHTML 1.0 e CSS. Il sito è stato inoltre progettato mantenendo una netta separazione tra struttura e presentazione cercando di mantenere una logica di navigazione intuitiva e semplificata.
-\hfill\\
-Nella realizzazione del sito è stata prestata particolare cura nel rendere il sito accessibile anche agli utenti che presentino deficit visivi o che adoperino \textit{screen reader} per leggere le pagine usando le seguenti correttezze:
-\begin{description}
-	\item[Schema di colori ad alto contrasto]\hfill\\
-	 la struttura del sito è intervallato dal colore \textbf{bianco} e da \textbf{grigio chiaro} per distinguere il cambio semantico dell'informazione, in netto contrasto col testo che risulta essere \textbf{nero }per i titoli e \textbf{grigio scuro} per le restanti informazioni.
-	\item[Markup del testo] \hfill \\
-	Nella formattazione del testo si sono usati numerosi accorgimenti per facilitare la lettura ai lettori svantaggiati quali:
-	\begin{itemize}
-		\item tag \texttt{xml:lang} per indicare agli screen reader la corretta pronuncia delle parole
-		\item la sottolineatura è utilizzata sempre ed esclusivamente per i link, in modo che gli utenti che non discernono i colori non abbiano problemi a distinguere i collegamenti dal testo semplice
-		\item tutte le immagini sono corredate dall'attributo alt per indicare il loro contenuto
-		\item form che contengono l' indicazione nel campo \texttt{label}
-	\end{itemize}
-\end{description}
+La lavorazione è similare al prodotto in quanto di possono eseguire le stesse operazioni di inserimento e modifica dei propri campi
 
 \subsection{Combinazione dei colori}
 Per cercare di garantire una totale usabilità del sito anche ad utenti affetti da problemi visivi è stato scelto di utilizzare uno schema a colori che esaltasse il contrasto tra sfondo e testo. Per testare tale scelta è stato utilizzato il servizio offerto da \href{http://colorfilter.wickline.org/}{\textit{wickline}} che mostra come il sito può venire visualizzato da utenti con determinati problemi. Di seguito vengono riportati i risultati ottenuti.
 \newpage
 \section{Utenti destinatari}
+\paragraph{Privati/Aziende}
+Una prima categoria di utenti destinatari del sito comprende in piccola misura i privati cittadini e nella maggioranza alle aziende che producono oggetti che rientrano nelle categorie merciologiche presenti nella sezione  \textit{Prodotti}.\\
+Questi utenti potranno visualizzare il catalogo e constatare la presenza di un particolare prodotto; per questo, oltre alle informazioni di base del prodotto, si può trovare l'indicazione circa le possibili \textit{lavorazioni}.\\
+Oltre a ciò, gli utenti potranno (nelle due pagine \textit{Home} e \textit{Contatti}) scoprire la storia della compagnia e qual'ora fossero interessati, chiedere informazioni tramite un apposito form.
+
+\paragraph{Amministratori}
+Un'altra categoria di utenti del sito è rappresentata dagli amministratori IMAS che potranno accedere, autenticandosi attraverso un link nell' \textit{header} a destra del logo aziendale, ad un'area riservata dalla quale è possibile gestire il catalogo dei prodotti e lavorazioni che può offrire la ditta.
+
 \newpage
+
 \section{Usabilità}
+
+Dopo aver discusso col proponente riguardo alle possibili implementazioni del sito, in fase di progettazione ci siamo chiesti come distribuire le varie informazioni nel sito cercando di dare una giusta collocazione alle cose ponendo l'attenzione su due variabli quali le azioni che un utente maggiormente esegue e la tipologia aziendale in questione
+
+\begin{description}
+	\item [Consultare il catalogo prodotti] \hfill \\
+	L'operazione più frequentemente compiuta dagli utenti è quella di consultare il catalogo dei prodotti presenti.
+	\hfill 
+	Essendo però una ditta che non ha una continuità di rinnovo dei prodotti, si è ritenuto apportuno non metterlo in evidenza nella homepage, ma piuttosto  dedicare un area apposita. 
+	La \textbf{Home} è stata adibita a chi entra per la prima volta nel sito o piuttosto quache vecchi utente che vogliano informarsi circa sulle origini, sulla storia o sulla mission aziendale. \hfill
+	Nel contempo in queste sezioni sono stati inseriti link diretti per poter consultare i nostri prodotti  ed è stata inoltre predisposta una comoda \textit{NavBar} con la quale raggiungere da ogni punto del sito le pagine \textbf{Prodotti} e \textbf{Lavorazioni}, i cui nomi sono esplicativi circa le informazioni contenute.
+	Stessa considerazione va fatta per la \textbf{consultazione delle lavorazioni}.
+	\item [Manutenzione del catalogo] \hfill \\
+	L'operazione di manutenzione dei cataloghi (aggiunta, modifica e rimozione dei prodotti/lavorazioni) è riservata agli amministratori del sito.\\
+	 È logico pensare che, essendo tali utenti un numero inferiore rispetto ai visitatori, il link per l'autenticazione e l'accesso all'area riservata possa essere messa in posizione \textit{nascosta}. Portroppo per ragioni di spazio l'abbiamo posizionata solo in alto a destra sapendo di creare così disorientamento.\\
+	 Abbiamo cercato di limitare i danni avvisando,  una volta entrati nell'area login, che tale area è riservata ai dependenti IMAS.\\
+	  \textit{Si noti che il pulsante per poter entrare nell'area gestione prodotti e lavorazioni è visibile solo quando  l'amministratore ha eseguito il login.}
+\end{description}
+\subsection{Elementi dell'Interfaccia Grafica}
+
+Analizziamo ora gli elementi dell'interfaccia utilizzati per renderla il più chiara (intuitiva per ogni utente) e diretta (minor numero di click per un operazione) possibile.
+\begin{description}
+	\item [NavBar] La barra di navigazione è presente in ogni pagina e consente l'accesso diretto alla homepage, l'accesso alle pagine \textit{Prodotti}, \textit{Lavorazioni} e \textit{Contatti}.
+	\item [Breadcrumbs] Per evitare che l'utente si senta disorientato all'interno del sito, quando dalla homepage si addentra con maggiore profondità nella struttura del sito, compare il percorso dell'utente a partire dalla homepage. Per approfondire la struttura si veda la sezione \hyperref[sub:Responsivity]{\underline{Responsive Design}}.
+	\item [Link] I link sono tutti sottolineati e segnalati in giallo, quelli visitati invece in arancione.
+\end{description}
+
 \newpage
 \section{Gerarchia file}
 \newpage
