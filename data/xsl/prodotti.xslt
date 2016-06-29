@@ -8,7 +8,7 @@
 			<xsl:sort select="nomecat" />
                 <xsl:variable name="tab" select = "position()+10"/>
                 <xsl:if test="position() mod 2 = 0">
-                    <div class="pari">
+                    <div class="pariP">
                         <div class="catContent">
                             <img class="circolare fotocat" src="{fotocat}" alt="{altcat}" />
                             <div class="testocat">
@@ -31,7 +31,7 @@
                     </div>
                 </xsl:if>
                 <xsl:if test="position() mod 2 != 0">
-                    <div class="dispari">
+                    <div class="dispariP">
                         <div class="catContent">
                             <img class="circolare fotocat" src="{fotocat}" alt="{altcat}" />
                             <div class="testocat">
