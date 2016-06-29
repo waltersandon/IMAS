@@ -24,7 +24,7 @@ ul {
 	margin:1.5em 0em 0em 0em;
 }
   
-#adminzone {
+#zonaadmin {
 	display:none;
 }
 
@@ -36,8 +36,15 @@ ul {
 
 /* breadcrumbs */
 
+#breadcrumb {
+	border-style:solid;
+	border-width:1px;
+	margin-bottom:2em;
+}
+
 #breadcrumb p {
     font-size:1em;
+	margin-left:0.5em;
 }
   
 /* circlemenu */
@@ -53,10 +60,6 @@ ul {
 	border-radius:999px;
 }
 
-.selected {
-	font-size:1.2em !important;
-}
-
 /* index */
 
 .foto {
@@ -68,42 +71,13 @@ ul {
 }
 
 .testo ul {
-	page-break-before:always;
+	page-break-inside:avoid;
 }
-
-/* -index */
-
-/* login */
-
-#ullogin li {
-	margin-top:0.3em;
-}
-
-/* -login */
-
-/* admin */
-
-#container img {
-	display:none;
-}
-
-/* -admin */
-
-/* insprod */
-
-#ulinsprod li {
-	margin-top:0.5em;
-}
-
-.checklav {
-    display:inline;
-}
-
-/* -insprod */
 
 /* footer */
 
 #footer {
+	page-break-inside:avoid;
 	font-size:0.8em;
 	font-style:italic;
 	border-style:solid;
@@ -122,10 +96,114 @@ ul {
 	content:"| ";
 }
 
+#footer div {
+	text-align:center;
+}
+
 #footer img {
 	display:none;
 }
 
 #footer p {
 	margin:1em 0em 0em 1em;
+}
+
+.center {
+	text-align:center;
+}
+
+/* prodotti */
+
+.testocat h1 {
+	font-size:1.2em;
+	text-transform:uppercase;
+}
+
+.testocat p {
+	font-size:0.8em;
+}
+
+.circleGrid h1 {
+	font-size:1em;
+	text-transform:uppercase;
+}
+
+.circleGrid p:before {
+	content:"Lavorazione disponibile: ";
+}
+
+.circleGrid p {
+	font-size:0.8em;
+}
+
+/* lavorazioni */
+
+/* contatti */
+
+fieldset {
+	page-break-inside:avoid;
+}
+
+#hiddenazienda {
+	display:none;
+}
+
+#memorequired {
+	font-size:0.7em;
+}
+
+#messaggio {
+	margin-left:2em;
+}
+
+#inviaemail {
+	margin-left:2.5em;
+}
+
+/* login */
+
+#ullogin li {
+	margin-top:0.3em;
+}
+
+/* admin */
+
+#container img {
+	display:none;
+}
+
+.containeradmin li {
+	margin-top:0.5em;
+}
+
+/* generale zona riservata */
+
+.ulnopadd li {
+	margin-top:0.5em;
+}
+
+.standardcheckb {
+	margin:0;
+}
+
+.ulmod li {
+	margin-top:0.5em;
+}
+
+.infoattuale {
+	font-size:1.4em;
+}
+
+.nomescelta {
+	font-size:1.2em;
+}
+
+#attualelabel {
+	margin-bottom:0;
+	font-style:italic;
+}
+
+#attualedescr {
+	margin-top:0;
+	font-style:italic;
 }
