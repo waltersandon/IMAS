@@ -34,6 +34,8 @@
 <foto>../public_html/images/griglia_bbq.jpg</foto>
 <alt>griglia spessa</alt>
 <descrizione>Una griglia realizzata su misura per ogni tipo di barbecue.</descrizione>
+<lavorazione>Cromatura</lavorazione>
+<lavorazione>Acciaio-Inox</lavorazione>
 </prodotto>
 
 <prodotto>
@@ -52,6 +54,7 @@
 <foto>../public_html/images/griglia_fornello.jpg</foto>
 <alt>griglia per barbecue</alt>
 <descrizione>Una griglia realizzata per fornelli professionali.</descrizione>
+<lavorazione>Verniciatura</lavorazione>
 </prodotto>
 
 <prodotto>
