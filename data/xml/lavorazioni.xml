@@ -30,9 +30,9 @@ Una catena produttiva dell'azienda è dedicata alla zincatura a telaio dedicata 
 </lavorazione>
 
 <lavorazione produzione="esterna">
-<nomeLav>Verniciatura Poliestere</nomeLav>
+<nomeLav>Verniciatura</nomeLav>
 <fotoLav>../public_html/images/verniciatura.jpg</fotoLav>
-<altLav>Foto Verniciatura Poliestere</altLav>
+<altLav>Foto Verniciatura</altLav>
 <descrLav>
 La verniciatura in polvere di poliestere può essere utilizzata sia per scopi industriali che per scopi architettonici.
 In particolare è utilizzata per il rivestimento metalli con polvere poliestere e garantisce un’ottima resistenza agli agenti chimici e atmosferici.
@@ -44,7 +44,7 @@ Essendo questa lavorazione suscettibile ai colori imposti dalla moda del momento
 </lavorazione>
 
 <lavorazione produzione="esterna">
-<nomeLav>Acciaio Inox</nomeLav>
+<nomeLav>Acciaio-Inox</nomeLav>
 <fotoLav>../public_html/images/verniciatura.jpg</fotoLav>
 <altLav>Foto Acciaio Inox</altLav>
 <descrLav>

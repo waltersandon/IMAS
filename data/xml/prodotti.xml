@@ -14,7 +14,6 @@
 <foto>../public_html/images/griglia.jpg</foto>
 <alt>griglia per forni e fornelli classica</alt>
 <descrizione>Una semplice griglia adatta a tutti i tipi forni domestici.</descrizione>
-<lavorazione>Acciao Inox</lavorazione>
 <lavorazione>Cromatura</lavorazione>
 </prodotto>
 
@@ -24,7 +23,6 @@
 <foto>../public_html/images/griglia_laterale.jpg</foto>
 <alt>griglia laterale</alt>
 <descrizione>Griglia laterale standard.</descrizione>
-<lavorazione>Verniciatura Poliestere</lavorazione>
 </prodotto>
 
 </categoria>
@@ -50,7 +48,7 @@
 <foto>../public_html/images/portabottiglie.jpg</foto>
 <alt>porta bottiglie da frigorifero</alt>
 <descrizione>Porta bottiglie</descrizione>
-<lavorazione>Verniciatura Poliestere</lavorazione>
+<lavorazione>Verniciatura</lavorazione>
 <lavorazione>Acciaio Inox</lavorazione>
 </prodotto>
 
