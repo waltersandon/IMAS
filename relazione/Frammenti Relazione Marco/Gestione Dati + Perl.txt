@@ -1,11 +1,14 @@
 \section{Gestione dati}
-Tutti i dati sono immagazzinati nei file xml.
+Tutti i dati sono immagazzinati nei seguenti file xml:
 \begin
-	\item[Login.xml] è l'elenco delle combinazioni username+password che possono accedere alla zona di amministrazione del sito.
-	\item[Prodotti.xml] è l'elenco dei prodotti disponibili e sono divisi in 3 categorie prefissate. Sia le categorie che i prodotti possiedono vari nodi che ne descrivono le caratteristiche. In particolare i prodotti possono essere disponibili sotto nessuna o più lavorazioni.
-	\item[Lavorazioni.xml] è l'elenco delle lavorazioni disponibili. Anch'esse possiedono vari nodi che ne descrivono le caratteristiche.
+	\item[Login.xml] è l'elenco delle combinazioni username+password che possono accedere alla zona di amministrazione del sito. Viene usato solamente per il login.
+	\item[Prodotti.xml] è l'elenco dei prodotti disponibili e sono divisi in 3 categorie prefissate. Sia le categorie che i prodotti possiedono vari nodi che ne descrivono le caratteristiche. In particolare i prodotti possono essere disponibili sotto nessuna o più lavorazioni. Viene usato per creare un elenco nella sezione Prodotti, e nella zona di amministrazione.
+	\item[Lavorazioni.xml] è l'elenco delle lavorazioni disponibili. Anch'esse possiedono vari nodi che ne descrivono le caratteristiche. Viene usato per creare un elenco nella sezione Lavorazioni, e nella zona di amministrazione.
 \end
 Per una gestione dati più semplice rispetto al modificare direttamente i file xml, il sito rende disponibile una serie di funzionalità nell'area di amministrazione, così che anche un utente inesperto possa effettuare aggiornamenti.
+
+Ciascuno dei 3 file xml è associato al corrispondente xmlSchema. 
+E' stato utilizzato il modello "Tende alla Veneziana" in quanto permetteva una veloce e semplice consultazione vista anche la scarsa complessità della struttura.
 
 \newpage
 \section{Perl}
@@ -22,10 +25,10 @@ Riguardo alla stampa delle pagine, è stata sfruttata semplicemente la print assi
 Riguardo al login, tramite l'apposito form il sito controlla in login.xml se l'username e la password corrispondono, restituendo un errore oppure permettendo l'accesso alla zona di amministrazione. Solo i gestori del sito hanno accesso a quest'area e non vi è modo di registrarsi.
 
 Riguardo alla gestione dei prodotti e delle lavorazioni, sono offerte 5 funzionalità per chi non è pratico di xml che garantiscono il rispetto del corrispondente XMLSchema.
-Queste funzionalità si possono suddividere in due categorie dal codice molto simile:
 \begin
-	\item[Inserimento] alla quale appartengono l'inserimento prodotto/lavorazione.
-	Questa categoria crea un nodo con i parametri impostati dall'utente, lo controlla e lo inserisce nel rispettivo file xml.
-	\item[Modifica] alla quale appartengono la modifica prodotto/lavorazione e la riassegnazione di una lavorazione ai diversi prodotti.
-Questa categoria si occupa di modificare od eliminare i nodi in base alle scelte dell'utente.  Inizialmente occorre selezionare l'elemento, poi verrà mostrata la pagina con i vari parametri modificabili. I cambiamenti vengono controllati ed introdotti nei rispettivi file xml.
+	\item[Inserimento Prodotto] Questa pagina crea un nodo con i parametri impostati dall'utente. Permette la scelta della categoria, del nome e di tutte le altre caratteristiche del prodotto, a parte l'ID che viene assegnato automaticamente. I dati immessi vengono poi controllati ed inseriti in prodotti.xml.
+	\item[Modifica-Elimina Prodotto] Questa pagina permette di scegliere un prodotto e di modificarne le caratteristiche (tranne l'ID), oppure di cancellarlo. Alcuni campi sono precompilati con il valore attuale per facilitare le operazioni. Le eventuali immagini rimpiazzate vengono cancellate. Nel caso sia presente un errore, nulla viene modificato.
+	\item[Assegnazione Lavorazione] Questa pagina permette assegnare (o togliere) una lavorazione a più prodotti. Tale necessità sorge in particolare quando si inserisce una nuova lavorazione ed evita di dover modificare ogni singolo prodotto.
+	\item[Inserimento Lavorazione] Questa pagina si comporta analogamente all'Inserimento Prodotto. In questo caso non si ha un ID a differenziare due lavorazioni, dunque vi è un controllo sul nome.
+	\item[Modifica-Elimina Lavorazione] Questa pagina si comporta analogamente alla Modifica-Elimina Prodotto. Quando si elimina una lavorazione, essa viene automaticamente tolta da ogni prodotto.
 \end
