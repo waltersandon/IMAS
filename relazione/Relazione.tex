@@ -167,12 +167,28 @@ Tutto il sito è stato sviluppato in XHTML 1.0 Strict. Le pagine sono generate d
 	 \\La pagina offre degli aiuti nel caso si inseriscano dei dati errati;
 	 \item[cgi-bin/login.cg] la seguente pagina permette l'autenticazione degli amministratori per poter accedere all'area riservata. Anche in questo caso pagina offre degli aiuti nel caso si inseriscano dei dati errati
 	 \\Dal momento in cui ci si logga in ogni pagina al posto del link \textit{area riservata} saranno presenti 2 link per l'area \textbf{amministrazione}e per il \textbf{loguot};
-	 \item[cgi-bin/admin.cg] il ruolo fondamentale della pagina è l'inserimento dei dati. Si presenta con la sezione \textit{Prodotti} e quella \textit{Lavorazioni} e ognuna delle quali presenta le operazioni che si possono fare.
-	 
+	 \item[cgi-bin/admin.cg] il ruolo fondamentale della pagina è l'inserimento dei dati. Si presenta con 2 sezioni: \textit{Prodotti} e  \textit{Lavorazioni} e ognuna delle quali presenta le operazioni che l'amministratore può fare ad ognu.	 
 \end{description}
 \newpage
 
 \section{Presentazione}
+Per la presentazione delle informazioni abbiamo cercato di essere quanto più precisi possibili ed accessibili. Abbiamo deciso di sviluppare l'interfaccia grafica tramite l'utilizzo di codice CSS. Volendo ottenere un ottimo grado di accessibilità abbiamo deciso di utilizzare CSS in versione 2, in quanto compatibile con la maggioranza dei browser in circolazione.
+Riteniamo che anche se la pagina dovesse essere visualizzata da browser con compatibilità inferiore il contenuto e l'accessibilità non vengono alterati.
+\\
+Tutte le pagine mostrano una grafica diversa, simili solo nell'alternanza del colore al cambio informazione. Questo è statto necessario in quanto ogni pagina presenta un'ospetto deverso non compatibile semanticamente con quello delle altre pagine.
+\\ Siamo riusciti a presentare un design accativante e piacevole alla vista, di contro invece,  proprio per l'incompatibilità appena descritta, non siamo riusciti ad usare in più pagine gli stessi elementi portandoci così ad avere un CSS leggermente prolisso e suscettibile di errori. 
+\\Nonostante ciò crediamo che la visualizzazione sia ottimale in ugual modo. 
+\\
+\\
+Ai fini del miglioramento della presentazione e delle performance abbiamo deciso di suddividere i file CSS in base alle funzioni a loro riservate. Esistono 3 tipi di CSS:
+\begin{itemize}
+	\item Il file "default.css" utilizzato per la maggior parte dei dispositivi con risoluzione maggiore.
+	\item Il file "mobile.css" utilizzato per la parte dei dispostivi mobili quali i tablet, dove la dimensione dello schermo rimane più compatta. Esso viene attivato ad una risoluzione inferiore ai 768px;
+	\item Il file "print.css" utilizzato per la stampa delle pagine visualizzate. È stato posto particolare accorgimento a questo tipo di funzione, omettendo le parti del sito meno importanti. È stato altresì preso in considerazione la rimozione dei contenuti quali sfondi decorativi per ottenere una stampa più pulita possibile. Invece abbiamo ritenuto buona cosa mantenere le immagini in quanto crediamo siano importanti per il nostro sito.
+	
+\end{itemize}
+
+Il font utilizzano è di tipo standard e tutti i caratteri utilizzati hanno una dimensione relativa permettendoci una maggiore adattabilità alle preferenze dell'utente, senza influire negativamente nell'aspetto del sito.
 \newpage
 \section{Comportamento}
 \newpage
