@@ -4,15 +4,15 @@ targetNamespace="http://www.imas.com"
 xmlns="http://www.imas.com"
 elementFormDefault="qualified">
 
-    <xs:element name="login" type="Tlogin" />
+<xs:element name="utenti" type="Tutenti" />
 	
-    <xs:complexType name="Tlogin">
+    <xs:complexType name="Tutenti">
       <xs:sequence>
-        <xs:element name="admin" type="Tadmin" minOccurs="1" maxOccurs="unbounded" />
+        <xs:element name="utente" type="Tutente" minOccurs="1" maxOccurs="unbounded" />
       </xs:sequence>
     </xs:complexType>
 
-    <xs:complexType name="Tadmin">
+    <xs:complexType name="Tutente">
         <xs:sequence>
          <xs:element name="username" type="xs:string" />
          <xs:element name="password" type="xs:string" />
