@@ -44,7 +44,7 @@
 <label for="tipoclprivato">Privato</label></li>
 <li><input tabindex="12" type="radio" class="ccateg" id="tipoclazienda" name="radiotipocl" value="azienda" onChange="Rivela()" />
 <label for="tipoclazienda">Azienda</label></li>
-<li id="hiddenazienda"><input type="text" id="azienda" placeholder=" Nome Azienda*" /></li>
+<li id="hiddenazienda"><label for="azienda">&gt;&gt;</label><input type="text" id="azienda" placeholder=" Nome Azienda*" /></li>
 </ul>
 <span id="erroricateg" class="errori"></span>
 </fieldset>
@@ -82,9 +82,9 @@
 </fieldset>
 
 <fieldset id="fieldultimo">
-<legend><label for="messaggio">Messaggio<span class="required">*</span></label></legend>
+<legend>Messaggio</legend>
 <ul id="tipoprob">
-<li id="indicetipo">Tipologia:</li>
+<li id="indicetipo">Tipologia<span class="required">*</span>:</li>
 <li><input tabindex="21" type="radio" class="radiotipoprob" id="asstec" name="radiocateg" value="asstec" />
 <label for="asstec">Assistenza Tecnica</label></li>
 <li><input tabindex="22" type="radio" class="radiotipoprob" id="difmalf" name="radiocateg" value="difmalf" />
@@ -97,6 +97,7 @@
 <label for="altro">Altro</label></li>
 </ul>
 <span id="erroritipo" class="errori"></span>
+<label for="messaggio" id="labmess">Messaggio<span class="required">*</span>:</label>
 <textarea tabindex="31" id="messaggio" placeholder=" Scrivere il proprio messaggio qui."></textarea>
 <input tabindex="32" type="button" id="inviaemail" value="Invia" onClick="Email()" /><span id="errorimessaggio" class="errori"></span>
 </fieldset>
