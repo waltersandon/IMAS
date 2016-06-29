@@ -74,6 +74,15 @@ ul {
 	page-break-inside:avoid;
 }
 
+#container img {
+	width:40px;
+	height:40px;
+	display:inline;
+	border-radius:999em;
+	float:left;
+	margin-right:1em;
+}
+
 /* footer */
 
 #footer {
@@ -114,6 +123,11 @@ ul {
 
 /* prodotti */
 
+.testocat {
+	margin-left:3.5em;
+	margin-bottom:2em;
+}
+
 .testocat h1 {
 	font-size:1.2em;
 	text-transform:uppercase;
@@ -121,6 +135,11 @@ ul {
 
 .testocat p {
 	font-size:0.8em;
+}
+
+.circleGrid {
+	page-break-inside:avoid;
+	min-height:50px;
 }
 
 .circleGrid h1 {
@@ -136,7 +155,9 @@ ul {
 	font-size:0.8em;
 }
 
-/* lavorazioni */
+.elencolav {
+	margin:0em 0em 0em 4.5em;
+}
 
 /* contatti */
 
@@ -168,8 +189,8 @@ fieldset {
 
 /* admin */
 
-#container img {
-	display:none;
+.containeradmin img {
+	display:none !important;
 }
 
 .containeradmin li {
@@ -177,6 +198,11 @@ fieldset {
 }
 
 /* generale zona riservata */
+
+.adminfoto {
+	float:none !important;
+	vertical-align:middle;
+}
 
 .ulnopadd li {
 	margin-top:0.5em;
@@ -192,6 +218,8 @@ fieldset {
 
 .infoattuale {
 	font-size:1.4em;
+	display:inline;
+	margin-right:1em;
 }
 
 .nomescelta {
