@@ -2,7 +2,7 @@
 <catalogo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.imas.com data/xsd/prodotti.xsd">
 
 <categoria>
-<fotocat>../public_html/images/forni_fornelli.jpg</fotocat>
+<fotocat>../public_html/images/griglie_fornelli.jpg</fotocat>
 <altcat>Griglie e fornelli</altcat>
 <nomecat>prodotti in filo per griglie e fornelli</nomecat>
 <descrcat>Considerando la necessità di resistenza a continue sollecitazioni termiche, il materiale scelto per i prodotti in filo come la tecnologia di processo sono cruciali.
@@ -11,10 +11,11 @@
 <prodotto>
 <id>ID1</id>
 <nomeprod>Griglia per forni classica</nomeprod>
-<foto>../public_html/images/griglia.jpg</foto>
+<foto>../public_html/images/griglia_classica.jpg</foto>
 <alt>griglia per forni e fornelli classica</alt>
 <descrizione>Una semplice griglia adatta a tutti i tipi forni domestici.</descrizione>
 <lavorazione>Cromatura</lavorazione>
+<lavorazione>Acciaio-Inox</lavorazione>
 </prodotto>
 
 <prodotto>
@@ -22,7 +23,43 @@
 <nomeprod>Griglia laterale</nomeprod>
 <foto>../public_html/images/griglia_laterale.jpg</foto>
 <alt>griglia laterale</alt>
-<descrizione>Griglia laterale standard.</descrizione>
+<descrizione>Una comune griglia laterale.</descrizione>
+<lavorazione>Acciaio-Inox</lavorazione>
+<lavorazione>Zincatura</lavorazione>
+</prodotto>
+
+<prodotto>
+<id>ID6</id>
+<nomeprod>Griglia per barbecue</nomeprod>
+<foto>../public_html/images/griglia_bbq.jpg</foto>
+<alt>griglia spessa</alt>
+<descrizione>Una griglia realizzata su misura per ogni tipo di barbecue.</descrizione>
+</prodotto>
+
+<prodotto>
+<id>ID7</id>
+<nomeprod>Griglia spessa</nomeprod>
+<foto>../public_html/images/griglia_spessa.jpg</foto>
+<alt>griglia per fornelli</alt>
+<descrizione>Una griglia realizzata appositamente per resistere a grandi pesi ed urti.</descrizione>
+<lavorazione>Acciaio-Inox</lavorazione>
+<lavorazione>Zincatura</lavorazione>
+</prodotto>
+
+<prodotto>
+<id>ID8</id>
+<nomeprod>Griglia per fornelli</nomeprod>
+<foto>../public_html/images/griglia_fornello.jpg</foto>
+<alt>griglia per barbecue</alt>
+<descrizione>Una griglia realizzata per fornelli professionali.</descrizione>
+</prodotto>
+
+<prodotto>
+<id>ID9</id>
+<nomeprod>Filo metallico per griglie</nomeprod>
+<foto>../public_html/images/filo.jpg</foto>
+<alt>filo metallico per griglie</alt>
+<descrizione>Il nostro filo metallico può essere adattato ad ogni vostra richiesta.</descrizione>
 </prodotto>
 
 </categoria>
@@ -40,6 +77,7 @@
 <foto>../public_html/images/frigo.jpg</foto>
 <alt>griglia per frigorifero</alt>
 <descrizione>Griglia per i frigoriferi domestici</descrizione>
+<lavorazione>Verniciatura</lavorazione>
 </prodotto>
 
 <prodotto>
@@ -49,7 +87,16 @@
 <alt>porta bottiglie da frigorifero</alt>
 <descrizione>Porta bottiglie</descrizione>
 <lavorazione>Verniciatura</lavorazione>
-<lavorazione>Acciaio Inox</lavorazione>
+<lavorazione>Acciaio-Inox</lavorazione>
+</prodotto>
+
+<prodotto>
+<id>ID12</id>
+<nomeprod>Lastra ripiano</nomeprod>
+<foto>../public_html/images/lastra.jpg</foto>
+<alt>lastra per ripiano frigorifero</alt>
+<descrizione>Una lastra realizzata su misura per i ripiani di frigoriferi e simili.</descrizione>
+<lavorazione>Verniciatura</lavorazione>
 </prodotto>
 
 </categoria>
@@ -64,10 +111,30 @@
 <prodotto>
 <id>ID5</id>
 <nomeprod>Molle per sedili</nomeprod>
-<foto>../public_html/images/molleSedili.jpg</foto>
+<foto>../public_html/images/molle_sedili.jpg</foto>
 <alt>molle per sedili</alt>
 <descrizione>Molle interne ai sedili per aumentare il comfort.</descrizione>
 <lavorazione>Cromatura</lavorazione>
+<lavorazione>Zincatura</lavorazione>
+<lavorazione>Acciaio-Inox</lavorazione>
+</prodotto>
+
+<prodotto>
+<id>ID10</id>
+<nomeprod>Laminato per auto</nomeprod>
+<foto>../public_html/images/laminato.jpg</foto>
+<alt>laminato per auto</alt>
+<descrizione>Laminato per i rivestimenti di auto, misure adattabili su richiesta.</descrizione>
+<lavorazione>Verniciatura</lavorazione>
+<lavorazione>Cromatura</lavorazione>
+</prodotto>
+
+<prodotto>
+<id>ID11</id>
+<nomeprod>Filo di rinforzo</nomeprod>
+<foto>../public_html/images/filo_rinforzo.jpg</foto>
+<alt>filo di rinforzo per auto</alt>
+<descrizione>Filo metallico per rinforzare l'interno della struttura di un auto.</descrizione>
 <lavorazione>Zincatura</lavorazione>
 <lavorazione>Acciaio Inox</lavorazione>
 </prodotto>

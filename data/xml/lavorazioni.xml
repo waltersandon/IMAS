@@ -17,7 +17,7 @@ Ogni lavoro di cromatura che eseguiamo, piccolo o grande che sia, è sempre una 
 
 <lavorazione produzione="interna">
 <nomeLav>Zincatura</nomeLav>
-<fotoLav>../public_html/images/taglio.jpg</fotoLav>
+<fotoLav>../public_html/images/zincatura.jpg</fotoLav>
 <altLav>Foto Zincatura</altLav>
 <descrLav>
 La zincatura è il processo con cui viene applicato un rivestimento di zinco su un manufatto metallico generalmente di acciaio per proteggerlo dalla corrosione galvanica: esso infatti limita la formazione di micro-celle elettrolitiche ad azione anodica nei bordi di grano.
@@ -45,7 +45,7 @@ Essendo questa lavorazione suscettibile ai colori imposti dalla moda del momento
 
 <lavorazione produzione="esterna">
 <nomeLav>Acciaio-Inox</nomeLav>
-<fotoLav>../public_html/images/verniciatura.jpg</fotoLav>
+<fotoLav>../public_html/images/acciaio_inox.jpg</fotoLav>
 <altLav>Foto Acciaio Inox</altLav>
 <descrLav>
 L'acciaio inox è una lega di ferro dalle caratteristiche eccezionali che la rendono adatta ad ogni situazione.
