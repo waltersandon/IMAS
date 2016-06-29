@@ -4,8 +4,7 @@
     display: block;
     overflow: hidden;
     clear: both;
-    padding-left:2em;
-	padding-right:2em;
+    padding-bottom: 0em !important;
 }
 .catContent{
     height: 190px;
