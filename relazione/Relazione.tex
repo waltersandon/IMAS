@@ -129,9 +129,25 @@ Il layout adottato ha come larghezza massima 1200px dovuto ad un fattore estetic
 \end{figure}
 
 Per quanto riguarda il nostro contesto, la maggioranza degli utenti visitatori saranno aziende interessate alla nostra ditta pertanto si è deciso di puntare ad un layout adatto a partatili piuttosto che a schermi di grandi dimensioni. Non abbiamo sviluppato la parte mobile lato smartphone garantendo comunque che i contenuti non subiranno alterazioni spiacevoli fino a quando la grandezza dello schermo sarà grande come i table in modalità portrait. 
-\subsection{Layout per dispositivi mobili}
-\subsection{Layout di stampa}
+\\
+\\
+Tutto il layout è stato progettato a pannelli adattabili, in questo modo si ha una più espandibilità.
+\begin{itemize}
+	\item Partendo con l'analisi dall'alto si evidenzia subito il div "header", esso ha il compito di informare l'utente su ciò che sta visitando.
+	\\In questo caso siamo stati un pò condizionati dal fatto che non avevamo una totale libertà. Infatti manca una breve descrizione per far capire all'utent quale sia la tematica del sito.
+	\\Come spiegato in precedenza a lato a destra è presente il link per l'accesso agli amministratori.
+	\item Sempre nell'area di maggior visibilita è presente il menu utente. Anch'esso è stato identificato tramite l'utilizzo del div "menu". Presenta 4 campi rappresentati da \textbf{Home}, \textbf{Prodotti}, \textbf{Lavorazioni} e \textbf{Contatti}. Evidenzia il menù attivo in ogni pagina del sito. Questa area rappresenta l'asse informativo di dove un utente può andare.
+	\item Sottostante il menu principale è presente il div "breadcrumbs". Esso ha il compito di aiutare l'utente ad identificare in che posizione del sito si trova rispetto l’homepage del sito. Questa area rappresenta l'asse informativo di dove l'utente sia in quel determinato istante.
+	\item Il blocco centrale è rappresentato dal div "container". Ha il compito di raccogliere la sezione principale, tutte le informazioni raccolte dagli utenti verranno rappresentate all'intero di esso. Questa area rappresenta l'asse informativo di cosa si sta trattando.
+	\item Nella parte inferiore del sito è stato creato il div "footer", al suo interno sono presenti le credenziali della ditta e i loghi della certificazione html e css.
+\end{itemize}
 
+\subsection{Layout per dispositivi mobili}
+Il layout per i dispositivi mobili è stato sviluppato per risoluzioni non inferiori ai 768px, l'aspetto del sito non varia, ma si è cercato di ridimensionare le dimensioni dei font piuttosto che la grandezza delle immagine in modo da utilizzare quanta più area possibile per la visualizzazione.
+\\Ove non è stato possibile abbiamo cambiato la disposizione degli oggetti.
+
+\subsection{Layout di stampa}
+Nel layout di stampa si è deciso di eliminare tutte le informazioni superficiali e di mantenere il contenuto semplice e privo di colori e immagini. Anche in questa parte i font non sono stati modificati rispetto a quelli di default, in modo da non alterare la relativa qualità di stampa o portabilità nel caso di stampa in PDF.
 \newpage
 \section{Struttura}
 \newpage
