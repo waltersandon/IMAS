@@ -3,6 +3,7 @@
 \usepackage{graphicx}
 \usepackage[italian]{babel}
 \usepackage{hyperref}
+\usepackage{float}
 \title{Progetto di Tecnologie Web}
 
 
@@ -12,7 +13,6 @@
 		\centering
 		\includegraphics[width=0.7\linewidth]{logo-unipd.png}
 	\end{figure}
-	\
 	\begin{center}{\fontsize{20}{10}\selectfont Autori:}\end{center}
 	\begin{center}{\fontsize{20}{30}\selectfont 
 			Marco Casagrande
@@ -67,11 +67,12 @@ Dopo aver discusso col proponente riguardo alle possibili implementazioni del si
 \begin{description}
 	\item [Consultare il catalogo prodotti] \hfill \\
 	L'operazione più frequentemente compiuta dagli utenti è quella di consultare il catalogo dei prodotti presenti.
-	\hfill 
-	Essendo però una ditta che non ha una continuità di rinnovo dei prodotti, si è ritenuto apportuno non metterlo in evidenza nella homepage, ma piuttosto  dedicare un area apposita. 
-	La \textbf{Home} è stata adibita a chi entra per la prima volta nel sito o piuttosto quache vecchi utente che vogliano informarsi circa sulle origini, sulla storia o sulla mission aziendale. \hfill
-	Nel contempo in queste sezioni sono stati inseriti link diretti per poter consultare i nostri prodotti  ed è stata inoltre predisposta una comoda \textit{NavBar} con la quale raggiungere da ogni punto del sito le pagine \textbf{Prodotti} e \textbf{Lavorazioni}, i cui nomi sono esplicativi circa le informazioni contenute.
+	\\
+	Essendo però una ditta che non ha una continuità di rinnovo dei prodotti, si è ritenuto apportuno non metterlo in evidenza nella \textit{homepage}, ma piuttosto  dedicare un area apposita. 
+	La \textbf{Home} è stata adibita a chi entra per la prima volta nel sito o piuttosto qualche vecchio utente che vogliano informarsi circa sulle origini, sulla storia o sulla mission aziendale. \\
+	Nel contempo in queste sezioni sono stati inseriti link diretti per poter consultare i nostri prodotti  ed è stata inoltre predisposta una comoda \textit{NavBar} con la quale raggiungere comodamente le pagine \textbf{Prodotti} e \textbf{Lavorazioni}, i cui nomi sono esplicativi circa le informazioni contenute.
 	Stessa considerazione va fatta per la \textbf{consultazione delle lavorazioni}.
+
 	\item [Manutenzione del catalogo] \hfill \\
 	L'operazione di manutenzione dei cataloghi (aggiunta, modifica e rimozione dei prodotti/lavorazioni) è riservata agli amministratori del sito.\\
 	 È logico pensare che, essendo tali utenti un numero inferiore rispetto ai visitatori, il link per l'autenticazione e l'accesso all'area riservata possa essere messa in posizione \textit{nascosta}. Portroppo per ragioni di spazio l'abbiamo posizionata solo in alto a destra sapendo di creare così disorientamento.\\
@@ -83,16 +84,51 @@ Dopo aver discusso col proponente riguardo alle possibili implementazioni del si
 Analizziamo ora gli elementi dell'interfaccia utilizzati per renderla il più chiara (intuitiva per ogni utente) e diretta (minor numero di click per un operazione) possibile.
 \begin{description}
 	\item [NavBar] La barra di navigazione è presente in ogni pagina e consente l'accesso diretto alla homepage, l'accesso alle pagine \textit{Prodotti}, \textit{Lavorazioni} e \textit{Contatti}.
-	\item [Breadcrumbs] Per evitare che l'utente si senta disorientato all'interno del sito, quando dalla homepage si addentra con maggiore profondità nella struttura del sito, compare il percorso dell'utente a partire dalla homepage. Per approfondire la struttura si veda la sezione \hyperref[sub:Responsivity]{\underline{Responsive Design}}.
-	\item [Link] I link sono tutti sottolineati e segnalati in giallo, quelli visitati invece in arancione.
+	\\È stata progettata in modo tale che l'utente sappia in ogni momento in che pagina si trova. Infatti la parte della barra corrispondente alla pagina visitata risulta essere evidenziata.
+	\item [Breadcrumbs] Per evitare che l'utente si senta disorientato all'interno del sito, quando dalla homepage si addentra con maggiore profondità nella struttura del sito, compare il percorso dell'utente a partire dalla homepage.
+	\item [Link] Abbiamo deciso di adottare due tipologie di link, quelli che si trovano immersi nel testo e quelli che invece sono inseriti nelle due sezioni precedentemente descritte.
+	\\ I primi sono sottolineati e aderiscono alla rappresentazione standard dei link ovvero blu se non visitati e viola in caso contrario.Tutti gli altri inseriti nelle sezioni \textit{nav bar} e \textit{Breadcrumbs} sono comunque ben visibili con il passaggio del mouse grazie all'effetto \textbf{hover}.
 \end{description}
 
 \newpage
 \section{Gerarchia file}
+
+La gerarchia del sito è formata da 3 cartelle:
+\begin{itemize}
+	\item \texttt{cgi-bin} con gli script \texttt{.cgi}
+	\item \texttt{data} con 3 sotto-cartelle
+	\begin{itemize}
+		\item \texttt{xml} contente tutti i file xml
+		\item \texttt{xsd} contente gli \textit{XMLSchema}
+		\item \texttt{xsl} contenete i fogli di trasformazione
+	\end{itemize}
+	\item \texttt{public\_html} con il file \texttt{index.xhtml} e le sotto-cartelle:
+	\begin{itemize}
+		\item \texttt{images} con le immagini che ci sono servite per decorare il sito
+		\item \texttt{icons} con l'e icone per i tab dei browser
+		\item \texttt{javascript} con le funzioni appunto in \textit{JavaScript}
+		\item \texttt{parts} con i file xhtml parziali, ovvero parti di codice xhtml che verranno stampate dinamicamente grazie al perl
+		\item \texttt{css} con i fogli di stile  
+	\end{itemize}
+\end{itemize}
 \newpage
 \section{Architettura}
 \subsection{Progettazione layout}
+Prima di iniziare la stesura del codice abbiamo cercato di organizzare i dati che volevamo rappresentare. Questo ci ha permesso di chiarire alcuni aspetti fondamentali che il sito doveva avere. Innanzitutto la semplicità di navigazione al suo interno. Se un sito è semplice è visitabile e capibile da più persone. Il target d'utenza è l'utente in grado di utilizzare strumenti per la navigazione sul web.
+\\
+\\
+Fin da subito abbiamo optato per un layout di tipo fluido. Ha richiesto più lavoro del previsto ma ha ricompensato lo sforzo in quanto, abbiamo dovuto adattarlo ai vari tipi di monitor cambiando di molto l'aspetto, ma questo ha reso possibile un alto indice di accessibilità.
 \subsection{Sviluppo layout}
+Nell'immagine sottostante è possibile visualizzare la struttura principale dei div, i quali raccolgono per contenuto tematico le informazioni.
+Il layout adottato ha come larghezza massima 1200px dovuto ad un fattore estetico dato che le varie sezioni del \textit{Container} cambia di colore ad ogni cambio d'informazione, mentre l'altezza non è stata in nessun modo alterata rispetto l'originale. Questo permette una evoluzione verso il basso senza problemi.
+\begin{figure}[H]	
+	\centering
+	\includegraphics[width=\linewidth]{layout.png}
+	\caption{Layout delle pagine}
+	\label{Layout delle pagine}
+\end{figure}
+
+Per quanto riguarda il nostro contesto, la maggioranza degli utenti visitatori saranno aziende interessate alla nostra ditta pertanto si è deciso di puntare ad un layout adatto a partatili piuttosto che a schermi di grandi dimensioni. Non abbiamo sviluppato la parte mobile lato smartphone garantendo comunque che i contenuti non subiranno alterazioni spiacevoli fino a quando la grandezza dello schermo sarà grande come i table in modalità portrait. 
 \subsection{Layout per dispositivi mobili}
 \subsection{Layout di stampa}
 
