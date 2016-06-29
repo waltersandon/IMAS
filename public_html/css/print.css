@@ -173,6 +173,11 @@ fieldset {
 	font-size:0.7em;
 }
 
+#labmess {
+	float:left;
+	margin-left:0.5em;
+}
+
 #messaggio {
 	margin-left:2em;
 }
