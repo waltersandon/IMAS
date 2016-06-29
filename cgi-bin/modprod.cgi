@@ -44,7 +44,7 @@ if($nomeprod and $nomeprod ne "--------") {
 	<span class='nomescelta'>$nomeprod</span>
 	</div>";
 
-	print "<form class='white' action='../cgi-bin/modifyprod.cgi' method='post' enctype='multipart/form-data' autocomplete='off'>";
+	print "<form class='white' action='../cgi-bin/modifyprod.cgi' method='post' enctype='multipart/form-data'>";
 	
 	print "<p class='warning marginleft'>Per modificare un prodotto, compilare i campi dati sottostanti:</p>
 	<ul id='ulmod'>
@@ -75,7 +75,7 @@ if($nomeprod and $nomeprod ne "--------") {
 	foreach $nomelav(@nomelav) {
 		my $listalav = $nomelav->string_value;
 		if($radice->findvalue("//prodotto[nomeprod = '$nomeprod']/lavorazione[text() = '$listalav']")) {
-		print "<p class='standardcheckb'><input tabindex='$tabindex' type='checkbox' id='check$listalav' name='check$listalav' value='$listalav' checked /><label for='check$listalav'>$listalav</label></p>";
+		print "<p class='standardcheckb'><input tabindex='$tabindex' type='checkbox' id='check$listalav' name='check$listalav' value='$listalav' checked='checked' /><label for='check$listalav'>$listalav</label></p>";
 		}
 		else {
 		print "<p class='standardcheckb'><input tabindex='$tabindex' type='checkbox' id='check$listalav' name='check$listalav' value='$listalav' /><label for='check$listalav'>$listalav</label></p>";
@@ -98,7 +98,7 @@ if($nomeprod and $nomeprod ne "--------") {
 	<td><label for='texta2' class='textbold'>Descrizione:</label></td>
 	</tr>
 	<tr>
-	<td><textarea tabindex='$tabindex' name='texta2' id='texta2'></textarea></td>
+	<td><textarea tabindex='$tabindex' name='texta2' id='texta2' rows='0' cols='0'></textarea></td>
 	</tr>";
 	
 	$tabindex += 1;
@@ -115,9 +115,9 @@ if($nomeprod and $nomeprod ne "--------") {
 	$tabinxed += 1;
 	
 	print "<form class='lightgrey' action='../cgi-bin/deleteprod.cgi' method='post'>
-	<span id='testodelete' class='textbold'>Eliminazione prodotto:</span>
-	<input type='hidden' name='eliminaprod' id='eliminaprod' value='$nomeprod' />
-	<input tabindex='$tabindex' type='submit' value='Elimina Prodotto' class='submitchoice redhover' />
+	<p id='testodelete' class='textbold noblock'>Eliminazione prodotto:</p>
+	<p class='noblock'><input type='hidden' name='eliminaprod' id='eliminaprod' value='$nomeprod' /></p>
+	<p class='noblock'><input tabindex='$tabindex' type='submit' value='Elimina Prodotto' class='submitchoice redhover' /></p>
 	</form>
 	</div>";
 }
@@ -125,16 +125,15 @@ else {
 	printHTML("../public_html/parts/modprod_content_choice.xhtml");
 	foreach $categoria(@categoria) {
 		my $listacat = $categoria->getElementsByTagName('nomecat')->string_value;
-		print "<option disabled>Categoria: $listacat</option>";
+		print "<option disabled='disabled'>Categoria: $listacat</option>";
 		my @prodotto = $categoria->getElementsByTagName('prodotto');
 		foreach $prodotto(@prodotto) {
 			my $nomeprod = $prodotto->getElementsByTagName('nomeprod')->string_value;
 			print "<option>$nomeprod</option>";
 		}
 	}
-	print "</select>
-	<input tabindex='12' type='submit' value='Seleziona Prodotto' class='submitchoice' />
-	</div>
+	print "</select></p>
+	<p class='noblock'><input tabindex='12' type='submit' value='Seleziona Prodotto' class='submitchoice' /></p>
 	</form>
 	</div>";
 }

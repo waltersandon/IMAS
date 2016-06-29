@@ -37,7 +37,7 @@ if($nomelav and $nomelav ne "--------") {
 	<span class='nomescelta'>$nomelav</span>
 	</div>";
 	
-	print "<form class='white' action='../cgi-bin/modifylav.cgi' method='post' enctype='multipart/form-data' autocomplete='off'>";
+	print "<form class='white' action='../cgi-bin/modifylav.cgi' method='post' enctype='multipart/form-data'>";
 	
 	print "<p class='warning marginleft'>Per modificare una lavorazione, compilare i campi dati sottostanti:</p>
 	<ul id='ulmod'>
@@ -64,13 +64,13 @@ if($nomelav and $nomelav ne "--------") {
 	</tbody>
 	</table>
 	</li>
-	
+	<li>
 	<table class='tablemod'>
 	<tbody>
 	<tr><td><label for='texta1' id='labeldescrlav' class='textbold labeltextlav'>Descrizione:</label></td></tr>
-	<tr><td><textarea tabindex='15' name='texta1' id='texta1' class='textlav'></textarea></td></tr>
+	<tr><td><textarea tabindex='15' name='texta1' id='texta1' class='textlav' rows='0' cols='0'></textarea></td></tr>
 	<tr><td><label for='texta2' id='labelcomm' class='textbold labeltextlav'>Commento:</label></td></tr>
-	<tr><td><textarea tabindex='16' name='texta2' id='texta2' class='textlav'></textarea></td></tr>
+	<tr><td><textarea tabindex='16' name='texta2' id='texta2' class='textlav' rows='0' cols='0'></textarea></td></tr>
 	<tr><td><input tabindex='17' type='submit' value='Conferma Modifiche' class='submitchoice' /></td></tr>
 	</tbody>
 	</table>
@@ -79,9 +79,9 @@ if($nomelav and $nomelav ne "--------") {
 	</form>";
 	
 	print "<form class='lightgrey' action='../cgi-bin/deletelav.cgi' method='post'>
-	<span id='testodelete' class='textbold'>Eliminazione lavorazione:</span>
-	<input type='hidden' name='eliminalav' id='eliminalav' value='$nomelav' />
-	<input tabindex='18' type='submit' value='Elimina Lavorazione' class='submitchoice redhover' />
+	<p id='testodelete' class='textbold noblock'>Eliminazione lavorazione:</p>
+	<p class='noblock'><input type='hidden' name='eliminalav' id='eliminalav' value='$nomelav' /></p>
+	<p class='noblock'><input tabindex='18' type='submit' value='Elimina Lavorazione' class='submitchoice redhover' /></p>
 	</form>
 	</div>";
 
@@ -92,8 +92,8 @@ else {
 			my $nomelav = $lavorazione->getElementsByTagName('nomeLav')->string_value;
 			print "<option>$nomelav</option>";
 	}
-	print "</select>
-	<input tabindex='12' type='submit' value='Seleziona Lavorazione' class='submitchoice' />
+	print "</select></p>
+	<p class='noblock'><input tabindex='12' type='submit' value='Seleziona Lavorazione' class='submitchoice' /></p>
 	</form>
 	</div>";
 }

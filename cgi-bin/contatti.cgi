@@ -2,7 +2,9 @@
 
 require "utility.pl";
 
-printDOCTYPE();
+print "Content-type: text/html\n\n";
+print '<!DOCTYPE html>';
+	
 printHTML_BEGIN();
 printHTML("../public_html/parts/contatti_header.xhtml");
 printBODY_BEGIN();

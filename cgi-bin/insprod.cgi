@@ -45,7 +45,7 @@ $maxid = "ID".$maxid;
 
 print "<ul class='ulnopadd formmargin'>
 <li><input type='hidden' name='id' id='id' value='$maxid' /></li>
-<li><label for='selectcateg'>Categoria: </label></td>
+<li><label for='selectcateg'>Categoria: </label>
 <select tabindex='11' id='selectcateg' name='selectcateg' class='formmargin'>";
 
 foreach $categoria(@categoria) {
@@ -69,12 +69,12 @@ foreach $nomelav(@nomelav) {
 
 print "</li>
 <li><p id='ptexta2'><label for='texta2'>Descrizione:</label></p>
-<textarea tabindex='$tabindex' id='texta2' name='texta2'></textarea></li>
+<textarea tabindex='$tabindex' id='texta2' name='texta2' rows='0' cols='0'></textarea></li>
 </ul>";
 
 $tabindex += 1;
 
-print "<input tabindex='$tabindex' type='submit' value='Inserisci Prodotto' class='submit' />
+print "<p><input tabindex='$tabindex' type='submit' value='Inserisci Prodotto' class='submit' /></p>
 </form>
 </div>";
 

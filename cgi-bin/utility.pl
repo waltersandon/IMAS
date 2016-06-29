@@ -17,7 +17,7 @@ sub printDOCTYPE {
 }
 
 sub printHTML_BEGIN {
-    print '<html xml:lang="it" lang="it" xmlns="http://www.w3.org/1999/xhtml">';
+    print '<html lang="it" xml:lang="it" xmlns="http://www.w3.org/1999/xhtml">';
 }
 
 sub printHTML_END {
@@ -39,7 +39,7 @@ sub printHEADER {
 	$utente = $session->param('username');
 	print '<div id="header">
 	<a href="../cgi-bin/index.cgi" tabindex="1"><img id="logoDitta" src="../public_html/images/logoimas.png" alt="Logo Imas"/></a>
-	<div id="zonaadmin"><a class="admincolor linkadmin" href="../cgi-bin/admin.cgi" tabindex="2">Amministrazione</a> | <a class="admincolor linkadmin" href="../cgi-bin/logout.cgi" tabindex="3">Logout</a><span></div>
+	<div id="zonaadmin"><span><a class="admincolor linkadmin" href="../cgi-bin/admin.cgi" tabindex="2">Amministrazione</a> | <a class="admincolor linkadmin" href="../cgi-bin/logout.cgi" tabindex="3">Logout</a></span></div>
     </div>';
 	}
 }

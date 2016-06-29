@@ -45,34 +45,35 @@ if($nomelav and $nomelav ne "--------") {
 	<span class='nomescelta'>$nomelav</span>
 	</div>";
 	
-	print "<form class='white' action='../cgi-bin/assegnalav_result.cgi' method='post' autocomplete='off'>";
+	print "<form class='white' action='../cgi-bin/assegnalav_result.cgi' method='post'>";
 	
-	print "<div class='divlav'>
-	<p class='sottoinfo'>La $nomelav è disponibile per i prodotti spuntati:</p>
+	print "<p class='warning marginleft'>La lavorazione $nomelav è disponibile per i prodotti spuntati:</p>
+	<div id='divlav'>
 	<input tabindex='11' type='hidden' name='hiddennomelav' id='hiddennomelav' value='$nomelav' />
-	<ul id='ulmod'>";
+	<ul id='ulmod' class='ulnopadd formmargin'>";
 	
 	my $tabindex = 12;
 	foreach my $listaprod(@listaprod) {
 		$nomelistaprod = $listaprod->string_value;
+		my $idprod = $radice->findvalue("//prodotto[nomeprod = '$nomelistaprod']/id");
 		if($radice->findvalue("//prodotto[nomeprod = '$nomelistaprod']/lavorazione[text() = '$nomelav']")) {
 			print "<li>
-			<input tabindex='$tabindex' type='checkbox' id='check$nomelistaprod' name='check$nomelistaprod' value='$nomelistaprod' checked />
-			<label for='check$nomelistaprod'>$nomelistaprod</label></li>";
+			<input tabindex='$tabindex' type='checkbox' id='check$idprod' name='check$idprod' value='$nomelistaprod' checked='checked' />
+			<label for='check$idprod'>$nomelistaprod</label></li>";
 		}
 		else {
 			print "<li>
-			<input tabindex='$tabindex' type='checkbox' id='check$nomelistaprod' name='check$nomelistaprod' value='$nomelistaprod' />
-			<label for='check$nomelistaprod'>$nomelistaprod</label></li>";
+			<input tabindex='$tabindex' type='checkbox' id='check$idprod' name='check$idprod' value='$nomelistaprod' />
+			<label for='check$idprod'>$nomelistaprod</label></li>";
 		}
 		$tabindex += 1;
 	}
 	
 	print "</ul>
-	<input tabindex='$tabindex' type='submit' value='Conferma Assegnazioni' class='submitchoice' />
 	</div>
-	</div>
-	</form>";
+	<p class='noblock'><input tabindex='$tabindex' type='submit' value='Conferma Assegnazioni' id='submitassegn' class='submitchoice' /></p>
+	</form>
+	</div>";
 }
 else {
 	printHTML("../public_html/parts/assegnalav_content_choice.xhtml");
@@ -80,8 +81,8 @@ else {
 			my $nomelav = $lavorazione->getElementsByTagName('nomeLav')->string_value;
 			print "<option>$nomelav</option>";
 	}
-	print "</select>
-	<input tabindex='12' type='submit' value='Seleziona Lavorazione' class='submitchoice' />
+	print "</select></p>
+	<p class='noblock'><input tabindex='12' type='submit' value='Seleziona Lavorazione' class='submitchoice' /></p>
 	</form>
 	</div>";
 }
