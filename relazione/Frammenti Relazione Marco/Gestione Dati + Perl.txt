@@ -1,0 +1,31 @@
+\section{Gestione dati}
+Tutti i dati sono immagazzinati nei file xml.
+\begin
+	\item[Login.xml] è l'elenco delle combinazioni username+password che possono accedere alla zona di amministrazione del sito.
+	\item[Prodotti.xml] è l'elenco dei prodotti disponibili e sono divisi in 3 categorie prefissate. Sia le categorie che i prodotti possiedono vari nodi che ne descrivono le caratteristiche. In particolare i prodotti possono essere disponibili sotto nessuna o più lavorazioni.
+	\item[Lavorazioni.xml] è l'elenco delle lavorazioni disponibili. Anch'esse possiedono vari nodi che ne descrivono le caratteristiche.
+\end
+Per una gestione dati più semplice rispetto al modificare direttamente i file xml, il sito rende disponibile una serie di funzionalità nell'area di amministrazione, così che anche un utente inesperto possa effettuare aggiornamenti.
+
+\newpage
+\section{Perl}
+Il linguaggio Perl è stato utilizzato sia per stampare modularmente e dinamicamente le varie pagine, sia per il corretto funzionamento dei servizi offerti dal sito, cioè il login ed i vari tipi di modifiche ai prodotti ed alle lavorazioni.
+Le librerie utilizzate sono state:
+\begin
+	\item[CGI]
+	\item[Lib::XML]
+	\item[Lib::XSLT]
+\end
+
+Riguardo alla stampa delle pagine, è stata sfruttata semplicemente la print assieme ad alcune pagine xhtml così da produrre l'opportuno output.
+
+Riguardo al login, tramite l'apposito form il sito controlla in login.xml se l'username e la password corrispondono, restituendo un errore oppure permettendo l'accesso alla zona di amministrazione. Solo i gestori del sito hanno accesso a quest'area e non vi è modo di registrarsi.
+
+Riguardo alla gestione dei prodotti e delle lavorazioni, sono offerte 5 funzionalità per chi non è pratico di xml che garantiscono il rispetto del corrispondente XMLSchema.
+Queste funzionalità si possono suddividere in due categorie dal codice molto simile:
+\begin
+	\item[Inserimento] alla quale appartengono l'inserimento prodotto/lavorazione.
+	Questa categoria crea un nodo con i parametri impostati dall'utente, lo controlla e lo inserisce nel rispettivo file xml.
+	\item[Modifica] alla quale appartengono la modifica prodotto/lavorazione e la riassegnazione di una lavorazione ai diversi prodotti.
+Questa categoria si occupa di modificare od eliminare i nodi in base alle scelte dell'utente.  Inizialmente occorre selezionare l'elemento, poi verrà mostrata la pagina con i vari parametri modificabili. I cambiamenti vengono controllati ed introdotti nei rispettivi file xml.
+\end

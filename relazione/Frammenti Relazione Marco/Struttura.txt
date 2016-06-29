@@ -1,0 +1,1 @@
+Tutto il sito è stato sviluppato in XHTML 1.0 Strict. Le pagine sono generate da PERL tramite sistemi di templating. L'unica eccezione riguarda la pagina Contatti, che necessitava di alcuni elementi di HTML5.
