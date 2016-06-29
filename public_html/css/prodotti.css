@@ -11,7 +11,7 @@
     height: 190px;
     display: inline;
     float: left;
-    margin-bottom:3em;
+    margin-bottom:8em;
 }
 
 .testocat{
@@ -39,8 +39,8 @@
     float: left;
     text-align: center;
     width: 260px;
-	margin:2em auto 1.5em auto;
-	display:inline;
+	height:350px;
+	margin:0em auto 0em auto;
 }
 
 .circleGrid p{padding: 0;margin: 0.1em;}
