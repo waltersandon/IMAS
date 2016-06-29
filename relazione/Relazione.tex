@@ -150,6 +150,26 @@ Il layout per i dispositivi mobili è stato sviluppato per risoluzioni non infer
 Nel layout di stampa si è deciso di eliminare tutte le informazioni superficiali e di mantenere il contenuto semplice e privo di colori e immagini. Anche in questa parte i font non sono stati modificati rispetto a quelli di default, in modo da non alterare la relativa qualità di stampa o portabilità nel caso di stampa in PDF.
 \newpage
 \section{Struttura}
+La struttura del sito è stata suddivisa per contenuti, in modo da aiutare l'utente nella ricerca delle informazioni. Questo porta ad una maggiore chiarezza delle sezioni presenti.
+\\
+\\
+Tutto il sito è stato sviluppato in XHTML 1.0 Strict. Le pagine sono generate da PERL tramite sistemi di templating.
+\\
+\\Di seguito vengono spiegate le pagine principali:
+\\
+\begin{description}
+	\item[public\_html/index.html] \hfill \\
+	 tramite l'utilizzo della funzione \textit{http-equiv="refresh"} abbiamo reso possibile il reindirizzamento alla homepage che si trova all’interno della cartella "cgi-bin"nel caso l'untente acceda alla directory principale del sito;
+	 \item[cgi-bin/index.cgi]  la pagina viene generata con un contenuto esclusivamente statico richiamando altre parti comuni e specifiche della pagina che si trovano in \textbf{public\_html/parts}. La parte comune in ogni pagina risulta essere solo il footer, metre l'header e il menu, se pur considerati statici, sono specifici alla pagina;
+	 \item[cgi-bin/prodotti.cgi]  questa pagina viene generata da un contenuto sia dinamico che statico. Dove la parte statica è formata dall'header, menù e footer, mentre il contenuto presente nel \textit{container} è generata dinamicamente richiamando "../data/xsl/prodotti.xslt" che estrae dell'xml i dati necessari per la composizione della pagina;
+	 \item[cgi-bin/lavorazioni.cgi]  come per la pagina precedente anche la seguente è composta sia da contenuto statico che dinamico. La parte dinamica si differenzia dal fatto che non viene richiamato lo stesso file \textit{.xslt} ma quello specidico alle lavorazioni. 
+	 \item[cgi-bin/contatti.cgi] questa pagina è costruita come l' \textit{homepage} in quanto il suo contenuto è totalmente statico. La particolarità di questa pagina è che richiama del codice javascript contenuto in \textit{public\_html/javascript} per inviare una richiesta d'informazione alla ditta dopo aver premuto il tasto \textbf{invia} dell'apposita form presente nella pagina.
+	 \\La pagina offre degli aiuti nel caso si inseriscano dei dati errati;
+	 \item[cgi-bin/login.cg] la seguente pagina permette l'autenticazione degli amministratori per poter accedere all'area riservata. Anche in questo caso pagina offre degli aiuti nel caso si inseriscano dei dati errati
+	 \\Dal momento in cui ci si logga in ogni pagina al posto del link \textit{area riservata} saranno presenti 2 link per l'area \textbf{amministrazione}e per il \textbf{loguot};
+	 \item[cgi-bin/admin.cg] il ruolo fondamentale della pagina è l'inserimento dei dati. Si presenta con la sezione \textit{Prodotti} e quella \textit{Lavorazioni} e ognuna delle quali presenta le operazioni che si possono fare.
+	 
+\end{description}
 \newpage
 
 \section{Presentazione}
