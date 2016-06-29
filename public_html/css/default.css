@@ -4,7 +4,7 @@ html,body {
     margin:auto;
     font-family:'Helvetica','Arial', sans-serif;
     font-size:1em;
-    background-color:white;
+	background-color:#f2f2f2;
 }
 
 a:active {outline:none;}
@@ -48,6 +48,7 @@ body{max-width:1300px}
 .linkadmin {
 	padding:1em 0.8em 1em 0.8em;
 	border-radius:15px;
+	margin-left:0.8em;
 }
 
 .linkadmin:hover {
@@ -63,7 +64,11 @@ body{max-width:1300px}
 #panoramic {
     width:100%;
     height:180px;
-	margin:0.5em 0em 1.5em 0em;
+	border-style:solid;
+	border-color:gray;
+	border-left:none;
+	border-right:none;
+	margin:0em 0em 1em 0em;
     object-fit:cover; /* nota */
 }
 
@@ -128,7 +133,6 @@ body{max-width:1300px}
 #circlemenu span, #circlemenu a span{
     position:relative;
     top: 40%;
-    overflow: hidden;
 }
 
 #circlemenu #home, .home{
@@ -227,7 +231,7 @@ body{max-width:1300px}
 /* container */
 
 #container {
-    margin-top: 2em;
+	margin-top:2em;
 	color:#383838;
 }
 
@@ -385,10 +389,6 @@ legend {
 	text-align:center;
 }
 
-.colorbox {
-	background:lightgrey;
-}
-
 .required {
 	color:#eb2d2d;
 }
@@ -530,8 +530,9 @@ legend {
 /* css admin */
 
 .containeradmin h1 {
-	padding:0.5em 0em 0.5em 2em;
+	padding:1em 0em 0.5em 2em;
 	background-color:#EFEFEF;
+	margin-top:0;
 }
 
 .containeradmin  ul {
@@ -546,14 +547,13 @@ legend {
 }
 
 .containeradmin  img {
-	margin-left:2em;
 	float:left;
 	height:120px;
 	width:120px;
 	border-radius:99px;
 	border-style:solid;
 	border-width:0.2em;
-    border-color:#C0C0C0;
+	margin-left:2em;
 }
 
 .containeradmin  span {
@@ -561,6 +561,14 @@ legend {
 	font-size:1.2em;
 	padding:0;
     margin:2.5em 0em 0em 1em;
+}
+
+.normalborder {
+    border-color:black;
+}
+
+.redborder {
+	border-color:darkred;
 }
 
 /* css zone di modifica */
