@@ -1,8 +1,0 @@
-\section{Comportamento}
-Il comportamento del sito è regolato da controlli sia da parte del Perl, sia di Javascript.
-
-Riguardo al primo, verrà approfondito in una sezione successiva e coinvolge solo gli utenti amministratori. Il Perl si occupa della gestione dei dati immagazzinati nei file xml.
-
-Riguardo al Javascript, esso compare nel form della sezione Contatti e coinvolge anche gli utenti comuni. In questa sezione gli utenti possono usufruire di un modulo per compilare automaticamente un'email con i loro dati personali, la categoria della richiesta e la descrizione. I controlli consistono nella correttezza dei dati immessi (campi obbligatori, formato dell'email, lunghezza messaggio) e vengono effettuati all'invio della richiesta e se necessario segnalano il luogo dell'errore.
-
-Nel caso l'utente abbia disabilitato Javascript, non potrà usufruire del modulo, ma potrà comunque compilare un'email "manualmente".
