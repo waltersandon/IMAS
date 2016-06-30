@@ -1,3 +1,0 @@
-Nel layout di stampa si è deciso di eliminare tutte le informazioni superficiali e di mantenere il contenuto semplice e privo di colori. Vista la natura commerciale del sito, si vuole offrire una stampa che riporti solo le informazioni chiave all'utente. In particolare, saranno le sezioni Prodotti e Lavorazioni ad essere oggetti di stampa, che infatti riportano le immagini dei vari prodotti ed una lista di rapida consultazione. 
-
-Le sezioni amministrative mantengono lo stesso stile minimale, considerata anche la scarsa probabilità di stamparle. Nel layout di stampa i font non sono stati modificati rispetto a quelli di default, in modo da non alterare la relativa qualità di stampa o portabilità nel caso di stampa in PDF.
